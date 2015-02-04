@@ -1,46 +1,421 @@
 FORMAT: 1A
 
 # Veo CMS API
-Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+The Veo CMS API powers the CMS within the Veo architecture
 
-# Group Notes
-Notes related resources of the **Notes API**
+Please be sure to validate your response examples with [JSONLint][1].
 
-## Notes Collection [/notes]
-### List all Notes [GET]
-+ Response 200 (application/json)
+[1]:  http://jsonlint.com/
 
-        [{
-          "id": 1, "title": "Jogging in park"
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office"
-        }]
+# Group Business - Distributors
+Represents actions against Distributor objects
 
-### Create a Note [POST]
-+ Request (application/json)
-
-        { "title": "Buy cheese and bread for breakfast." }
-
-+ Response 201 (application/json)
-
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
-
-## Note [/notes/{id}]
-A single Note object with all its details
+## Distributor [/cms/business/distributor/{id}]
+Represents a distributor
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + id (string, `1`) ... The id of the Distributor.
 
-### Retrieve a Note [GET]
-+ Response 200 (application/json)
++ Model (application/json)
 
-    + Header
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "type": "Distributor",
+            "status": "published",
+            "name": "televisa.networks.mx",
+            "code": "televisa.networks.mx",
+            "contact": "Juan Perez"
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
 
-            X-My-Header: The Value
+### Retrieve a Distributor [GET]
+Returns a specific Distributor.
 
-    + Body
++ Response 200
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
+    [Distributor][]
 
-### Remove a Note [DELETE]
+## List Distributors [/cms/business/distributor/list]
+Returns all Distributors.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "Distributor",
+                "status": "published",
+                "name": "televisa.networks.mx",
+                "code": "televisa.networks.mx",
+                "contact": "Juan Perez"
+            },
+            {
+                "id": 2,
+                "type": "Distributor",
+                "status": "published",
+                "name": "televisa.networks.mx",
+                "code": "televisa.networks.mx",
+                "contact": "Pedro Perez"
+            }
+        ],
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve all Distributors [GET]
+Retrieves all distributors.
+
++ Response 200
+
+    [List Distributors][]
+
+# Group Business - Person
+Represents actions against Person objects
+
+## Person [/cms/business/person/{id}]
+Represents a Person
+
++ Parameters
+    + id (string, `14`) ... The id of the Person.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 14,
+            "type": "Person",
+            "status": "published",
+            "communicationName": "Helena Bonham Carter",
+            "firstName": "Helena Bonham",
+            "familyName": "Carter",
+            "characterName": "Elpidio Valdez",
+            "characterImage": {
+                "id": 1,
+                "alt": "Test alt value",
+                "contentType": "image/png",
+                "height": 126,
+                "width": 224,
+                "size": 30827,
+                "url": "https://scablevision-a.akamaihd.net/prod/Picture/C_1_Picture_6046_profile152Image.png"
+            },
+            "role": "Actor",
+            "asset": 3
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve a Person [GET]
+Returns a specific Person.
+
++ Response 200
+
+    [Person][]
+
+## List People [/cms/business/people]
+Returns all People.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 14,
+                "type": "Person",
+                "status": "published",
+                "communicationName": "Helena Bonham Carter",
+                "firstName": "Helena Bonham",
+                "familyName": "Carter",
+                "characterName": "Elpidio Valdez",
+                "characterImage": {
+                    "id": 1,
+                    "alt": "Test alt value",
+                    "contentType": "image/png",
+                    "height": 126,
+                    "width": 224,
+                    "size": 30827,
+                    "url": "https://scablevision-a.akamaihd.net/prod/Picture/C_1_Picture_6046_profile152Image.png"
+                },
+                "role": "Actor",
+                "asset": 3
+            },
+            {
+                "id": 15,
+                "type": "Person",
+                "status": "published",
+                "communicationName": "Edward Norton",
+                "firstName": "Edward",
+                "familyName": "Norton",
+                "characterName": "Eutelia",
+                "characterImage": null,
+                "role": "Actor",
+                "asset": 3
+            }
+        ],
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve all People [GET]
+Retrieves all People.
+
++ Response 200
+
+    [List People][]
+
+
+# Group Business - Studio
+Represents actions against Studio objects
+
+## Studio [/cms/business/studio/{id}]
+Represents a studio
+
++ Parameters
+    + id (string, `1`) ... The id of the Studio.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "type": "Studio",
+            "status": "published",
+            "name": "FOX",
+            "code": "FOX"
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve a Studio [GET]
+Returns a specific Studio.
+
++ Response 200
+
+    [Studio][]
+
+## List Studios [/cms/business/studio/list]
+Returns all Studios.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "Studio",
+                "status": "published",
+                "name": "FOX",
+                "code": "FOX"
+            },
+            {
+                "id": 2,
+                "type": "Studio",
+                "status": "published",
+                "name": "SONY",
+                "code": "SON"
+            }
+        ],
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve all Studios [GET]
+Retrieves all Studios.
+
++ Response 200
+
+    [List Studios][]
+
+
+
+# Group System - Navigation
+Represents actions against CMS Navigation objects
+
+## Navigation [/cms/system/navigation]
+Returns the Navigation of the CMS.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "Navigation",
+                "title": "Entities",
+                "items": [
+                  {
+                    "id": 10,
+                    "type": "Navigation",
+                    "title": "Asset",
+                    "link": "/browse/asset"
+                  },
+                  {
+                    "id": 11,
+                    "type": "Navigation",
+                    "title": "Picture",
+                    "link": "/browse/picture"
+                  }
+                ]
+            },
+            {
+                "id": 2,
+                "type": "Navigation",
+                "title": "Taxonomies",
+                "items": [
+                  {
+                    "id": 20,
+                    "type": "Navigation",
+                    "title": "Genre",
+                    "link": "/browse/genre"
+                  },
+                  {
+                    "id": 21,
+                    "type": "Navigation",
+                    "title": "Rating",
+                    "link": "/browse/rating"
+                  }
+                ]
+            }
+        ]
+    }
+    ```
+
+### Retrieve the Navigation menu [GET]
+Retrieves navigation menu for the CMS. This is simply an enumeration of the Entities in the system
+
++ Response 200
+
+    [Navigation][]
+
+
+
+# Group System - Users
+Represents actions against CMS User objects
+
+## User [/cms/system/user/{id}]
+Represents a user
+
++ Parameters
+    + id (string, `1`) ... The id of the User.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "type": "User",
+            "firstName": "John",
+            "lastName": "Doe",
+            "username": "johndoe@mymail.com",
+            "role": "admin"
+        }
+    }
+    ```
+
+### Retrieves a User [GET]
+Returns a specific User.
+
++ Response 200
+
+    [User][]
+
+### Updates a User [PUT]
+Updates a specific User.
+
++ Request
+
+    [User][]
+
++ Response 200
+
+    [User][]
+
+
+### Deletes a User [DELETE]
+Deletes a specific User.
+
 + Response 204
+
+## List Users [/cms/system/users]
+Returns all Users.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "User",
+                "firstName": "John",
+                "lastName": "Doe",
+                "username": "johndoe@mymail.com",
+                "role": "admin"
+            },
+            {
+                "id": 2,
+                "type": "User",
+                "firstName": "Jane",
+                "lastName": "Doe",
+                "username": "janedoe@mymail.com",
+                "role": "basic"
+            },
+
+        ]
+    }
+    ```
+
+### Retrieve all Users [GET]
+Retrieves all users.
+
++ Response 200
+
+    [List Users][]
+
+### Creates a User [POST]
+Creates a new User in the CMS.
+
++ Request
+
+    [User][]
+
++ Response 201
+
+    [User][]
