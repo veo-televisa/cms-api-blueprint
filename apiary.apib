@@ -40,6 +40,13 @@ Represents a distributor
 ### Retrieve a Distributor [GET]
 Returns a specific Distributor.
 
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
 + Response 200
 
     [Distributor][]
@@ -79,6 +86,13 @@ Returns all Distributors.
 
 ### Retrieve all Distributors [GET]
 Retrieves all distributors.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
 
 + Response 200
 
@@ -127,6 +141,12 @@ Represents a Person
 
 ### Retrieve a Person [GET]
 Returns a specific Person.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
 
 + Response 200
 
@@ -184,6 +204,12 @@ Returns all People.
 ### Retrieve all People [GET]
 Retrieves all People.
 
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
 + Response 200
 
     [List People][]
@@ -219,6 +245,12 @@ Represents a studio
 
 ### Retrieve a Studio [GET]
 Returns a specific Studio.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
 
 + Response 200
 
@@ -257,6 +289,12 @@ Returns all Studios.
 
 ### Retrieve all Studios [GET]
 Retrieves all Studios.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
 
 + Response 200
 
@@ -409,6 +447,12 @@ Returns the Navigation of the CMS.
 
 ### Retrieve the Navigation menu [GET]
 Retrieves navigation menu for the CMS. This is simply an enumeration of the Entities in the system
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
 
 + Response 200
 
@@ -646,7 +690,16 @@ Represents a user
 + Parameters
     + id (string, `1`) ... The id of the User.
 
-+ Model (application/json)
+### Retrieves a User [GET]
+Returns a specific User.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 200
 
     ```js
     {
@@ -661,27 +714,51 @@ Represents a user
     }
     ```
 
-### Retrieves a User [GET]
-Returns a specific User.
-
-+ Response 200
-
-    [User][]
-
 ### Updates a User [PUT]
 Updates a specific User.
 
 + Request
 
-    [User][]
+    ```js
+    {
+        "data": {
+            "firstName": "John",
+            "lastName": "Doe",
+            "username": "johndoe@mymail.com",
+            "role": "admin"
+        }
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
 
 + Response 200
 
-    [User][]
-
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "type": "User",
+            "firstName": "John",
+            "lastName": "Doe",
+            "username": "johndoe@mymail.com",
+            "role": "admin"
+        }
+    }
+    ```
 
 ### Deletes a User [DELETE]
 Deletes a specific User.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
 
 + Response 204
 
@@ -708,14 +785,20 @@ Returns all Users.
                 "lastName": "Doe",
                 "username": "janedoe@mymail.com",
                 "role": "basic"
-            },
-
+            }
         ]
     }
     ```
 
 ### Retrieve all Users [GET]
 Retrieves all users.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
 
 + Response 200
 
@@ -726,9 +809,33 @@ Creates a new User in the CMS.
 
 + Request
 
-    [User][]
+    ```js
+    {
+        "data": {
+            "firstName": "John",
+            "lastName": "Doe",
+            "username": "johndoe@mymail.com",
+            "role": "admin"
+        }
+    }
+    ```    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
 
 + Response 201
 
-    [User][]
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "type": "User",
+            "firstName": "John",
+            "lastName": "Doe",
+            "username": "johndoe@mymail.com",
+            "role": "admin"
+        }
+    }
+    ```
 
