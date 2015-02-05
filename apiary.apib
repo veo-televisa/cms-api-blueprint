@@ -262,6 +262,97 @@ Retrieves all Studios.
     [List Studios][]
 
 
+# Group System - Authentication
+Represents actions against CMS Navigation objects
+
+## Login [/cms/system/authentication/login]
+Attempts to authenticate into the CMS
+
+### Login to the site [POST]
+Attempts to login to the site. Upon successful authentication, a token will be provided, which should be used in all subsequent authenticated requests
+
++ Request (application/json)
+
+    ```js
+    {
+        "username": "user@gmail.com",
+        "password": "password1"
+    }
+    ```
+
++ Response 200
+
+    ```js
+    {
+        "data": {
+            "token": "qwerty12345"
+            },
+            "messages": []
+    }
+    ```
+
++ Response 403
+
+    ```js
+    {
+        "data": { },
+        "messages": [
+            {
+                "error": "Invalid Credentials"
+            }
+        ]
+    }
+    ```
+
+## Logout [/cms/system/authentication/logout]
+Attempts to logout of the CMS
+
+### Logout of the site [POST]
+Attempts to logout to the site
+
++ Response 200
+
+
+## Recover Password [/cms/system/authentication/recover]
+Attempts to recover the user's password from the CMS
+
+### Recover Password [POST]
+Attempts to recover the user's password from the CMS
+
++ Request (application/json)
+
+    ```js
+    {
+        "username": "user@gmail.com"
+    }
+    ```
+
++ Response 200
+
+    ```js
+    {
+        "data": { },
+        "messages": [
+            {
+                "success": "Your password has been sent to your e-mail address"
+            }
+        ]
+    }
+    ```
+
++ Response 403
+
+    ```js
+    {
+        "data": { },
+        "messages": [
+            {
+                "error": "Invalid credentials"
+            }
+        ]
+    }
+    ```
+
 
 # Group System - Navigation
 Represents actions against CMS Navigation objects
