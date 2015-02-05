@@ -7,6 +7,7 @@ Please be sure to validate your response examples with [JSONLint][1].
 
 [1]:  http://jsonlint.com/
 
+
 # Group Business - Distributors
 Represents actions against Distributor objects
 
@@ -353,7 +354,6 @@ Attempts to recover the user's password from the CMS
     }
     ```
 
-
 # Group System - Navigation
 Represents actions against CMS Navigation objects
 
@@ -414,6 +414,227 @@ Retrieves navigation menu for the CMS. This is simply an enumeration of the Enti
 
     [Navigation][]
 
+
+# Group System - User History
+Retrieves the users' history of actions
+
+## User History [/cms/system/user-history/{id}]
+Retrieve the user's history given a userId
+
++ Parameters
+    + id (string, `1`) ... The id of the User.
+
+### Retrieve User History [GET]
+Retrieve the user's history given a userId, ordered by last action date descending.
+
++ Request
+        
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 200 (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 3,
+                "userId": 9,
+                "type": "UserHistory",
+                "action": {
+                        "type": "publish",
+                        "date": "2014-01-03 06:30:00"
+                },
+                "entity": {
+                        "id": 4754,
+                        "title": "Spacejam",
+                        "type": "Asset"
+                }
+            },
+            {
+                "id": 2,
+                "userId": 9,
+                "type": "UserHistory",
+                "action": {
+                        "type": "save",
+                        "date": "2014-01-03 06:10:00"
+                },
+                "entity": {
+                        "id": 4754,
+                        "title": "Spacejam",
+                        "type": "Asset"
+                }
+            },
+            {
+                "id": 1,
+                "userId": 9,
+                "type": "UserHistory",
+                "action": {
+                        "type": "view",
+                        "date": "2014-01-03 06:00:00"
+                },
+                "entity": {
+                        "id": 4754,
+                        "title": "Spacejam",
+                        "type": "Asset"
+                }
+            }
+        ],
+        "messages": []
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "data": [],
+        "messages": [
+            {
+                "error": "User not found"
+            }
+        ]
+    }
+    ```
+
+### Creates a User History [POST]
+Creates a new UserHistory record
+
++ Request
+    
+    ```js
+    {
+        "data": 
+            {
+                "action": {
+                        "type": "publish",
+                        "date": "2014-01-03 06:30:00"
+                },
+                "entity": {
+                        "id": 4754,
+                        "title": "Spacejam",
+                        "type": "Asset"
+                }
+            }
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+    
+
++ Response 201
+
+    ```js
+    {
+        "data": 
+            {
+                "id": 3,
+                "userId": 9,
+                "type": "UserHistory",
+                "action": {
+                        "type": "publish",
+                        "date": "2014-01-03 06:30:00"
+                },
+                "entity": {
+                        "id": 4754,
+                        "title": "Spacejam",
+                        "type": "Asset"
+                }
+            }
+    }
+    ```
+
+### Deletes a User History [DELETE]
+Deletes a specific User's History.
+
++ Request
+        
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 204
+
+## Global User History [/cms/system/user-history/global]
+Retrieve the global history of all users
+
+### Retrieve Global User History [GET]
+Retrieve global history across all users, ordered by last action date descending.
+
++ Request
+        
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 200 (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 4,
+                "userId": 5,
+                "type": "UserHistory",
+                "action": {
+                        "type": "publish",
+                        "date": "2014-02-13 04:30:00"
+                },
+                "entity": {
+                        "id": 5001,
+                        "title": "Star Wars",
+                        "type": "Asset"
+                }
+            },
+            {
+                "id": 3,
+                "userId": 9,
+                "type": "UserHistory",
+                "action": {
+                        "type": "publish",
+                        "date": "2014-01-03 06:30:00"
+                },
+                "entity": {
+                        "id": 4754,
+                        "title": "Spacejam",
+                        "type": "Asset"
+                }
+            },
+            {
+                "id": 2,
+                "userId": 9,
+                "type": "UserHistory",
+                "action": {
+                        "type": "save",
+                        "date": "2014-01-03 06:10:00"
+                },
+                "entity": {
+                        "id": 4754,
+                        "title": "Spacejam",
+                        "type": "Asset"
+                }
+            },
+            {
+                "id": 1,
+                "userId": 9,
+                "type": "UserHistory",
+                "action": {
+                        "type": "view",
+                        "date": "2014-01-03 06:00:00"
+                },
+                "entity": {
+                        "id": 4754,
+                        "title": "Spacejam",
+                        "type": "Asset"
+                }
+            }
+        ],
+        "messages": []
+    }
+    ```
 
 
 # Group System - Users
@@ -510,3 +731,4 @@ Creates a new User in the CMS.
 + Response 201
 
     [User][]
+
