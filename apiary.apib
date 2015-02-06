@@ -458,6 +458,98 @@ Retrieves navigation menu for the CMS. This is simply an enumeration of the Enti
 
     [Navigation][]
 
+# Group System - Publication
+Represents the publication workflow of the CMS
+
+## Status [/cms/system/publication/statuses]
+Returns all available publication statuses
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "PublicationStatus",
+                "title": "draft",
+            },
+            {
+                "id": 2,
+                "type": "PublicationStatus",
+                "title": "scheduled",
+            },
+            {
+                "id": 3,
+                "type": "PublicationStatus",
+                "title": "published",
+            },
+            {
+                "id": 4,
+                "type": "PublicationStatus",
+                "title": "unpublished",
+            },
+            {
+                "id": 5,
+                "type": "PublicationStatus",
+                "title": "expired",
+            },
+            
+        ]
+    }
+    ```
+
+### Retrieve all statuses [GET]
+Retrieves all available publication statuses
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 200
+
+    [Status][]
+
+## Transition [/cms/system/publication/transition/{transition}/{entityName}/{entityId}]
+Requests involving the transitions of the publication workflow
+
++ Parameters
+    + transition (string, `publish`) ... The transition to execute.
+        + Values
+            + `save`
+            + `preview`
+            + `publish`
+            + `purge`
+            + `unpublish`
+    + entityName (string, `asset`) ... The name of the entity.
+    + entityId (int, `5000`) ... The id of the entity.
+
+
+### Execute Transition [POST]
+Executes a transition for a given entity
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
++ Response 200 (application/json)
+
++ Response 500 (application/json)
+
+    ```js
+    {
+        "data": [],
+        "messages": [
+            {
+                "error": "More information about error"
+            }
+        ]
+    }
+
 
 # Group System - User History
 Retrieves the users' history of actions
@@ -838,4 +930,3 @@ Creates a new User in the CMS.
         }
     }
     ```
-
