@@ -568,6 +568,301 @@ Creates a new Distributor.
     
     [Distributor][]
 
+# Group Business - Navigation
+Represents actions against Navigation objects
+
+## Navigation [/cms/business/navigation/{id}]
+Represents a Navigation
+
++ Parameters
+    + id (string, `1`) ... The id of the Navigation.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "type": "Navigation",
+            "title": "Main menu",
+            "key": "main-menu",
+            "items": [
+                {
+                    "id": 10,
+                    "type": "Navigation",
+                    "title": "Tele para llevar",
+                    "key": "main-menu-tele-para-llevar",
+                    "link": "/tv/epg",
+                    "icon": null
+                },
+                {
+                    "id": 11,
+                    "type": "Navigation",
+                    "title": "Play",
+                    "key": "main-menu-play",
+                    "link": "/clubondemand",
+                    "icon": null
+                },
+                {
+                    "id": 12,
+                    "type": "Navigation",
+                    "title": "Rentas",
+                    "key": "main-menu-rentas",
+                    "link": "/tienda",
+                    "icon": null
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Navigation [GET]
+Returns a specific Navigation.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Navigation][]
+
+### Updates a Navigation [PUT]
+Updates a specific Navigation
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "title": "Main menu",
+            "key": "main-menu",
+            "items": [
+                {
+                    "id": 10,
+                    "type": "Navigation",
+                    "title": "Tele para llevar",
+                    "key": "main-menu-tele-para-llevar",
+                    "link": "/tv/epg",
+                    "icon": null
+                },
+                {
+                    "id": 11,
+                    "type": "Navigation",
+                    "title": "Play",
+                    "key": "main-menu-play",
+                    "link": "/clubondemand",
+                    "icon": null
+                },
+                {
+                    "id": 12,
+                    "type": "Navigation",
+                    "title": "Rentas",
+                    "key": "main-menu-rentas",
+                    "link": "/tienda",
+                    "icon": null
+                }
+            ]
+        }
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Navigation][]
+
+### Deletes a Navigation [DELETE]
+Deletes a Navigation
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+## List Navigations [/cms/business/navigation/list]
+Returns all Navigation.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "Navigation",
+                "title": "Main menu",
+                "key": "main-menu",
+                "items": [
+                    {
+                        "id": 10,
+                        "type": "Navigation",
+                        "title": "Tele para llevar",
+                        "key": "main-menu-tele-para-llevar",
+                        "link": "/tv/epg",
+                        "icon": null
+                    },
+                    {
+                        "id": 11,
+                        "type": "Navigation",
+                        "title": "Play",
+                        "key": "main-menu-play",
+                        "link": "/clubondemand",
+                        "icon": null
+                    },
+                    {
+                        "id": 12,
+                        "type": "Navigation",
+                        "title": "Rentas",
+                        "key": "main-menu-rentas",
+                        "link": "/tienda",
+                        "icon": null
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "type": "Navigation",
+                "title": "Clubondemand",
+                "key": "clubondemand",
+                "items": [
+                    {
+                        "id": 20,
+                        "type": "Navigation",
+                        "title": "Inicio",
+                        "key": "clubondemand-inicio",
+                        "link": "/clubondemand",
+                        "icon": null
+                    },
+                    {
+                        "id": 21,
+                        "type": "Navigation",
+                        "title": "Películas",
+                        "key": "clubondemand-peliculas",
+                        "link": "/clubondemand/peliculas",
+                        "icon": null
+                    },
+                    {
+                        "id": 22,
+                        "type": "Navigation",
+                        "title": "Series de TV",
+                        "key": "clubondemand-series-de-tv",
+                        "link": "/clubondemand/series",
+                        "icon": null
+                    },
+                    {
+                        "id": 23,
+                        "type": "Navigation",
+                        "title": "Telenovelas",
+                        "key": "clubondemand-telenovelas",
+                        "link": "/clubondemand/telenovelas",
+                        "icon": null
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "type": "Navigation",
+                "title": "Tienda",
+                "key": "tienda",
+                "items": [
+                    {
+                        "id": 24,
+                        "type": "Navigation",
+                        "title": "Inicio",
+                        "key": "tienda-inicio",
+                        "link": "/tienda",
+                        "icon": null
+                    },
+                    {
+                        "id": 25,
+                        "type": "Navigation",
+                        "title": "Catálogo Completo",
+                        "key": "tienda-catalogo-completo",
+                        "link": "/tienda/peliculas",
+                        "icon": null
+                    }
+                ]
+            }
+        ]
+    }
+    ```
+
+### Retrieve all Navigations [GET]
+Retrieves all geoblockings.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [List Navigations][]
+
+### Creates a Navigation [POST]
+Creates a new Navigation.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "title": "Main menu",
+            "key": "main-menu",
+            "items": [
+                {
+                    "id": 10,
+                    "type": "Navigation",
+                    "title": "Tele para llevar",
+                    "key": "main-menu-tele-para-llevar",
+                    "link": "/tv/epg",
+                    "icon": null
+                },
+                {
+                    "id": 11,
+                    "type": "Navigation",
+                    "title": "Play",
+                    "key": "main-menu-play",
+                    "link": "/clubondemand",
+                    "icon": null
+                },
+                {
+                    "id": 12,
+                    "type": "Navigation",
+                    "title": "Rentas",
+                    "key": "main-menu-rentas",
+                    "link": "/tienda",
+                    "icon": null
+                }
+            ]
+        }
+    }
+    ```    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Navigation][]
+
 # Group Business - Parental Rating
 Represents actions against Parental Rating objects
 
@@ -1151,7 +1446,7 @@ Attempts to recover the user's password from the CMS
 # Group System - Navigation
 Represents actions against CMS Navigation objects
 
-## Navigation [/cms/system/navigation]
+## SystemNavigation [/cms/system/navigation]
 Returns the Navigation of the CMS.
 
 + Model (application/json)
@@ -1212,7 +1507,7 @@ Retrieves navigation menu for the CMS. This is simply an enumeration of the Enti
 
 + Response 200
 
-    [Navigation][]
+    [SystemNavigation][]
 
 # Group System - Publication
 Represents the publication workflow of the CMS
