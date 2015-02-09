@@ -7,8 +7,145 @@ Please be sure to validate your response examples with [JSONLint][1].
 
 [1]:  http://jsonlint.com/
 
+# Group Business - Country
+Represents actions against Country objects
 
-# Group Business - Distributors
+## Country [/cms/business/country/{id}]
+Represents a country
+
++ Parameters
+    + id (string, `1`) ... The id of the Country.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "parentId": 0,
+            "title": "United States",
+            "type": "Country"
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Country [GET]
+Returns a specific Country.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Country][]
+
+### Updates a Country [PUT]
+Updates a specific Country
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "parentId": 0,
+            "title": "United States",
+        }
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Country][]
+
+### Deletes a Country [DELETE]
+Deletes a country
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+## List Countries [/cms/business/country/list]
+Returns all Countries.
+
++ Model (application/json)
+
+    ```js
+        {
+            "data": [
+                {
+                    "id": 1,
+                    "parentId": 0,
+                    "title": "United States",
+                    "type": "Country"
+                },
+                {
+                    "id": 2,
+                    "parentId": 0,
+                    "title": "México",
+                    "type": "Country"
+                }
+            ],
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve all Countries [GET]
+Retrieves all countries.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [List Countries][]
+
+### Creates a Country [POST]
+Creates a new Country.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "parentId": 0,
+            "title": "United States",
+        }
+    }
+    ```    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Country][]
+
+# Group Business - Distributor
 Represents actions against Distributor objects
 
 ## Distributor [/cms/business/distributor/{id}]
@@ -978,7 +1115,7 @@ Retrieve global history across all users, ordered by last action date descending
     ```
 
 
-# Group System - Users
+# Group System - User
 Represents actions against CMS User objects
 
 ## User [/cms/system/user/{id}]
