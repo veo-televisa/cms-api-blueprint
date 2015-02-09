@@ -51,6 +51,44 @@ Returns a specific Distributor.
 
     [Distributor][]
 
+### Updates a Distributor [PUT]
+Updates a specific Distributor
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "name": "televisa.networks.mx",
+            "code": "televisa.networks.mx",
+            "contact": "Juan Perez"
+        }
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Distributor][]
+
+### Deletes a Distributor [DELETE]
+Deletes a distributor
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
 ## List Distributors [/cms/business/distributor/list]
 Returns all Distributors.
 
@@ -97,6 +135,30 @@ Retrieves all distributors.
 + Response 200
 
     [List Distributors][]
+
+### Creates a Distributor [POST]
+Creates a new Distributor.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "name": "televisa.networks.mx",
+            "code": "televisa.networks.mx",
+            "contact": "Juan Perez"
+        }
+    }
+    ```    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Distributor][]
 
 # Group Business - Person
 Represents actions against Person objects
@@ -151,6 +213,55 @@ Returns a specific Person.
 + Response 200
 
     [Person][]
+
+### Updates a Person [PUT]
+Updates a specific Person
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "communicationName": "Helena Bonham Carter",
+            "firstName": "Helena Bonham",
+            "familyName": "Carter",
+            "characterName": "Elpidio Valdez",
+            "characterImage": {
+                "id": 1,
+                "alt": "Test alt value",
+                "contentType": "image/png",
+                "height": 126,
+                "width": 224,
+                "size": 30827,
+                "url": "https://scablevision-a.akamaihd.net/prod/Picture/C_1_Picture_6046_profile152Image.png"
+            },
+            "role": "Actor",
+            "asset": 3
+        }
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Person][]
+
+### Deletes a Person [DELETE]
+Deletes a Person
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
 
 ## List People [/cms/business/people]
 Returns all People.
@@ -215,6 +326,42 @@ Retrieves all People.
     [List People][]
 
 
+### Creates a Person [POST]
+Creates a new Person in the CMS.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "communicationName": "Helena Bonham Carter",
+            "firstName": "Helena Bonham",
+            "familyName": "Carter",
+            "characterName": "Elpidio Valdez",
+            "characterImage": {
+                "id": 1,
+                "alt": "Test alt value",
+                "contentType": "image/png",
+                "height": 126,
+                "width": 224,
+                "size": 30827,
+                "url": "https://scablevision-a.akamaihd.net/prod/Picture/C_1_Picture_6046_profile152Image.png"
+            },
+            "role": "Actor",
+            "asset": 3
+        }
+    }
+    ```    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+
+    [Person][]
+
 # Group Business - Studio
 Represents actions against Studio objects
 
@@ -255,6 +402,42 @@ Returns a specific Studio.
 + Response 200
 
     [Studio][]
+
+### Updates a Studio [PUT]
+Updates a specific Studio
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "name": "FOX",
+            "code": "FOX"
+        }
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Studio][]
+
+### Deletes a Studio [DELETE]
+Deletes a studio
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
 
 ## List Studios [/cms/business/studio/list]
 Returns all Studios.
@@ -300,6 +483,28 @@ Retrieves all Studios.
 
     [List Studios][]
 
+### Create a Studio [POST]
+Creates a new Studio in the CMS
+
++ Request
+    
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "name": "FOX",
+            "code": "FOX"
+        }
+    }
+    ```
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 201
+
+    [Studio][]
 
 # Group System - Authentication
 Represents actions against CMS Navigation objects
