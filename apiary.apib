@@ -568,6 +568,149 @@ Creates a new Distributor.
     
     [Distributor][]
 
+# Group Business - Parental Rating
+Represents actions against Parental Rating objects
+
+## Parental Rating [/cms/business/parental-rating/{id}]
+Represents a Parental Rating
+
++ Parameters
+    + id (string, `1`) ... The id of the Parental Rating.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "title": "G",
+            "code": "G",
+            "level": 0,
+            "type": "ParentalRating"
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Parental Rating [GET]
+Returns a specific Parental Rating.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Parental Rating][]
+
+### Updates a Parental Rating [PUT]
+Updates a specific Parental Rating
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "title": "G",
+            "code": "G",
+            "level": 0
+        }
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Parental Rating][]
+
+### Deletes a Parental Rating [DELETE]
+Deletes a Parental Rating
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+## List Parental Ratings [/cms/business/parental-rating/list]
+Returns all Parental Rating.
+
++ Model (application/json)
+
+    ```js
+        {
+            "data": [
+                {
+                    "id": 1,
+                    "title": "G",
+                    "code": "G",
+                    "level": 0,
+                    "type": "ParentalRating"
+                },
+                {
+                  "id": 2,
+                  "title": "PG",
+                  "code": "PG",
+                  "level": 1,
+                  "type": "ParentalRating"
+                }
+            ],
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve all Parental Ratings [GET]
+Retrieves all geoblockings.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [List Parental Ratings][]
+
+### Creates a Parental Rating [POST]
+Creates a new Parental Rating.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "title": "G",
+            "code": "G",
+            "level": 0
+        }
+    }
+    ```    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Parental Rating][]
+
 # Group Business - Person
 Represents actions against Person objects
 
