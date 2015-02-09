@@ -145,6 +145,144 @@ Creates a new Country.
     
     [Country][]
 
+# Group Business - Genre
+Represents actions against Genre objects
+
+## Genre [/cms/business/genre/{id}]
+Represents a genre
+
++ Parameters
+    + id (string, `1`) ... The id of the Genre.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 3,
+            "parentId": 0,
+            "title": "Action",
+            "type": "Genre"
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Genre [GET]
+Returns a specific Genre.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Genre][]
+
+### Updates a Genre [PUT]
+Updates a specific Genre
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "parentId": 0,
+            "title": "Action",
+        }
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Genre][]
+
+### Deletes a Genre [DELETE]
+Deletes a Genre
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+## List Genres [/cms/business/genre/list]
+Returns all Genres.
+
++ Model (application/json)
+
+    ```js
+        {
+            "data": [
+                {
+                    "id": 3,
+                    "parentId": 0,
+                    "title": "Action",
+                    "type": "Genre"
+                },
+                {
+                    "id": 4,
+                    "parentId": 0,
+                    "title": "Spanish",
+                    "type": "Genre"
+                }
+            ],
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve all Genres [GET]
+Retrieves all genres.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [List Genres][]
+
+### Creates a Genre [POST]
+Creates a new Genre.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "parentId": 0,
+            "title": "Action",
+        }
+    }
+    ```    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Genre][]
+
 # Group Business - Distributor
 Represents actions against Distributor objects
 
