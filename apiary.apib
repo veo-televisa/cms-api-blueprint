@@ -283,6 +283,139 @@ Creates a new Genre.
     
     [Genre][]
 
+# Group Business - Geoblocking
+Represents actions against Geoblocking objects
+
+## Geoblocking [/cms/business/geoblocking/{id}]
+Represents a Geoblocking
+
++ Parameters
+    + id (string, `1`) ... The id of the Geoblocking.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "title": "Guatemala",
+            "type": "Geoblocking"
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Geoblocking [GET]
+Returns a specific Geoblocking.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Geoblocking][]
+
+### Updates a Geoblocking [PUT]
+Updates a specific Geoblocking
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "title": "Guatemala",
+        }
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Geoblocking][]
+
+### Deletes a Geoblocking [DELETE]
+Deletes a Geoblocking
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+## List Geoblockings [/cms/business/geoblocking/list]
+Returns all Geoblocking.
+
++ Model (application/json)
+
+    ```js
+        {
+            "data": [
+                {
+                    "id": 1,
+                    "title": "Guatemala",
+                    "type": "Geoblocking"
+                },
+                {
+                    "id": 2,
+                    "title": "Italy",
+                    "type": "Geoblocking"
+                }
+            ],
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve all Geoblockings [GET]
+Retrieves all geoblockings.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [List Geoblockings][]
+
+### Creates a Geoblocking [POST]
+Creates a new Geoblocking.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "title": "Guatemala",
+        }
+    }
+    ```    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Geoblocking][]
+
 # Group Business - Distributor
 Represents actions against Distributor objects
 
