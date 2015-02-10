@@ -145,6 +145,158 @@ Creates a new Country.
     
     [Country][]
 
+# Group Business - Distributor
+Represents actions against Distributor objects
+
+## Distributor [/cms/business/distributor/{id}]
+Represents a distributor
+
++ Parameters
+    + id (string, `1`) ... The id of the Distributor.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "type": "Distributor",
+            "status": "published",
+            "name": "televisa.networks.mx",
+            "code": "televisa.networks.mx",
+            "contact": "Juan Perez"
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve a Distributor [GET]
+Returns a specific Distributor.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Distributor][]
+
+### Updates a Distributor [PUT]
+Updates a specific Distributor
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "name": "televisa.networks.mx",
+            "code": "televisa.networks.mx",
+            "contact": "Juan Perez"
+        }
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Distributor][]
+
+### Deletes a Distributor [DELETE]
+Deletes a distributor
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+## List Distributors [/cms/business/distributor/list]
+Returns all Distributors.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "Distributor",
+                "status": "published",
+                "name": "televisa.networks.mx",
+                "code": "televisa.networks.mx",
+                "contact": "Juan Perez"
+            },
+            {
+                "id": 2,
+                "type": "Distributor",
+                "status": "published",
+                "name": "televisa.networks.mx",
+                "code": "televisa.networks.mx",
+                "contact": "Pedro Perez"
+            }
+        ],
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve all Distributors [GET]
+Retrieves all distributors.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [List Distributors][]
+
+### Creates a Distributor [POST]
+Creates a new Distributor.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "name": "televisa.networks.mx",
+            "code": "televisa.networks.mx",
+            "contact": "Juan Perez"
+        }
+    }
+    ```    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Distributor][]
+
 # Group Business - Genre
 Represents actions against Genre objects
 
@@ -403,7 +555,7 @@ Creates a new Geoblocking.
     ```js
     {
         "data": {
-            "title": "Guatemala",
+            "title": "Guatemala"
         }
     }
     ```    
@@ -416,37 +568,99 @@ Creates a new Geoblocking.
     
     [Geoblocking][]
 
-# Group Business - Distributor
-Represents actions against Distributor objects
+# Group Business - Picture
+Represents actions against Picture objects
 
-## Distributor [/cms/business/distributor/{id}]
-Represents a distributor
+## Picture [/cms/business/picture/{id}]
+Represents a Picture
 
 + Parameters
-    + id (string, `1`) ... The id of the Distributor.
+    + id (string, `1`) ... The id of the Picture.
 
 + Model (application/json)
 
     ```js
     {
         "data": {
+            "type": "Picture",
             "id": 1,
-            "type": "Distributor",
             "status": "published",
-            "name": "televisa.networks.mx",
-            "code": "televisa.networks.mx",
-            "contact": "Juan Perez"
+            "createdAt": "2014-03-28 00:25:44",
+            "modifiedAt": "2014-03-28 00:25:46",
+            "assetId": "11173",
+            "checksum": "",
+            "credits": "Tom Smith",
+            "externalPictureId": "TELE0000005493762057",
+            "filesize": "0",
+            "orientation": "portrait",
+            "pictureType": "Poster",
+            "providerId": "televisa.networks.mx",
+            "studio": "MyStudio",
+            "title": "",
+            "userId": "3",
+            "versions": [
+                {
+                    "profile": "webLandscapeSmall",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                    "width": "192",
+                    "height": "108"
+                },
+                {
+                    "profile": "webLandscapeMedium",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "224",
+                    "height": "126"
+                },
+                {
+                    "profile": "webLandscapeLarge",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "384",
+                    "height": "216"
+                },
+                {
+                    "profile": "mobileLandscapeSmall",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "96",
+                    "height": "54"
+                },
+                {
+                    "profile": "mobileLandscapeMedium",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "160",
+                    "height": "90"
+                },
+                {
+                    "profile": "mobileLandscapeLarge",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "320",
+                    "height": "180"
+                },
+                {
+                    "profile": "mobileRetinaLandscapeSmall",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "192",
+                    "height": "108"
+                },
+                {
+                    "profile": "mobileRetinaLandscapeMedium",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "320",
+                    "height": "180"
+                },
+                {
+                    "profile": "mobileRetinaLandscapeLarge",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "640",
+                    "height": "360"
+                }
+            ]
         },
-        "messages": [
-            {
-                "success": "Data successfully retrieved"
-            }
-        ]
+        "messages": []
     }
     ```
 
-### Retrieve a Distributor [GET]
-Returns a specific Distributor.
+### Retrieve a Picture [GET]
+Returns a specific Picture.
 
 + Request
 
@@ -457,10 +671,10 @@ Returns a specific Distributor.
 
 + Response 200
 
-    [Distributor][]
+    [Picture][]
 
-### Updates a Distributor [PUT]
-Updates a specific Distributor
+### Updates a Picture [PUT]
+Updates a specific Picture
 
 + Request
 
@@ -468,9 +682,75 @@ Updates a specific Distributor
     {
         "data": {
             "status": "published",
-            "name": "televisa.networks.mx",
-            "code": "televisa.networks.mx",
-            "contact": "Juan Perez"
+            "createdAt": "2014-03-28 00:25:44",
+            "modifiedAt": "2014-03-28 00:25:46",
+            "assetId": "11173",
+            "checksum": "",
+            "credits": "Tom Smith",
+            "externalPictureId": "TELE0000005493762057",
+            "filesize": "0",
+            "orientation": "portrait",
+            "pictureType": "Poster",
+            "providerId": "televisa.networks.mx",
+            "studio": "MyStudio",
+            "title": "",
+            "userId": "3",
+            "versions": [
+                {
+                    "profile": "webLandscapeSmall",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                    "width": "192",
+                    "height": "108"
+                },
+                {
+                    "profile": "webLandscapeMedium",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "224",
+                    "height": "126"
+                },
+                {
+                    "profile": "webLandscapeLarge",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "384",
+                    "height": "216"
+                },
+                {
+                    "profile": "mobileLandscapeSmall",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "96",
+                    "height": "54"
+                },
+                {
+                    "profile": "mobileLandscapeMedium",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "160",
+                    "height": "90"
+                },
+                {
+                    "profile": "mobileLandscapeLarge",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "320",
+                    "height": "180"
+                },
+                {
+                    "profile": "mobileRetinaLandscapeSmall",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "192",
+                    "height": "108"
+                },
+                {
+                    "profile": "mobileRetinaLandscapeMedium",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "320",
+                    "height": "180"
+                },
+                {
+                    "profile": "mobileRetinaLandscapeLarge",
+                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    "width": "640",
+                    "height": "360"
+                }
+            ]
         }
     }
     ```
@@ -482,10 +762,10 @@ Updates a specific Distributor
 
 + Response 200
 
-    [Distributor][]
+    [Picture][]
 
-### Deletes a Distributor [DELETE]
-Deletes a distributor
+### Deletes a Picture [DELETE]
+Deletes a Picture
 
 + Request
 
@@ -497,8 +777,8 @@ Deletes a distributor
 + Response 204
 
 
-## List Distributors [/cms/business/distributor/list]
-Returns all Distributors.
+## List Pictures [/cms/business/picture/list]
+Returns all Pictures.
 
 + Model (application/json)
 
@@ -506,32 +786,86 @@ Returns all Distributors.
     {
         "data": [
             {
+                "type": "Picture",
                 "id": 1,
-                "type": "Distributor",
                 "status": "published",
-                "name": "televisa.networks.mx",
-                "code": "televisa.networks.mx",
-                "contact": "Juan Perez"
-            },
-            {
-                "id": 2,
-                "type": "Distributor",
-                "status": "published",
-                "name": "televisa.networks.mx",
-                "code": "televisa.networks.mx",
-                "contact": "Pedro Perez"
-            }
+                "createdAt": "2014-03-28 00:25:44",
+                "modifiedAt": "2014-03-28 00:25:46",
+                "assetId": "11173",
+                "checksum": "",
+                "credits": "Tom Smith",
+                "externalPictureId": "TELE0000005493762057",
+                "filesize": "0",
+                "orientation": "portrait",
+                "pictureType": "Poster",
+                "providerId": "televisa.networks.mx",
+                "studio": "MyStudio",
+                "title": "",
+                "userId": "3",
+                "versions": [
+                    {
+                        "profile": "webLandscapeSmall",
+                        "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                        "width": "192",
+                        "height": "108"
+                    },
+                    {
+                        "profile": "webLandscapeMedium",
+                        "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                        "width": "224",
+                        "height": "126"
+                    },
+                    {
+                        "profile": "webLandscapeLarge",
+                        "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                        "width": "384",
+                        "height": "216"
+                    },
+                    {
+                        "profile": "mobileLandscapeSmall",
+                        "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                        "width": "96",
+                        "height": "54"
+                    },
+                    {
+                        "profile": "mobileLandscapeMedium",
+                        "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                        "width": "160",
+                        "height": "90"
+                    },
+                    {
+                        "profile": "mobileLandscapeLarge",
+                        "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                        "width": "320",
+                        "height": "180"
+                    },
+                    {
+                        "profile": "mobileRetinaLandscapeSmall",
+                        "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                        "width": "192",
+                        "height": "108"
+                    },
+                    {
+                        "profile": "mobileRetinaLandscapeMedium",
+                        "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                        "width": "320",
+                        "height": "180"
+                    },
+                    {
+                        "profile": "mobileRetinaLandscapeLarge",
+                        "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                        "width": "640",
+                        "height": "360"
+                    }
+                ]
+                }
         ],
-        "messages": [
-            {
-                "success": "Data successfully retrieved"
-            }
-        ]
+        "messages": []
     }
     ```
 
-### Retrieve all Distributors [GET]
-Retrieves all distributors.
+### Retrieve all Pictures [GET]
+Retrieves all pictures.
 
 + Request
 
@@ -542,10 +876,10 @@ Retrieves all distributors.
 
 + Response 200
 
-    [List Distributors][]
+    [List Pictures][]
 
-### Creates a Distributor [POST]
-Creates a new Distributor.
+### Creates a Picture [POST]
+Creates a new Picture.
 
 + Request
 
@@ -553,12 +887,78 @@ Creates a new Distributor.
     {
         "data": {
             "status": "published",
-            "name": "televisa.networks.mx",
-            "code": "televisa.networks.mx",
-            "contact": "Juan Perez"
+            "createdAt": "2014-03-28 00:25:44",
+            "modifiedAt": "2014-03-28 00:25:46",
+            "assetId": "11173",
+            "checksum": "",
+            "credits": "Tom Smith",
+            "externalPictureId": "TELE0000005493762057",
+            "filesize": "0",
+            "orientation": "portrait",
+            "pictureType": "Poster",
+            "providerId": "televisa.networks.mx",
+            "studio": "MyStudio",
+            "title": "",
+            "userId": "3",
+            "versions": [
+                {
+                    profile: "webLandscapeSmall",
+                    link: "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                    width: "192",
+                    height: "108"
+                },
+                {
+                    profile: "webLandscapeMedium",
+                    link: "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    width: "224",
+                    height: "126"
+                },
+                {
+                    profile: "webLandscapeLarge",
+                    link: "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    width: "384",
+                    height: "216"
+                },
+                {
+                    profile: "mobileLandscapeSmall",
+                    link: "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    width: "96",
+                    height: "54"
+                },
+                {
+                    profile: "mobileLandscapeMedium",
+                    link: "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    width: "160",
+                    height: "90"
+                },
+                {
+                    profile: "mobileLandscapeLarge",
+                    link: "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    width: "320",
+                    height: "180"
+                },
+                {
+                    profile: "mobileRetinaLandscapeSmall",
+                    link: "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    width: "192",
+                    height: "108"
+                },
+                {
+                    profile: "mobileRetinaLandscapeMedium",
+                    link: "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    width: "320",
+                    height: "180"
+                },
+                {
+                    profile: "mobileRetinaLandscapeLarge",
+                    link: "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                    width: "640",
+                    height: "360"
+                }
+            ]
         }
     }
-    ```    
+    ```
     + Headers
             
             X-Auth-Token: qwerty12345
@@ -566,7 +966,8 @@ Creates a new Distributor.
 
 + Response 201
     
-    [Distributor][]
+    [Picture][]
+
 
 # Group Business - Navigation
 Represents actions against Navigation objects
@@ -1207,6 +1608,8 @@ Creates a new Person in the CMS.
 + Response 201
 
     [Person][]
+
+
 
 # Group Business - Studio
 Represents actions against Studio objects
@@ -1981,3 +2384,4 @@ Creates a new User in the CMS.
         }
     }
     ```
+
