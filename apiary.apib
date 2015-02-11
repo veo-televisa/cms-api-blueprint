@@ -1755,6 +1755,283 @@ Creates a new Studio in the CMS
 
     [Studio][]
 
+# Group Business - Video
+Represents actions against Video objects
+
+## Video [/cms/business/video/{id}]
+Represents a Video
+
++ Parameters
+    + id (string, `1`) ... The id of the Video.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "type": "Video",
+            "id": 4533,
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "asset": {
+                "id": 4754,
+                "title": "Operación Dragón"
+            },
+            "audioLanguage": {
+                "id": 3,
+                "title": "English"
+            },
+            "audioType": "Stereo",
+            "checksum": "f35494cf15c017a6e8338e39fc0bf027",
+            "dataCenterOrigin": "Cablevision",
+            "definition": "SD",
+            "externalVideoAssetId": "ASST0000000001033132",
+            "duration": "01:42:29",
+            "files": [
+                {
+                   "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
+                   "type": "HDS" 
+                },
+                {
+                   "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
+                   "type": "HLS" 
+                },
+                {
+                   "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
+                   "type": "SS" 
+                }
+            ],
+            "nominatedLength": "01:42",
+            "originalFilePath": "//192.168.101.108/ifs/prod_ingestion/harmonic/veo_4533.mpg",
+            "resolution": "480i",
+            "screenFormat": "Widescreen",
+            "userId": 3,
+            "videoType": "full",
+            "workflowTemplateGUID": "7e63ecfd-0305-4aba-bb88-1c35fdb18337"
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Video [GET]
+Returns a specific Video.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Video][]
+
+### Updates a Video [PUT]
+Updates a specific Video
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "asset": {
+                "id": 4754,
+                "title": "Operación Dragón"
+            }
+            "audioLanguage": {
+                "id": 3,
+                "title": "English"
+            },
+            "audioType": "Stereo",
+            "checksum": "f35494cf15c017a6e8338e39fc0bf027",
+            "dataCenterOrigin": "Cablevision",
+            "definition": "SD",
+            "externalVideoAssetId": "ASST0000000001033132",
+            "duration": "01:42:29",
+            "files": [
+                {
+                   "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
+                   "type": "HDS" 
+                },
+                {
+                   "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
+                   "type": "HLS" 
+                },
+                {
+                   "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
+                   "type": "SS" 
+                }
+            ],
+            "nominatedLength": "01:42",
+            "originalFilePath": "//192.168.101.108/ifs/prod_ingestion/harmonic/veo_4533.mpg",
+            "resolution": "480i",
+            "screenFormat": "Widescreen",
+            "userId": 3,
+            "videoType": full,
+            "workflowTemplateGUID": "7e63ecfd-0305-4aba-bb88-1c35fdb18337",
+        },
+        "messages": []
+    }
+    ```
+    
+    + Headers
+            
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Video][]
+
+### Deletes a Video [DELETE]
+Deletes a Video
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+## List Videos [/cms/business/videos]
+Returns all Videos.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                
+                "type": "Video",
+                "id": 4533,
+                "status": "published",
+                "createdAt": "2013-08-23 19:07:49",
+                "modifiedAt": "2014-08-07 02:50:31",
+                "asset": {
+                    "id": 4754,
+                    "title": "Operación Dragón"
+                },
+                "audioLanguage": {
+                    "id": 3,
+                    "title": "English"
+                },
+                "audioType": "Stereo",
+                "checksum": "f35494cf15c017a6e8338e39fc0bf027",
+                "dataCenterOrigin": "Cablevision",
+                "definition": "SD",
+                "externalVideoAssetId": "ASST0000000001033132",
+                "duration": "01:42:29",
+                "files": [
+                    {
+                       "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
+                       "type": "HDS" 
+                    },
+                    {
+                       "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
+                       "type": "HLS" 
+                    },
+                    {
+                       "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
+                       "type": "SS" 
+                    }
+                ],
+                "nominatedLength": "01:42",
+                "originalFilePath": "//192.168.101.108/ifs/prod_ingestion/harmonic/veo_4533.mpg",
+                "resolution": "480i",
+                "screenFormat": "Widescreen",
+                "userId": 3,
+                "videoType": "full",
+                "workflowTemplateGUID": "7e63ecfd-0305-4aba-bb88-1c35fdb18337"
+            }
+        ],
+        "messages": []
+    }
+    ```
+
+### Retrieve all Videos [GET]
+Retrieves all videos.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [List Videos][]
+
+### Creates a Video [POST]
+Creates a new Video.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "asset": {
+                "id": 4754,
+                "title": "Operación Dragón"
+            },
+            "audioLanguage": {
+                "id": 3,
+                "title": "English"
+            },
+            "audioType": "Stereo",
+            "checksum": "f35494cf15c017a6e8338e39fc0bf027",
+            "dataCenterOrigin": "Cablevision",
+            "definition": "SD",
+            "externalVideoAssetId": "ASST0000000001033132",
+            "duration": "01:42:29",
+            "files": [
+                {
+                   "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
+                   "type": "HDS" 
+                },
+                {
+                   "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
+                   "type": "HLS" 
+                },
+                {
+                   "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
+                   "type": "SS" 
+                }
+            ],
+            "nominatedLength": "01:42",
+            "originalFilePath": "//192.168.101.108/ifs/prod_ingestion/harmonic/veo_4533.mpg",
+            "resolution": "480i",
+            "screenFormat": "Widescreen",
+            "userId": 3,
+            "videoType": "full",
+            "workflowTemplateGUID": "7e63ecfd-0305-4aba-bb88-1c35fdb18337"
+        },
+        "messages": []
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Video][]
+
 # Group System - Authentication
 Represents actions against CMS Navigation objects
 
@@ -2384,4 +2661,3 @@ Creates a new User in the CMS.
         }
     }
     ```
-
