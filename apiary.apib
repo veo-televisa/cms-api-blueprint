@@ -7,6 +7,466 @@ Please be sure to validate your response examples with [JSONLint][1].
 
 [1]:  http://jsonlint.com/
 
+# Group Business - Asset
+Represents actions against Asset objects
+
+## Asset [/cms/business/asset/{id}]
+Represents a Asset
+
++ Parameters
+    + id (string, `1`) ... The id of the Asset.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "type": "Asset",
+            "assetType": "Movie",
+            "id": 4754,
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "title": "Operación Dragón",
+            "titleSeo": "Operación Dragón",
+            "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+            "synopsisLong": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo. Es la película que tras estrenarse en Hong Kong, dio a conocer a Bruce Lee en Estados Unidos.",
+            "keywords": "dragon",
+            "duration": "01:42",
+            "startYear": 1973,
+            "endYear": 1980,
+            "externalBillingId": "000557397",
+            "parentalRating": {
+                "id": 9,
+                "title": "R"
+            },
+            "mainGenre": {
+                "id": 111,
+                "title": "Acción y Aventura"
+            },
+            "genres": [
+                {
+                    "id": 111,
+                    "title": "Acción y Aventura"
+                },
+                {
+                    "id": 112,
+                    "title": "Dibujos Animados"
+                }
+            ],
+            "distributor": {
+                "id": 12,
+                "name": "Warner Bros."
+            },
+            "studio": {
+                "id": 22,
+                "name": "WDD"
+            },
+            "people": [
+                {
+                    "id": 7312,
+                    "role": "Actor",
+                    "communicationName": "John Saxon"
+                },
+                {
+                    "id": 7313,
+                    "role": "Actor",
+                    "communicationName": "Bruce Lee"
+                },
+                {
+                    "id": 7314,
+                    "role": "Director",
+                    "communicationName": "Robert Clouse"
+                },
+                {
+                    "id": 15010,
+                    "role": "Actor",
+                    "communicationName": "Jim Kelly"
+                },
+                {
+                    "id": 15011,
+                    "role": "Actor",
+                    "communicationName": "Ahna Capri"
+                }
+            ],
+            "pictures": [
+                {
+                    "type": "Picture",
+                    "id": 2853,
+                    "status": "published",
+                    "createdAt": "2014-03-28 00:25:44",
+                    "modifiedAt": "2014-03-28 00:25:46",
+                    "pictureType": "Poster",
+                    "title": ""
+                }
+            ],
+            "videos": [
+                {
+                    
+                    "type": "Video",
+                    "id": 4533,
+                    "status": "published",
+                    "createdAt": "2013-08-23 19:07:49",
+                    "modifiedAt": "2014-08-07 02:50:31",
+                    "definition": "SD",
+                    "duration": "01:42:29",
+                    "userId": 3
+                }
+            ],
+            "publicationEvent": {
+                "type": "PublicationEvent",
+                "id": 18563,
+                "status": "published",
+                "createdAt": "2013-08-23 19:07:49",
+                "modifiedAt": "2014-08-07 02:50:31",
+                "startDate": "2014-04-09 06:00:00",
+                "endDate": "2015-03-31 05:59:00",
+                "billingType": "rental",
+                "price": "25.00",
+                "userId": 3
+            }
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve an Asset [GET]
+Returns a specific Asset.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Asset][]
+
+### Updates a Asset [PUT]
+Updates a specific Asset
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "assetType": "Movie",
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "title": "Operación Dragón",
+            "titleSeo": "Operación Dragón",
+            "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+            "synopsisLong": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo. Es la película que tras estrenarse en Hong Kong, dio a conocer a Bruce Lee en Estados Unidos.",
+            "keywords": "dragon",
+            "duration": "01:42",
+            "startYear": 1973,
+            "endYear": 1980,
+            "externalBillingId": "000557397",
+            "parentalRating": {
+                "id": 9,
+                "title": "R"
+            },
+            "mainGenre": {
+                "id": 111,
+                "title": "Acción y Aventura"
+            },
+            "genres": [
+                {
+                    "id": 111,
+                    "title": "Acción y Aventura"
+                },
+                {
+                    "id": 112,
+                    "title": "Dibujos Animados"
+                }
+            ],
+            "distributor": {
+                "id": 12,
+                "name": "Warner Bros."
+            },
+            "studio": {
+                "id": 22,
+                "name": "WDD"
+            },
+            "people": [
+                {
+                    "id": 7312,
+                    "role": "Actor",
+                    "communicationName": "John Saxon"
+                },
+                {
+                    "id": 7313,
+                    "role": "Actor",
+                    "communicationName": "Bruce Lee"
+                },
+                {
+                    "id": 7314,
+                    "role": "Director",
+                    "communicationName": "Robert Clouse"
+                },
+                {
+                    "id": 15010,
+                    "role": "Actor",
+                    "communicationName": "Jim Kelly"
+                },
+                {
+                    "id": 15011,
+                    "role": "Actor",
+                    "communicationName": "Ahna Capri"
+                }
+            ],
+            "pictures": [
+                {
+                    "type": "Picture",
+                    "id": 2853,
+                    "status": "published",
+                    "createdAt": "2014-03-28 00:25:44",
+                    "modifiedAt": "2014-03-28 00:25:46",
+                    "pictureType": "Poster",
+                    "title": ""
+                }
+            ],
+            "videos": [
+                {
+                    
+                    "type": "Video",
+                    "id": 4533,
+                    "status": "published",
+                    "createdAt": "2013-08-23 19:07:49",
+                    "modifiedAt": "2014-08-07 02:50:31",
+                    "definition": "SD",
+                    "duration": "01:42:29",
+                    "userId": 3
+                }
+            ],
+            "publicationEvent": {
+                "type": "PublicationEvent",
+                "id": 18563,
+                "status": "published",
+                "createdAt": "2013-08-23 19:07:49",
+                "modifiedAt": "2014-08-07 02:50:31",
+                "startDate": "2014-04-09 06:00:00",
+                "endDate": "2015-03-31 05:59:00",
+                "billingType": "rental",
+                "price": "25.00",
+                "userId": 3
+            }
+        },
+        "messages": []
+    }
+    ```
+    
+    + Headers
+            
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Asset][]
+
+### Deletes an Asset [DELETE]
+Deletes an Asset
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+## List Assets [/cms/business/assets]
+Returns all Assets.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [ 
+            {
+                "type": "Asset",
+                "assetType": "Movie",
+                "id": 4754,
+                "status": "published",
+                "createdAt": "2013-08-23 19:07:49",
+                "modifiedAt": "2014-08-07 02:50:31",
+                "title": "Operación Dragón",
+                "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                "duration": "01:42",
+                "pictures": [
+                    {
+                        "type": "Picture",
+                        "id": 2853,
+                        "status": "published",
+                        "createdAt": "2014-03-28 00:25:44",
+                        "modifiedAt": "2014-03-28 00:25:46",
+                        "pictureType": "Poster",
+                        "title": ""
+                    }
+                ],
+                "publicationEvent": {
+                    "type": "PublicationEvent",
+                    "id": 18563,
+                    "status": "published",
+                    "createdAt": "2013-08-23 19:07:49",
+                    "modifiedAt": "2014-08-07 02:50:31",
+                    "startDate": "2014-04-09 06:00:00",
+                    "endDate": "2015-03-31 05:59:00",
+                    "billingType": "rental",
+                    "price": "25.00",
+                    "userId": 3
+                }
+            }
+        ],
+        "messages": []
+    }
+    ```
+
+### Retrieve all Assets [GET]
+Retrieves all Assets.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [List Assets][]
+
+### Creates an Asset [POST]
+Creates a new Asset.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "assetType": "Movie",
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "title": "Operación Dragón",
+            "titleSeo": "Operación Dragón",
+            "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+            "synopsisLong": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo. Es la película que tras estrenarse en Hong Kong, dio a conocer a Bruce Lee en Estados Unidos.",
+            "keywords": "dragon",
+            "duration": "01:42",
+            "startYear": 1973,
+            "endYear": 1980,
+            "externalBillingId": "000557397",
+            "parentalRating": {
+                "id": 9,
+                "title": "R"
+            },
+            "mainGenre": {
+                "id": 111,
+                "title": "Acción y Aventura"
+            },
+            "genres": [
+                {
+                    "id": 111,
+                    "title": "Acción y Aventura"
+                },
+                {
+                    "id": 112,
+                    "title": "Dibujos Animados"
+                }
+            ],
+            "distributor": {
+                "id": 12,
+                "name": "Warner Bros."
+            },
+            "studio": {
+                "id": 22,
+                "name": "WDD"
+            },
+            "people": [
+                {
+                    "id": 7312,
+                    "role": "Actor",
+                    "communicationName": "John Saxon"
+                },
+                {
+                    "id": 7313,
+                    "role": "Actor",
+                    "communicationName": "Bruce Lee"
+                },
+                {
+                    "id": 7314,
+                    "role": "Director",
+                    "communicationName": "Robert Clouse"
+                },
+                {
+                    "id": 15010,
+                    "role": "Actor",
+                    "communicationName": "Jim Kelly"
+                },
+                {
+                    "id": 15011,
+                    "role": "Actor",
+                    "communicationName": "Ahna Capri"
+                }
+            ],
+            "pictures": [
+                {
+                    "type": "Picture",
+                    "id": 2853,
+                    "status": "published",
+                    "createdAt": "2014-03-28 00:25:44",
+                    "modifiedAt": "2014-03-28 00:25:46",
+                    "pictureType": "Poster",
+                    "title": ""
+                }
+            ],
+            "videos": [
+                {
+                    
+                    "type": "Video",
+                    "id": 4533,
+                    "status": "published",
+                    "createdAt": "2013-08-23 19:07:49",
+                    "modifiedAt": "2014-08-07 02:50:31",
+                    "definition": "SD",
+                    "duration": "01:42:29",
+                    "userId": 3
+                }
+            ],
+            "publicationEvent": {
+                "type": "PublicationEvent",
+                "id": 18563,
+                "status": "published",
+                "createdAt": "2013-08-23 19:07:49",
+                "modifiedAt": "2014-08-07 02:50:31",
+                "startDate": "2014-04-09 06:00:00",
+                "endDate": "2015-03-31 05:59:00",
+                "billingType": "rental",
+                "price": "25.00",
+                "userId": 3
+            }
+        },
+        "messages": []
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Asset][]
+
 # Group Business - Country
 Represents actions against Country objects
 
@@ -2459,4 +2919,3 @@ Creates a new User in the CMS.
         }
     }
     ```
-
