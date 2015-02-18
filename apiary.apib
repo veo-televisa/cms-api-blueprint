@@ -467,6 +467,306 @@ Creates a new Asset.
     
     [Asset][]
 
+# Group Business - Channel
+Represents actions against Channel objects
+
+## Channel [/cms/business/channel/{id}]
+Represents a Channel
+
++ Parameters
+    + id (string, `1`) ... The id of the Channel.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "type": "Channel",
+            "channelType": "LinearChannel",
+            "id": 16,
+            "status": "published",
+            "createdAt": "2014-03-28 00:25:44",
+            "modifiedAt": "2014-03-28 00:25:46",
+            "userId": "3",
+            "title": "Unicable",
+            "affiliate": "Cablevision",
+            "callSign": "UNIC",
+            "number": 203,
+            "packageCodes": [
+                "mini-basico",
+                "basico",
+                "familiar",
+                "premium-hbo",
+                "premium-moviecity",
+                "LIVETV",
+                "MIN-B",
+                "MODULAR",
+                "BASICO",
+                "TOTAL HD",
+                "packTV",
+                "packHD",
+                "packHDMax",
+                "2",
+                "3",
+                "5"
+            ],
+            "restricted": false,
+            "streamName": "CV_Unicable",
+            "previewUrl": "http://pmorigin.veo.tv/Content/SS/Live/Channel(CV_Unicable).isml",
+            "hlsStreamName": null,
+            "hlsLiveAkamaiId": 206354,
+            "hasSearchResultOverlay": true,
+            "hasASpotOverlay": true,
+            "epgDescription": "Unicable",
+            "epgOrder": 6,
+            "images": [
+                {
+                    "type": "epgTimeline",
+                    "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                    "width": 31,
+                    "height": 47
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Channel [GET]
+Returns a specific Channel.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Channel][]
+
+### Updates a Channel [PUT]
+Updates a specific Channel
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "channelType": "LinearChannel",
+            "status": "published",
+            "createdAt": "2014-03-28 00:25:44",
+            "modifiedAt": "2014-03-28 00:25:46",
+            "userId": "3",
+            "title": "Unicable",
+            "affiliate": "Cablevision",
+            "callSign": "UNIC",
+            "number": 203,
+            "packageCodes": [
+                "mini-basico",
+                "basico",
+                "familiar",
+                "premium-hbo",
+                "premium-moviecity",
+                "LIVETV",
+                "MIN-B",
+                "MODULAR",
+                "BASICO",
+                "TOTAL HD",
+                "packTV",
+                "packHD",
+                "packHDMax",
+                "2",
+                "3",
+                "5"
+            ],
+            "restricted": false,
+            "streamName": "CV_Unicable",
+            "previewUrl": "http://pmorigin.veo.tv/Content/SS/Live/Channel(CV_Unicable).isml",
+            "hlsStreamName": null,
+            "hlsLiveAkamaiId": 206354,
+            "hasSearchResultOverlay": true,
+            "hasASpotOverlay": true,
+            "epgDescription": "Unicable",
+            "epgOrder": 6,
+            "images": [
+                {
+                    "type": "epgTimeline",
+                    "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                    "width": 31,
+                    "height": 47
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Channel][]
+
+### Deletes a Channel [DELETE]
+Deletes a Channel
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+## List Channels [/cms/business/channels]
+Returns all Channels.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "type": "Channel",
+                "channelType": "LinearChannel",
+                "id": 16,
+                "status": "published",
+                "createdAt": "2014-03-28 00:25:44",
+                "modifiedAt": "2014-03-28 00:25:46",
+                "userId": "3",
+                "title": "Unicable",
+                "affiliate": "Cablevision",
+                "callSign": "UNIC",
+                "number": 203,
+                "packageCodes": [
+                    "mini-basico",
+                    "basico",
+                    "familiar",
+                    "premium-hbo",
+                    "premium-moviecity",
+                    "LIVETV",
+                    "MIN-B",
+                    "MODULAR",
+                    "BASICO",
+                    "TOTAL HD",
+                    "packTV",
+                    "packHD",
+                    "packHDMax",
+                    "2",
+                    "3",
+                    "5"
+                ],
+                "restricted": false,
+                "streamName": "CV_Unicable",
+                "previewUrl": "http://pmorigin.veo.tv/Content/SS/Live/Channel(CV_Unicable).isml",
+                "hlsStreamName": null,
+                "hlsLiveAkamaiId": 206354,
+                "hasSearchResultOverlay": true,
+                "hasASpotOverlay": true,
+                "epgDescription": "Unicable",
+                "epgOrder": 6,
+                "images": [
+                    {
+                        "type": "epgTimeline",
+                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                        "width": 31,
+                        "height": 47
+                    }
+                ]
+            }
+        ],
+        "messages": []
+    }
+    ```
+
+### Retrieve all Channels [GET]
+Retrieves all Channels.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [List Channels][]
+
+### Creates a Channel [POST]
+Creates a new Channel.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "channelType": "LinearChannel",
+            "status": "published",
+            "createdAt": "2014-03-28 00:25:44",
+            "modifiedAt": "2014-03-28 00:25:46",
+            "userId": "3",
+            "title": "Unicable",
+            "affiliate": "Cablevision",
+            "callSign": "UNIC",
+            "number": 203,
+            "packageCodes": [
+                "mini-basico",
+                "basico",
+                "familiar",
+                "premium-hbo",
+                "premium-moviecity",
+                "LIVETV",
+                "MIN-B",
+                "MODULAR",
+                "BASICO",
+                "TOTAL HD",
+                "packTV",
+                "packHD",
+                "packHDMax",
+                "2",
+                "3",
+                "5"
+            ],
+            "restricted": false,
+            "streamName": "CV_Unicable",
+            "previewUrl": "http://pmorigin.veo.tv/Content/SS/Live/Channel(CV_Unicable).isml",
+            "hlsStreamName": null,
+            "hlsLiveAkamaiId": 206354,
+            "hasSearchResultOverlay": true,
+            "hasASpotOverlay": true,
+            "epgDescription": "Unicable",
+            "epgOrder": 6,
+            "images": [
+                {
+                    "type": "epgTimeline",
+                    "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                    "width": 31,
+                    "height": 47
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Channel][]
+
+
 # Group Business - Country
 Represents actions against Country objects
 
@@ -2106,8 +2406,162 @@ Creates a new Program.
     [Program][]
 
 
+# Group Business - Schedule
+Represents actions against a Schedule object
+
+## Schedule [/cms/business/schedule/start/{start}/end/{end}]
+Represents actions against the Schedule
+
++ Parameters
+    + start (int, `1423720800`) ... The start Unix timestamp of the Schedule.
+    + end (int, `1424204313`) ... The end Unix timestamp of the Schedule.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 123,
+            "type": "Schedule",
+            "scheduleType": "LinearSchedule",
+            "status": "published",
+            "createdAt": "2013-03-28 13:21:30",
+            "modifiedAt": "2013-03-28 13:21:35",
+            "userId": 3,
+            "affiliate": "Cablevision",
+            "externalChannelId": 60295,
+            "externalScheduleId": 20130401,
+            "scheduleDate: "2013-04-01 00:00:00",
+            "channels": [
+                {
+                    "type": "Channel",
+                    "channelType": "LinearChannel",
+                    "id": 16,
+                    "title": "Unicable",
+                    "number": 203,
+                    "images": [
+                        {
+                            "type": "epgTimeline",
+                            "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                            "width": 31,
+                            "height": 47
+                        }
+                    ],
+                    "programs": [
+                        {
+                            "type": "Program",
+                            "programType": "LinearEpisodeProgram",
+                            "id": 3,
+                            "duration": 2,
+                            "showType": "Series",
+                            "title": "Co-Ed Confidential 4",
+                            "userId": "3"
+                        },
+                        {
+                            "type": "Program",
+                            "programType": "LinearMovieProgram",
+                            "id": 7,
+                            "duration": 2,
+                            "showType": "Movie",
+                            "title": "Furia De Mujer",
+                            "userId": "3"
+                        }
+                    ]
+                }
+            ]
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve a Schedule [GET]
+Returns a specific EPG Schedule given relevant start and end times
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 200
+
+    [Schedule][]
+
+## Channel Schedule [/cms/business/schedule/start/{start}/end/{end}/channel/{channelId}]
+Represents actions against the Schedule, filtered by Channel
+
++ Parameters
+    + start (int, `1423720800`) ... The start Unix timestamp of the Schedule.
+    + end (int, `1424204313`) ... The end Unix timestamp of the Schedule.
+    + channelId (int, `16`) ... The id of the schedule channel 
+
+### Retrieve a Schedule [GET]
+Returns a specific EPG Schedule given relevant start and end times, filtered by a Channel
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 200
+
+    [Schedule][]
 
 
+## List Schedules [/cms/business/schedules]
+Returns all Schedules.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 123,
+                "type": "Schedule",
+                "scheduleType": "LinearSchedule",
+                "status": "published",
+                "createdAt": "2013-03-28 13:21:30",
+                "modifiedAt": "2013-03-28 13:21:35",
+                "userId": 3,
+                "scheduleDate": "2013-04-01 00:00:00"
+            },
+            {
+                "id": 124,
+                "type": "Schedule",
+                "scheduleType": "LinearSchedule",
+                "status": "published",
+                "createdAt": "2013-03-28 13:21:30",
+                "modifiedAt": "2013-03-28 13:21:35",
+                "userId": 3,
+                "scheduleDate": "2013-04-07 00:00:00"
+            }
+        ],
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve all Schedules [GET]
+Retrieves all Schedules.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 200
+
+    [List Schedules][]
 
 
 # Group Business - Studio
@@ -3126,3 +3580,4 @@ Creates a new User in the CMS.
         }
     }
     ```
+
