@@ -905,6 +905,256 @@ Creates a new Country.
     
     [Country][]
 
+# Group Business - Device Configuration
+Represents actions against Device Configuration
+
+## Device Configuration [/cms/business/device-config]
+Represents the Configuration of a Device (e.g., iOS, Android)
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "type": "DeviceConfiguration",
+            "id": 1,
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "properties": {
+               "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
+               "labelLinks": {
+                    "phone": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/phone",
+                    "tablet": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/tablet"
+               },
+               "rentalsEnabled": true,
+               "minimunSecondsBufferVideo": 1,
+               "maximunSecondsBufferVideo": 5
+            }
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve Device Configuration [GET]
+Returns a specific Device Configuration.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Device Configuration][]
+
+### Update Device Configuration [PUT]
+Updates a specific Device Configuration
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "properties": {
+               "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
+               "labelLinks": {
+                    "phone": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/phone",
+                    "tablet": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/tablet"
+               },
+               "rentalsEnabled": true,
+               "minimunSecondsBufferVideo": 1,
+               "maximunSecondsBufferVideo": 5
+            }
+        },
+        "messages": []
+    }
+    ```
+    
+    + Headers
+            
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Device Configuration][]
+
+### Delete Device Configuration [DELETE]
+Deletes a Device Configuration
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+### Create Device Configuration [POST]
+Creates a new Device Configuration.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "properties": {
+               "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
+               "labelLinks": {
+                    "phone": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/phone",
+                    "tablet": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/tablet"
+               },
+               "rentalsEnabled": true,
+               "minimunSecondsBufferVideo": 1,
+               "maximunSecondsBufferVideo": 5
+            }
+        },
+        "messages": []
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Device Configuration][]
+
+## Labels [/cms/business/device-config/labels/{key}]
+Represents the Labels for a Device's Configuration
+
++ Parameters
+    + key (string, `tablet`) ... The key for the labels configuration.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "login": {
+                    "accountOnHoldMessageSky": "Su cuenta está inactivo. Para tener acceso al contenido de BlueToGo revisa su perfil BlueToGo.",
+                    "learnMoreNoDot": "Más información",
+                    "manageProfile": "Administrar Perfil",
+                    "genres": {
+                        "action": "Acción",
+                        "comedy": "Comedia"
+                    }
+                }
+            }
+        ],
+        "messages": []
+    }
+    ```
+
+### Retrieve Labels [GET]
+Returns the Labels for a Device's Configuration
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Labels][]
+
+### Update Labels [PUT]
+Updates the Labels for a Device's Configuration
+
++ Request
+
+    ```js
+    {
+        "data": [
+            {
+                "login": {
+                    "accountOnHoldMessageSky": "Su cuenta está inactivo. Para tener acceso al contenido de BlueToGo revisa su perfil BlueToGo.",
+                    "learnMoreNoDot": "Más información",
+                    "manageProfile": "Administrar Perfil",
+                    "genres": {
+                        "action": "Acción",
+                        "comedy": "Comedia"
+                    }
+                }
+            }
+        ],
+        "messages": []
+    }
+    ```
+    
+    + Headers
+            
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Labels][]
+
+### Deletes Labels [DELETE]
+Deletes Labels for a Device's Configuration
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+### Creates Labels [POST]
+Creates the Labels for a Device's Configuration
+
++ Request
+
+    ```js
+    {
+        "data": [
+            {
+                "login": {
+                    "accountOnHoldMessageSky": "Su cuenta está inactivo. Para tener acceso al contenido de BlueToGo revisa su perfil BlueToGo.",
+                    "learnMoreNoDot": "Más información",
+                    "manageProfile": "Administrar Perfil",
+                    "genres": {
+                        "action": "Acción",
+                        "comedy": "Comedia"
+                    }
+                }
+            }
+        ],
+        "messages": []
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Labels][]
+
 # Group Business - Distributor
 Represents actions against Distributor objects
 
@@ -3539,4 +3789,5 @@ Creates a new User in the CMS.
         }
     }
     ```
+
 
