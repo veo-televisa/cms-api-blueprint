@@ -133,7 +133,7 @@ Represents a Asset
 ### Retrieve an Asset [GET]
 Returns a specific Asset.
 
-+ Request
++ Request Movie
 
     + Headers
             
@@ -143,6 +143,215 @@ Returns a specific Asset.
 + Response 200
 
     [Asset][]
+
++ Request Series
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    ```js
+    {
+        "data": {
+            "type": "Asset",
+            "assetType": "Series",
+            "id": 11173,
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "title": "La Viuda Negra",
+            "titleSeo": "La Viuda Negra",
+            "synopsisShort": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida.",
+            "synopsisLong": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida, pero a un alto precio.",
+            "keywords": "viuda",
+            "duration": "01:42",
+            "startYear": 1973,
+            "endYear": 1980,
+            "externalBillingId": "000557397",
+            "parentalRating": {
+                "id": 9,
+                "title": "R"
+            },
+            "mainGenre": {
+                "id": 111,
+                "title": "Acción y Aventura"
+            },
+            "genres": [
+                {
+                    "id": 111,
+                    "title": "Acción y Aventura"
+                },
+                {
+                    "id": 112,
+                    "title": "Dibujos Animados"
+                }
+            ],
+            "distributor": {
+                "id": 12,
+                "name": "Warner Bros."
+            },
+            "studio": {
+                "id": 22,
+                "name": "WDD"
+            },
+            "people": [
+                {
+                    "id": 7312,
+                    "role": "Actor",
+                    "communicationName": "John Saxon"
+                },
+                {
+                    "id": 7313,
+                    "role": "Actor",
+                    "communicationName": "Bruce Lee"
+                },
+                {
+                    "id": 7314,
+                    "role": "Director",
+                    "communicationName": "Robert Clouse"
+                },
+                {
+                    "id": 15010,
+                    "role": "Actor",
+                    "communicationName": "Jim Kelly"
+                },
+                {
+                    "id": 15011,
+                    "role": "Actor",
+                    "communicationName": "Ahna Capri"
+                }
+            ],
+            "pictures": [
+                {
+                    "type": "Picture",
+                    "id": 2853,
+                    "status": "published",
+                    "createdAt": "2014-03-28 00:25:44",
+                    "modifiedAt": "2014-03-28 00:25:46",
+                    "pictureType": "Poster",
+                    "title": ""
+                }
+            ],
+            "seasons": [
+                {
+                    "type": "Season",
+                    "id": 451,
+                    "title": null,
+                    "number": 1,
+                    "episodeCount": 0,
+                    "startYear": 1973,
+                    "endYear": 1974,
+                    "episodes": [
+                        {
+                            "type": "Asset",
+                            "assetType": "Episode",
+                            "id": 11392,
+                            "number": 40,
+                            "title": "Fuera de todo plan",
+                            "synopsisShort": "El Legado",
+                            "pictures": [
+                                {
+                                    "type": "Picture",
+                                    "id": 2853,
+                                    "status": "published",
+                                    "createdAt": "2014-03-28 00:25:44",
+                                    "modifiedAt": "2014-03-28 00:25:46",
+                                    "pictureType": "Poster",
+                                    "title": ""
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Asset",
+                            "assetType": "Episode",
+                            "id": 11569,
+                            "number": 39,
+                            "title": "Griselda se confiesa",
+                            "synopsisShort": "Griselda le cuenta a una guardia del reclusorio que Jones le confesó su amor y que nunca trató de hacerle daño. Mientras, Otálvaro planea la venganza por la muerte de su sobrina.",
+                            "pictures": [
+                                {
+                                    "type": "Picture",
+                                    "id": 2853,
+                                    "status": "published",
+                                    "createdAt": "2014-03-28 00:25:44",
+                                    "modifiedAt": "2014-03-28 00:25:46",
+                                    "pictureType": "Poster",
+                                    "title": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Season",
+                    "id": 462,
+                    "title": null,
+                    "number": 2,
+                    "episodeCount": 0,
+                    "startYear": 1974,
+                    "endYear": 1975,
+                    "episodes": [
+                        {
+                            "type": "Asset",
+                            "assetType": "Episode",
+                            "id": 12780,
+                            "number": 81,
+                            "title": "El Legado",
+                            "synopsisShort": "Griselda se ve enfrentada a una trampa de García mientras Jones se encarga del rescate. García finalmente embosca a Griselda y a Richie, quienes deciden llevar a cabo un plan para evitar ser capturados. Michael toma cartas en este asunto y pone en la mira a García.",
+                            "pictures": [
+                                {
+                                    "type": "Picture",
+                                    "id": 2853,
+                                    "status": "published",
+                                    "createdAt": "2014-03-28 00:25:44",
+                                    "modifiedAt": "2014-03-28 00:25:46",
+                                    "pictureType": "Poster",
+                                    "title": ""
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Asset",
+                            "assetType": "Episode",
+                            "id": 12781,
+                            "number": 80,
+                            "title": "Lucha de astucias",
+                            "synopsisShort": "Jennifer rescata a Jones de un barranco, en tanto que Griselda y Silvio finalmente se enfrentan: sólo uno saldrá con vida. Jennifer y Jones tienen claro que capturar a Griselda es ahora su prioridad.",
+                            "pictures": [
+                                {
+                                    "type": "Picture",
+                                    "id": 2853,
+                                    "status": "published",
+                                    "createdAt": "2014-03-28 00:25:44",
+                                    "modifiedAt": "2014-03-28 00:25:46",
+                                    "pictureType": "Poster",
+                                    "title": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "videos": [],
+            "publicationEvent": {
+                "type": "PublicationEvent",
+                "id": 18563,
+                "status": "published",
+                "createdAt": "2013-08-23 19:07:49",
+                "modifiedAt": "2014-08-07 02:50:31",
+                "startDate": "2014-04-09 06:00:00",
+                "endDate": "2015-03-31 05:59:00",
+                "billingType": "rental",
+                "price": "25.00",
+                "userId": 3
+            }
+        },
+        "messages": []
+    }
+    ```
 
 ### Updates a Asset [PUT]
 Updates a specific Asset
@@ -3789,5 +3998,6 @@ Creates a new User in the CMS.
         }
     }
     ```
+
 
 
