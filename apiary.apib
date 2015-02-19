@@ -2980,6 +2980,291 @@ Creates a new Program.
     [Program][]
 
 
+# Group Business - Season
+Represents actions against Season objects
+
+## Season [/cms/business/season/{id}]
+Represents a season
+
++ Parameters
+    + id (string, `1`) ... The id of the Season.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "type": "Season",
+            "id": 451,
+            "status": "published",
+            "createdAt": "2014-03-28 00:47:24",
+            "modifiedAt": "2014-04-18 01:40:42",
+            "userId": 3,
+            "title": null,
+            "number": 1,
+            "episodeCount": 0,
+            "startYear": 1973,
+            "endYear": 1974,
+            "episodes": [
+                {
+                    "type": "Asset",
+                    "assetType": "Episode",
+                    "id": 11392,
+                    "number": 40,
+                    "title": "Fuera de todo plan",
+                    "synopsisShort": "El Legado",
+                    "pictures": [
+                        {
+                            "type": "Picture",
+                            "id": 2853,
+                            "status": "published",
+                            "createdAt": "2014-03-28 00:25:44",
+                            "modifiedAt": "2014-03-28 00:25:46",
+                            "pictureType": "Poster",
+                            "title": ""
+                        }
+                    ]
+                },
+                {
+                    "type": "Asset",
+                    "assetType": "Episode",
+                    "id": 11569,
+                    "number": 39,
+                    "title": "Griselda se confiesa",
+                    "synopsisShort": "Griselda le cuenta a una guardia del reclusorio que Jones le confesó su amor y que nunca trató de hacerle daño. Mientras, Otálvaro planea la venganza por la muerte de su sobrina.",
+                    "pictures": [
+                        {
+                            "type": "Picture",
+                            "id": 2853,
+                            "status": "published",
+                            "createdAt": "2014-03-28 00:25:44",
+                            "modifiedAt": "2014-03-28 00:25:46",
+                            "pictureType": "Poster",
+                            "title": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve a Season [GET]
+Returns a specific Season.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 200
+
+    [Season][]
+
+### Updates a Season [PUT]
+Updates a specific Season
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "createdAt": "2014-03-28 00:47:24",
+            "modifiedAt": "2014-04-18 01:40:42",
+            "userId": 3,
+            "title": null,
+            "number": 1,
+            "episodeCount": 0,
+            "startYear": 1973,
+            "endYear": 1974,
+            "episodes": [
+                {
+                    "type": "Asset",
+                    "assetType": "Episode",
+                    "id": 11392,
+                    "number": 40,
+                    "title": "Fuera de todo plan",
+                    "synopsisShort": "El Legado",
+                    "pictures": [
+                        {
+                            "type": "Picture",
+                            "id": 2853,
+                            "status": "published",
+                            "createdAt": "2014-03-28 00:25:44",
+                            "modifiedAt": "2014-03-28 00:25:46",
+                            "pictureType": "Poster",
+                            "title": ""
+                        }
+                    ]
+                },
+                {
+                    "type": "Asset",
+                    "assetType": "Episode",
+                    "id": 11569,
+                    "number": 39,
+                    "title": "Griselda se confiesa",
+                    "synopsisShort": "Griselda le cuenta a una guardia del reclusorio que Jones le confesó su amor y que nunca trató de hacerle daño. Mientras, Otálvaro planea la venganza por la muerte de su sobrina.",
+                    "pictures": [
+                        {
+                            "type": "Picture",
+                            "id": 2853,
+                            "status": "published",
+                            "createdAt": "2014-03-28 00:25:44",
+                            "modifiedAt": "2014-03-28 00:25:46",
+                            "pictureType": "Poster",
+                            "title": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Season][]
+
+### Deletes a Season [DELETE]
+Deletes a Season
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+## List Seasons [/cms/business/seasons]
+Returns all Seasons.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "status": "published",
+                "createdAt": "2014-03-28 00:47:24",
+                "modifiedAt": "2014-04-18 01:40:42",
+                "userId": 3,
+                "title": null,
+                "number": 1
+            }
+        ],
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve all Seasons [GET]
+Retrieves all Seasons.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 200
+
+    [List Seasons][]
+
+### Create a Season [POST]
+Creates a new Season in the CMS
+
++ Request
+    
+    ```js
+    {
+        "data": {
+            "status": "published",
+            "createdAt": "2014-03-28 00:47:24",
+            "modifiedAt": "2014-04-18 01:40:42",
+            "userId": 3,
+            "title": null,
+            "number": 1,
+            "episodeCount": 0,
+            "startYear": 1973,
+            "endYear": 1974,
+            "episodes": [
+                {
+                    "type": "Asset",
+                    "assetType": "Episode",
+                    "id": 11392,
+                    "number": 40,
+                    "title": "Fuera de todo plan",
+                    "synopsisShort": "El Legado",
+                    "pictures": [
+                        {
+                            "type": "Picture",
+                            "id": 2853,
+                            "status": "published",
+                            "createdAt": "2014-03-28 00:25:44",
+                            "modifiedAt": "2014-03-28 00:25:46",
+                            "pictureType": "Poster",
+                            "title": ""
+                        }
+                    ]
+                },
+                {
+                    "type": "Asset",
+                    "assetType": "Episode",
+                    "id": 11569,
+                    "number": 39,
+                    "title": "Griselda se confiesa",
+                    "synopsisShort": "Griselda le cuenta a una guardia del reclusorio que Jones le confesó su amor y que nunca trató de hacerle daño. Mientras, Otálvaro planea la venganza por la muerte de su sobrina.",
+                    "pictures": [
+                        {
+                            "type": "Picture",
+                            "id": 2853,
+                            "status": "published",
+                            "createdAt": "2014-03-28 00:25:44",
+                            "modifiedAt": "2014-03-28 00:25:46",
+                            "pictureType": "Poster",
+                            "title": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 201
+
+    [Season][]
 
 
 # Group Business - Studio
