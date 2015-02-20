@@ -477,8 +477,6 @@ Updates a specific Asset
         "data": {
             "assetType": "Movie",
             "status": "published",
-            "createdAt": "2013-08-23 19:07:49",
-            "modifiedAt": "2014-08-07 02:50:31",
             "title": "Operación Dragón",
             "titleSeo": "Operación Dragón",
             "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
@@ -626,16 +624,13 @@ Updates a specific Asset
                 "type": "PublicationEvent",
                 "id": 18563,
                 "status": "published",
-                "createdAt": "2013-08-23 19:07:49",
-                "modifiedAt": "2014-08-07 02:50:31",
                 "startDate": "2014-04-09 06:00:00",
                 "endDate": "2015-03-31 05:59:00",
                 "billingType": "rental",
                 "price": "25.00",
                 "userId": 3
             }
-        },
-        "messages": []
+        }
     }
     ```
     
@@ -790,8 +785,6 @@ Creates a new Asset.
         "data": {
             "assetType": "Movie",
             "status": "published",
-            "createdAt": "2013-08-23 19:07:49",
-            "modifiedAt": "2014-08-07 02:50:31",
             "title": "Operación Dragón",
             "titleSeo": "Operación Dragón",
             "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
@@ -859,7 +852,6 @@ Creates a new Asset.
                     "type": "Picture",
                     "id": 2853,
                     "status": "published",
-                    "modifiedAt": "2014-03-28 00:25:46",
                     "credits": "Tom Smith",
                     "orientation": "portrait",
                     "pictureType": "Poster",
@@ -928,8 +920,6 @@ Creates a new Asset.
                     "type": "Video",
                     "id": 4533,
                     "status": "published",
-                    "createdAt": "2013-08-23 19:07:49",
-                    "modifiedAt": "2014-08-07 02:50:31",
                     "definition": "SD",
                     "duration": "01:42:29",
                     "userId": 3
@@ -939,16 +929,13 @@ Creates a new Asset.
                 "type": "PublicationEvent",
                 "id": 18563,
                 "status": "published",
-                "createdAt": "2013-08-23 19:07:49",
-                "modifiedAt": "2014-08-07 02:50:31",
                 "startDate": "2014-04-09 06:00:00",
                 "endDate": "2015-03-31 05:59:00",
                 "billingType": "rental",
                 "price": "25.00",
                 "userId": 3
             }
-        },
-        "messages": []
+        }
     }
     ```
     
@@ -1012,7 +999,6 @@ Represents a Channel
             "hasSearchResultOverlay": true,
             "hasASpotOverlay": true,
             "epgDescription": "Unicable",
-            "epgOrder": 6,
             "images": [
                 {
                     "type": "epgTimeline",
@@ -1050,8 +1036,6 @@ Updates a specific Channel
         "data": {
             "channelType": "LinearChannel",
             "status": "published",
-            "createdAt": "2014-03-28 00:25:44",
-            "modifiedAt": "2014-03-28 00:25:46",
             "userId": "3",
             "title": "Unicable",
             "affiliate": "Cablevision",
@@ -1083,7 +1067,6 @@ Updates a specific Channel
             "hasSearchResultOverlay": true,
             "hasASpotOverlay": true,
             "epgDescription": "Unicable",
-            "epgOrder": 6,
             "images": [
                 {
                     "type": "epgTimeline",
@@ -1092,8 +1075,7 @@ Updates a specific Channel
                     "height": 47
                 }
             ]
-        },
-        "messages": []
+        }
     }
     ```
     
@@ -1136,36 +1118,7 @@ Returns all Channels.
                 "modifiedAt": "2014-03-28 00:25:46",
                 "userId": "3",
                 "title": "Unicable",
-                "affiliate": "Cablevision",
-                "callSign": "UNIC",
                 "number": 203,
-                "packageCodes": [
-                    "mini-basico",
-                    "basico",
-                    "familiar",
-                    "premium-hbo",
-                    "premium-moviecity",
-                    "LIVETV",
-                    "MIN-B",
-                    "MODULAR",
-                    "BASICO",
-                    "TOTAL HD",
-                    "packTV",
-                    "packHD",
-                    "packHDMax",
-                    "2",
-                    "3",
-                    "5"
-                ],
-                "restricted": false,
-                "streamName": "CV_Unicable",
-                "previewUrl": "http://pmorigin.veo.tv/Content/SS/Live/Channel(CV_Unicable).isml",
-                "hlsStreamName": null,
-                "hlsLiveAkamaiId": 206354,
-                "hasSearchResultOverlay": true,
-                "hasASpotOverlay": true,
-                "epgDescription": "Unicable",
-                "epgOrder": 6,
                 "images": [
                     {
                         "type": "epgTimeline",
@@ -1194,71 +1147,6 @@ Retrieves all Channels.
 
     [List Channels][]
 
-### Creates a Channel [POST]
-Creates a new Channel.
-
-+ Request
-
-    ```js
-    {
-        "data": {
-            "channelType": "LinearChannel",
-            "status": "published",
-            "createdAt": "2014-03-28 00:25:44",
-            "modifiedAt": "2014-03-28 00:25:46",
-            "userId": "3",
-            "title": "Unicable",
-            "affiliate": "Cablevision",
-            "callSign": "UNIC",
-            "number": 203,
-            "packageCodes": [
-                "mini-basico",
-                "basico",
-                "familiar",
-                "premium-hbo",
-                "premium-moviecity",
-                "LIVETV",
-                "MIN-B",
-                "MODULAR",
-                "BASICO",
-                "TOTAL HD",
-                "packTV",
-                "packHD",
-                "packHDMax",
-                "2",
-                "3",
-                "5"
-            ],
-            "restricted": false,
-            "streamName": "CV_Unicable",
-            "previewUrl": "http://pmorigin.veo.tv/Content/SS/Live/Channel(CV_Unicable).isml",
-            "hlsStreamName": null,
-            "hlsLiveAkamaiId": 206354,
-            "hasSearchResultOverlay": true,
-            "hasASpotOverlay": true,
-            "epgDescription": "Unicable",
-            "epgOrder": 6,
-            "images": [
-                {
-                    "type": "epgTimeline",
-                    "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                    "width": 31,
-                    "height": 47
-                }
-            ]
-        },
-        "messages": []
-    }
-    ```
-    
-    + Headers
-            
-            X-Auth-Token: qwerty12345
-
-
-+ Response 201
-    
-    [Channel][]
 
 
 # Group Business - Country
@@ -1453,8 +1341,6 @@ Updates a specific Device Configuration
     {
         "data": {
             "status": "published",
-            "createdAt": "2013-08-23 19:07:49",
-            "modifiedAt": "2014-08-07 02:50:31",
             "properties": {
                "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
                "labelLinks": {
@@ -1465,8 +1351,7 @@ Updates a specific Device Configuration
                "minimunSecondsBufferVideo": 1,
                "maximunSecondsBufferVideo": 5
             }
-        },
-        "messages": []
+        }
     }
     ```
     
@@ -1502,8 +1387,6 @@ Creates a new Device Configuration.
     {
         "data": {
             "status": "published",
-            "createdAt": "2013-08-23 19:07:49",
-            "modifiedAt": "2014-08-07 02:50:31",
             "properties": {
                "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
                "labelLinks": {
@@ -1514,8 +1397,7 @@ Creates a new Device Configuration.
                "minimunSecondsBufferVideo": 1,
                "maximunSecondsBufferVideo": 5
             }
-        },
-        "messages": []
+        }
     }
     ```
     
@@ -1588,8 +1470,7 @@ Updates the Labels for a Device's Configuration
                     }
                 }
             }
-        ],
-        "messages": []
+        ]
     }
     ```
     
@@ -1635,8 +1516,7 @@ Creates the Labels for a Device's Configuration
                     }
                 }
             }
-        ],
-        "messages": []
+        ]
     }
     ```
     
@@ -2431,15 +2311,15 @@ Represents a Page
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
+                            "createdAt": "2013-08-23 19:07:49",
+                            "modifiedAt": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "modifiedAt": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -2507,8 +2387,8 @@ Represents a Page
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
+                                "createdAt": "2013-08-23 19:07:49",
+                                "modifiedAt": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -2536,15 +2416,15 @@ Represents a Page
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
+                            "createdAt": "2013-08-23 19:07:49",
+                            "modifiedAt": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "modifiedAt": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -2611,8 +2491,8 @@ Represents a Page
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
+                                "createdAt": "2013-08-23 19:07:49",
+                                "modifiedAt": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -2635,15 +2515,15 @@ Represents a Page
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
+                            "createdAt": "2013-08-23 19:07:49",
+                            "modifiedAt": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "modifiedAt": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -2710,8 +2590,8 @@ Represents a Page
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
+                                "createdAt": "2013-08-23 19:07:49",
+                                "modifiedAt": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -2733,15 +2613,15 @@ Represents a Page
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
+                            "createdAt": "2013-08-23 19:07:49",
+                            "modifiedAt": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "modifiedAt": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -2808,8 +2688,8 @@ Represents a Page
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
+                                "createdAt": "2013-08-23 19:07:49",
+                                "modifiedAt": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -2849,8 +2729,6 @@ Updates a specific Page
         "data": {
             "pageType": "Rental",
             "status": "published",
-            "createdAt": "2013-08-23 19:07:49",
-            "modifiedAt": "2014-08-07 02:50:31",
             "userId": 3,
             "title": "Tienda",
             "description": "Tienda",
@@ -2865,15 +2743,12 @@ Updates a specific Page
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -2941,8 +2816,6 @@ Updates a specific Page
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -2970,15 +2843,12 @@ Updates a specific Page
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -3045,8 +2915,6 @@ Updates a specific Page
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -3069,15 +2937,12 @@ Updates a specific Page
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -3144,8 +3009,6 @@ Updates a specific Page
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -3167,15 +3030,12 @@ Updates a specific Page
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -3242,8 +3102,6 @@ Updates a specific Page
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -3254,8 +3112,7 @@ Updates a specific Page
                     ]
                 }
             ]
-        },
-        "messages": []
+        }
     }
     ```
     
@@ -3326,8 +3183,6 @@ Creates a new Page.
         "data": {
             "pageType": "Rental",
             "status": "published",
-            "createdAt": "2013-08-23 19:07:49",
-            "modifiedAt": "2014-08-07 02:50:31",
             "userId": 3,
             "title": "Tienda",
             "description": "Tienda",
@@ -3342,15 +3197,12 @@ Creates a new Page.
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -3418,8 +3270,6 @@ Creates a new Page.
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -3447,15 +3297,12 @@ Creates a new Page.
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -3522,8 +3369,6 @@ Creates a new Page.
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -3546,15 +3391,12 @@ Creates a new Page.
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -3621,8 +3463,6 @@ Creates a new Page.
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -3644,15 +3484,12 @@ Creates a new Page.
                             "assettype": "movie",
                             "id": 4754,
                             "status": "published",
-                            "createdat": "2013-08-23 19:07:49",
-                            "modifiedat": "2014-08-07 02:50:31",
                             "title": "operación dragón",
                             "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                             "pictures": [
                                 {
                                     "type": "picture",
                                     "id": 1,
-                                    "modifiedat": "2014-03-28 00:25:46",
                                     "orientation": "portrait",
                                     "picturetype": "poster",
                                     "title": "",
@@ -3719,8 +3556,6 @@ Creates a new Page.
                                 "type": "publicationevent",
                                 "id": 18563,
                                 "status": "published",
-                                "createdat": "2013-08-23 19:07:49",
-                                "modifiedat": "2014-08-07 02:50:31",
                                 "startdate": "2014-04-09 06:00:00",
                                 "enddate": "2015-03-31 05:59:00",
                                 "billingtype": "rental",
@@ -3731,8 +3566,7 @@ Creates a new Page.
                     ]
                 }
             ]
-        },
-        "messages": []
+        }
     }
     ```    
     + Headers
@@ -4185,8 +4019,6 @@ Updates a specific Picture
     {
         "data": {
             "status": "published",
-            "createdAt": "2014-03-28 00:25:44",
-            "modifiedAt": "2014-03-28 00:25:46",
             "assetId": "11173",
             "checksum": "",
             "credits": "Tom Smith",
@@ -4325,8 +4157,6 @@ Creates a new Picture.
     {
         "data": {
             "status": "published",
-            "createdAt": "2014-03-28 00:25:44",
-            "modifiedAt": "2014-03-28 00:25:46",
             "assetId": "11173",
             "checksum": "",
             "credits": "Tom Smith",
@@ -4499,8 +4329,7 @@ Updates a specific Program
             "titleSeo": "Co-Ed Confidential 4",
             "year": 2010,
             "userId": "3"
-        },
-        "messages": []
+        }
     }
     ```
     
@@ -4564,52 +4393,6 @@ Retrieves all Programs.
 + Response 200
 
     [List Programs][]
-
-### Creates a Program [POST]
-Creates a new Program.
-
-+ Request
-
-    ```js
-    {
-        "data": {
-            "programType": "LinearEpisodeProgram",
-            "status": "published",
-            "duration": 2,
-            "externalProgramId": "EP013394160010",
-            "isHd": false,
-            "isLive": false,
-            "keywords": null,
-            "areRightsBlocked": false,
-            "mainGenre": {
-                "id": 111,
-                "title": "Acción y Aventura"
-            },
-            "packageCode": null,
-            "parentalRating": {
-                "id": 9,
-                "title": "R"
-            },
-            "synopsisShort": "Karen cuida de Zach",
-            "synopsisLong": "Karen cuida de Zach",
-            "showType": "Series",
-            "title": "Co-Ed Confidential 4",
-            "titleSeo": "Co-Ed Confidential 4",
-            "year": 2010,
-            "userId": "3"
-        },
-        "messages": []
-    }
-    ```
-    
-    + Headers
-            
-            X-Auth-Token: qwerty12345
-
-
-+ Response 201
-    
-    [Program][]
 
 
 # Group Business - Season
@@ -4708,8 +4491,6 @@ Updates a specific Season
     {
         "data": {
             "status": "published",
-            "createdAt": "2014-03-28 00:47:24",
-            "modifiedAt": "2014-04-18 01:40:42",
             "userId": 3,
             "title": null,
             "number": 1,
@@ -4729,8 +4510,6 @@ Updates a specific Season
                             "type": "Picture",
                             "id": 2853,
                             "status": "published",
-                            "createdAt": "2014-03-28 00:25:44",
-                            "modifiedAt": "2014-03-28 00:25:46",
                             "pictureType": "Poster",
                             "title": ""
                         }
@@ -4748,20 +4527,13 @@ Updates a specific Season
                             "type": "Picture",
                             "id": 2853,
                             "status": "published",
-                            "createdAt": "2014-03-28 00:25:44",
-                            "modifiedAt": "2014-03-28 00:25:46",
                             "pictureType": "Poster",
                             "title": ""
                         }
                     ]
                 }
             ]
-        },
-        "messages": [
-            {
-                "success": "Data successfully retrieved"
-            }
-        ]
+        }
     }
     ```
     
@@ -4833,8 +4605,6 @@ Creates a new Season in the CMS
     {
         "data": {
             "status": "published",
-            "createdAt": "2014-03-28 00:47:24",
-            "modifiedAt": "2014-04-18 01:40:42",
             "userId": 3,
             "title": null,
             "number": 1,
@@ -4881,12 +4651,7 @@ Creates a new Season in the CMS
                     ]
                 }
             ]
-        },
-        "messages": [
-            {
-                "success": "Data successfully retrieved"
-            }
-        ]
+        }
     }
     ```
 
@@ -5123,8 +4888,6 @@ Updates a specific Video
     {
         "data": {
             "status": "published",
-            "createdAt": "2013-08-23 19:07:49",
-            "modifiedAt": "2014-08-07 02:50:31",
             "asset": {
                 "id": 4754,
                 "title": "Operación Dragón"
@@ -5160,8 +4923,7 @@ Updates a specific Video
             "userId": 3,
             "videoType": full,
             "workflowTemplateGUID": "7e63ecfd-0305-4aba-bb88-1c35fdb18337",
-        },
-        "messages": []
+        }
     }
     ```
     
@@ -5235,8 +4997,6 @@ Creates a new Video.
     {
         "data": {
             "status": "published",
-            "createdAt": "2013-08-23 19:07:49",
-            "modifiedAt": "2014-08-07 02:50:31",
             "asset": {
                 "id": 4754,
                 "title": "Operación Dragón"
@@ -5272,8 +5032,7 @@ Creates a new Video.
             "userId": 3,
             "videoType": "full",
             "workflowTemplateGUID": "7e63ecfd-0305-4aba-bb88-1c35fdb18337"
-        },
-        "messages": []
+        }
     }
     ```
     
