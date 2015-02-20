@@ -2112,6 +2112,1353 @@ Creates a new Navigation.
     
     [Navigation][]
 
+# Group Business - Page
+Represents actions against Page objects
+
+## Page [/cms/business/page/{id}]
+Represents a Page
+
++ Parameters
+    + id (string, `1`) ... The id of the Page.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "type": "Page",
+            "pageType": "Rental",
+            "id": 1,
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "userId": 3,
+            "title": "Tienda",
+            "description": "Tienda",
+            "widgets": [
+                {
+                    "id": 1,
+                    "type":  "stage",
+                    "title": "",
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "rentasActivas",
+                    "id": 2,
+                    "title": "Rentas Activas",
+                    "limit": 2
+                },
+                {
+                    "type": "carousel",
+                    "widgetType": "recentlyAdded",
+                    "id": 3,
+                    "title": "AÑADIDAS RECIENTEMENTE",
+                    "limit": 4,
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "carousel",
+                    "widgetType": "collection",
+                    "id": 4,
+                    "title": "ACCION Y AVENTURA",
+                    "limit": 4,
+                    "moreLink": "http://www.veo.tv/tienda/peliculas",
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "carousel",
+                    "widgetType": "recommendations",
+                    "id": 5,
+                    "title": "ANIMADAS",
+                    "limit": 6,
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Page [GET]
+Returns a specific Page.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Page][]
+
+### Updates a Page [PUT]
+Updates a specific Page
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "pageType": "Rental",
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "userId": 3,
+            "title": "Tienda",
+            "description": "Tienda",
+            "widgets": [
+                {
+                    "id": 1,
+                    "type":  "stage",
+                    "title": "",
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "rentasActivas",
+                    "id": 2,
+                    "title": "Rentas Activas",
+                    "limit": 2
+                },
+                {
+                    "type": "carousel",
+                    "widgetType": "recentlyAdded",
+                    "id": 3,
+                    "title": "AÑADIDAS RECIENTEMENTE",
+                    "limit": 4,
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "carousel",
+                    "widgetType": "collection",
+                    "id": 4,
+                    "title": "ACCION Y AVENTURA",
+                    "limit": 4,
+                    "moreLink": "http://www.veo.tv/tienda/peliculas",
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "carousel",
+                    "widgetType": "recommendations",
+                    "id": 5,
+                    "title": "ANIMADAS",
+                    "limit": 6,
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Page][]
+
+### Deletes a Page [DELETE]
+Deletes a Page
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 204
+
+
+## List Pages [/cms/business/pages]
+Returns all Pages.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "pageType": "Rental",
+                "status": "published",
+                "createdAt": "2013-08-23 19:07:49",
+                "modifiedAt": "2014-08-07 02:50:31",
+                "userId": 3,
+                "title": "Tienda"
+            }
+        ],
+        "messages": []
+    }
+    ```
+
+### Retrieve all Pages [GET]
+Retrieves all pages.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [List Pages][]
+
+### Creates a Page [POST]
+Creates a new Page.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "pageType": "Rental",
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "userId": 3,
+            "title": "Tienda",
+            "description": "Tienda",
+            "widgets": [
+                {
+                    "id": 1,
+                    "type":  "stage",
+                    "title": "",
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "rentasActivas",
+                    "id": 2,
+                    "title": "Rentas Activas",
+                    "limit": 2
+                },
+                {
+                    "type": "carousel",
+                    "widgetType": "recentlyAdded",
+                    "id": 3,
+                    "title": "AÑADIDAS RECIENTEMENTE",
+                    "limit": 4,
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "carousel",
+                    "widgetType": "collection",
+                    "id": 4,
+                    "title": "ACCION Y AVENTURA",
+                    "limit": 4,
+                    "moreLink": "http://www.veo.tv/tienda/peliculas",
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "carousel",
+                    "widgetType": "recommendations",
+                    "id": 5,
+                    "title": "ANIMADAS",
+                    "limit": 6,
+                    "items": [
+                        {
+                            "type": "asset",
+                            "assettype": "movie",
+                            "id": 4754,
+                            "status": "published",
+                            "createdat": "2013-08-23 19:07:49",
+                            "modifiedat": "2014-08-07 02:50:31",
+                            "title": "operación dragón",
+                            "synopsisshort": "un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "pictures": [
+                                {
+                                    "type": "picture",
+                                    "id": 1,
+                                    "modifiedat": "2014-03-28 00:25:46",
+                                    "orientation": "portrait",
+                                    "picturetype": "poster",
+                                    "title": "",
+                                    "userid": "3",
+                                    "versions": [
+                                        {
+                                            "profile": "weblandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile150image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "weblandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "weblandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobilelandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapesmall",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapemedium",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileretinalandscapelarge",
+                                            "link": "https://cdnassets.veo.tv/prod/picture/c_1_picture_7315_profile151image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "publicationevent": {
+                                "type": "publicationevent",
+                                "id": 18563,
+                                "status": "published",
+                                "createdat": "2013-08-23 19:07:49",
+                                "modifiedat": "2014-08-07 02:50:31",
+                                "startdate": "2014-04-09 06:00:00",
+                                "enddate": "2015-03-31 05:59:00",
+                                "billingtype": "rental",
+                                "price": "25.00",
+                                "userid": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 201
+    
+    [Page][]
+
 # Group Business - Parental Rating
 Represents actions against Parental Rating objects
 
