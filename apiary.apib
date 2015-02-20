@@ -1164,7 +1164,6 @@ Represents a country
     {
         "data": {
             "id": 1,
-            "parentId": 0,
             "title": "United States",
             "type": "Country"
         },
@@ -1194,8 +1193,7 @@ Updates a specific Country
     ```js
     {
         "data": {
-            "parentId": 0,
-            "title": "United States",
+            "title": "United States"
         }
     }
     ```
@@ -1232,13 +1230,11 @@ Returns all Countries.
             "data": [
                 {
                     "id": 1,
-                    "parentId": 0,
                     "title": "United States",
                     "type": "Country"
                 },
                 {
                     "id": 2,
-                    "parentId": 0,
                     "title": "México",
                     "type": "Country"
                 }
@@ -1273,8 +1269,7 @@ Creates a new Country.
     ```js
     {
         "data": {
-            "parentId": 0,
-            "title": "United States",
+            "title": "United States"
         }
     }
     ```    
@@ -1806,10 +1801,24 @@ Represents a genre
     ```js
     {
         "data": {
-            "id": 3,
-            "parentId": 0,
-            "title": "Action",
-            "type": "Genre"
+            "id": 28,
+            "title": "Deportes",
+            "type": "Genre",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "userId": 3,
+            "items": [
+                {
+                    "id": 515,
+                    "title": "Futbol",
+                    "type": "Genre"
+                },
+                {
+                    "id": 518,
+                    "title": "Beisbol",
+                    "type": "Genre"
+                }
+            ]
         },
         "messages": []
     }
@@ -1837,8 +1846,20 @@ Updates a specific Genre
     ```js
     {
         "data": {
-            "parentId": 0,
-            "title": "Action",
+            "title": "Deportes",
+            "type": "Genre",
+            "items": [
+                {
+                    "id": 515,
+                    "title": "Futbol",
+                    "type": "Genre"
+                },
+                {
+                    "id": 518,
+                    "title": "Beisbol",
+                    "type": "Genre"
+                }
+            ]
         }
     }
     ```
@@ -1874,16 +1895,24 @@ Returns all Genres.
         {
             "data": [
                 {
-                    "id": 3,
-                    "parentId": 0,
-                    "title": "Action",
-                    "type": "Genre"
-                },
-                {
-                    "id": 4,
-                    "parentId": 0,
-                    "title": "Spanish",
-                    "type": "Genre"
+                    "id": 28,
+                    "title": "Deportes",
+                    "type": "Genre",
+                    "createdAt": "2013-08-23 19:07:49",
+                    "modifiedAt": "2014-08-07 02:50:31",
+                    "userId": 3,
+                    "items": [
+                        {
+                            "id": 515,
+                            "title": "Futbol",
+                            "type": "Genre"
+                        },
+                        {
+                            "id": 518,
+                            "title": "Beisbol",
+                            "type": "Genre"
+                        }
+                    ]
                 }
             ],
             "messages": [
@@ -1916,11 +1945,24 @@ Creates a new Genre.
     ```js
     {
         "data": {
-            "parentId": 0,
-            "title": "Action",
+            "title": "Deportes",
+            "type": "Genre",
+            "items": [
+                {
+                    "id": 515,
+                    "title": "Futbol",
+                    "type": "Genre"
+                },
+                {
+                    "id": 518,
+                    "title": "Beisbol",
+                    "type": "Genre"
+                }
+            ]
         }
     }
-    ```    
+    ```
+    
     + Headers
             
             X-Auth-Token: qwerty12345
