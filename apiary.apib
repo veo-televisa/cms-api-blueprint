@@ -22,7 +22,7 @@ Represents a Asset
     {
         "data": {
             "type": "Asset",
-            "assetType": "Movie",
+            "subType": "Movie",
             "id": 4754,
             "status": "published",
             "createdAt": "2013-08-23 19:07:49",
@@ -214,7 +214,7 @@ Returns a specific Asset.
     {
         "data": {
             "type": "Asset",
-            "assetType": "Series",
+            "subType": "Series",
             "id": 11173,
             "status": "published",
             "createdAt": "2013-08-23 19:07:49",
@@ -361,7 +361,7 @@ Returns a specific Asset.
                     "episodes": [
                         {
                             "type": "Asset",
-                            "assetType": "Episode",
+                            "subType": "Episode",
                             "id": 11392,
                             "number": 40,
                             "title": "Fuera de todo plan",
@@ -380,7 +380,7 @@ Returns a specific Asset.
                         },
                         {
                             "type": "Asset",
-                            "assetType": "Episode",
+                            "subType": "Episode",
                             "id": 11569,
                             "number": 39,
                             "title": "Griselda se confiesa",
@@ -410,7 +410,7 @@ Returns a specific Asset.
                     "episodes": [
                         {
                             "type": "Asset",
-                            "assetType": "Episode",
+                            "subType": "Episode",
                             "id": 12780,
                             "number": 81,
                             "title": "El Legado",
@@ -429,7 +429,7 @@ Returns a specific Asset.
                         },
                         {
                             "type": "Asset",
-                            "assetType": "Episode",
+                            "subType": "Episode",
                             "id": 12781,
                             "number": 80,
                             "title": "Lucha de astucias",
@@ -475,7 +475,7 @@ Updates a specific Asset
     ```js
     {
         "data": {
-            "assetType": "Movie",
+            "subType": "Movie",
             "status": "published",
             "title": "Operación Dragón",
             "titleSeo": "Operación Dragón",
@@ -667,7 +667,7 @@ Returns all Assets.
         "data": [ 
             {
                 "type": "Asset",
-                "assetType": "Movie",
+                "subType": "Movie",
                 "id": 4754,
                 "status": "published",
                 "createdAt": "2013-08-23 19:07:49",
@@ -783,7 +783,7 @@ Creates a new Asset.
     ```js
     {
         "data": {
-            "assetType": "Movie",
+            "subType": "Movie",
             "status": "published",
             "title": "Operación Dragón",
             "titleSeo": "Operación Dragón",
@@ -963,7 +963,7 @@ Represents a Channel
     {
         "data": {
             "type": "Channel",
-            "channelType": "LinearChannel",
+            "subType": "LinearChannel",
             "id": 16,
             "status": "published",
             "createdAt": "2014-03-28 00:25:44",
@@ -1034,7 +1034,7 @@ Updates a specific Channel
     ```js
     {
         "data": {
-            "channelType": "LinearChannel",
+            "subType": "LinearChannel",
             "status": "published",
             "userId": "3",
             "title": "Unicable",
@@ -1111,7 +1111,7 @@ Returns all Channels.
         "data": [
             {
                 "type": "Channel",
-                "channelType": "LinearChannel",
+                "subType": "LinearChannel",
                 "id": 16,
                 "status": "published",
                 "createdAt": "2014-03-28 00:25:44",
@@ -1689,7 +1689,7 @@ Represents actions against the EPG
         "data": [
             {
                 "type": "Channel",
-                "channelType": "LinearChannel",
+                "subType": "LinearChannel",
                 "id": 16,
                 "status": "published",
                 "createdAt": "2013-03-28 13:21:35",
@@ -1709,7 +1709,7 @@ Represents actions against the EPG
                     {
                         "id": 123,
                         "type": "Schedule",
-                        "scheduleType": "LinearSchedule",
+                        "subType": "LinearSchedule",
                         "scheduleDate": "2013-04-01 00:00:00",
                         "items": [
                             {
@@ -1718,7 +1718,7 @@ Represents actions against the EPG
                                 "endTime": "01:30:00",
                                 "program": {
                                     "type": "Program",
-                                    "programType": "LinearEpisodeProgram",
+                                    "subType": "LinearEpisodeProgram",
                                     "id": 3,
                                     "duration": 2,
                                     "showType": "Series",
@@ -1732,7 +1732,7 @@ Represents actions against the EPG
                                 "endTime": "03:00:00",
                                 "program": {
                                     "type": "Program",
-                                    "programType": "LinearMovieProgram",
+                                    "subType": "LinearMovieProgram",
                                     "id": 7,
                                     "duration": 2,
                                     "showType": "Movie",
@@ -2334,7 +2334,7 @@ Represents a Page
     {
         "data": {
             "type": "Page",
-            "pageType": "Rental",
+            "subType": "Rental",
             "id": 1,
             "status": "published",
             "createdAt": "2013-08-23 19:07:49",
@@ -2350,7 +2350,7 @@ Represents a Page
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "createdAt": "2013-08-23 19:07:49",
@@ -2448,14 +2448,14 @@ Represents a Page
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "recentlyAdded",
+                    "subType": "recentlyAdded",
                     "id": 3,
                     "title": "AÑADIDAS RECIENTEMENTE",
                     "limit": 4,
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "createdAt": "2013-08-23 19:07:49",
@@ -2546,7 +2546,7 @@ Represents a Page
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "collection",
+                    "subType": "collection",
                     "id": 4,
                     "title": "ACCION Y AVENTURA",
                     "limit": 4,
@@ -2554,7 +2554,7 @@ Represents a Page
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "createdAt": "2013-08-23 19:07:49",
@@ -2645,14 +2645,14 @@ Represents a Page
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "recommendations",
+                    "subType": "recommendations",
                     "id": 5,
                     "title": "ANIMADAS",
                     "limit": 6,
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "createdAt": "2013-08-23 19:07:49",
@@ -2769,7 +2769,7 @@ Updates a specific Page
     ```js
     {
         "data": {
-            "pageType": "Rental",
+            "subType": "Rental",
             "status": "published",
             "userId": 3,
             "title": "Tienda",
@@ -2782,7 +2782,7 @@ Updates a specific Page
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -2875,14 +2875,14 @@ Updates a specific Page
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "recentlyAdded",
+                    "subType": "recentlyAdded",
                     "id": 3,
                     "title": "AÑADIDAS RECIENTEMENTE",
                     "limit": 4,
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -2968,7 +2968,7 @@ Updates a specific Page
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "collection",
+                    "subType": "collection",
                     "id": 4,
                     "title": "ACCION Y AVENTURA",
                     "limit": 4,
@@ -2976,7 +2976,7 @@ Updates a specific Page
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -3062,14 +3062,14 @@ Updates a specific Page
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "recommendations",
+                    "subType": "recommendations",
                     "id": 5,
                     "title": "ANIMADAS",
                     "limit": 6,
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -3189,7 +3189,7 @@ Returns all Pages.
     {
         "data": [
             {
-                "pageType": "Rental",
+                "subType": "Rental",
                 "status": "published",
                 "createdAt": "2013-08-23 19:07:49",
                 "modifiedAt": "2014-08-07 02:50:31",
@@ -3223,7 +3223,7 @@ Creates a new Page.
     ```js
     {
         "data": {
-            "pageType": "Rental",
+            "subType": "Rental",
             "status": "published",
             "userId": 3,
             "title": "Tienda",
@@ -3236,7 +3236,7 @@ Creates a new Page.
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -3329,14 +3329,14 @@ Creates a new Page.
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "recentlyAdded",
+                    "subType": "recentlyAdded",
                     "id": 3,
                     "title": "AÑADIDAS RECIENTEMENTE",
                     "limit": 4,
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -3422,7 +3422,7 @@ Creates a new Page.
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "collection",
+                    "subType": "collection",
                     "id": 4,
                     "title": "ACCION Y AVENTURA",
                     "limit": 4,
@@ -3430,7 +3430,7 @@ Creates a new Page.
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -3516,14 +3516,14 @@ Creates a new Page.
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "recommendations",
+                    "subType": "recommendations",
                     "id": 5,
                     "title": "ANIMADAS",
                     "limit": 6,
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -4293,7 +4293,7 @@ Represents a Program
     {
         "data": {
             "type": "Program",
-            "programType": "LinearEpisodeProgram",
+            "subType": "LinearEpisodeProgram",
             "id": 3,
             "status": "published",
             "createdAt": "2014-03-28 00:25:44",
@@ -4347,7 +4347,7 @@ Updates a specific Program
     ```js
     {
         "data": {
-            "programType": "LinearEpisodeProgram",
+            "subType": "LinearEpisodeProgram",
             "status": "published",
             "duration": 2,
             "externalProgramId": "EP013394160010",
@@ -4407,7 +4407,7 @@ Returns all Programs.
         "data": [
             {
                 "type": "Program",
-                "programType": "LinearEpisodeProgram",
+                "subType": "LinearEpisodeProgram",
                 "id": 3,
                 "status": "published",
                 "createdAt": "2014-03-28 00:25:44",
@@ -4465,7 +4465,7 @@ Represents a season
             "episodes": [
                 {
                     "type": "Asset",
-                    "assetType": "Episode",
+                    "subType": "Episode",
                     "id": 11392,
                     "number": 40,
                     "title": "Fuera de todo plan",
@@ -4484,7 +4484,7 @@ Represents a season
                 },
                 {
                     "type": "Asset",
-                    "assetType": "Episode",
+                    "subType": "Episode",
                     "id": 11569,
                     "number": 39,
                     "title": "Griselda se confiesa",
@@ -4542,7 +4542,7 @@ Updates a specific Season
             "episodes": [
                 {
                     "type": "Asset",
-                    "assetType": "Episode",
+                    "subType": "Episode",
                     "id": 11392,
                     "number": 40,
                     "title": "Fuera de todo plan",
@@ -4559,7 +4559,7 @@ Updates a specific Season
                 },
                 {
                     "type": "Asset",
-                    "assetType": "Episode",
+                    "subType": "Episode",
                     "id": 11569,
                     "number": 39,
                     "title": "Griselda se confiesa",
@@ -4656,7 +4656,7 @@ Creates a new Season in the CMS
             "episodes": [
                 {
                     "type": "Asset",
-                    "assetType": "Episode",
+                    "subType": "Episode",
                     "id": 11392,
                     "number": 40,
                     "title": "Fuera de todo plan",
@@ -4675,7 +4675,7 @@ Creates a new Season in the CMS
                 },
                 {
                     "type": "Asset",
-                    "assetType": "Episode",
+                    "subType": "Episode",
                     "id": 11569,
                     "number": 39,
                     "title": "Griselda se confiesa",
