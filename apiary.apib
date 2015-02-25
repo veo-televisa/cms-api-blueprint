@@ -22,7 +22,7 @@ Represents a Asset
     {
         "data": {
             "entity": "Asset",
-            "type": "Movie",
+            "category": "Movie",
             "id": 4754,
             "status": "published",
             "createdAt": "2013-08-23 19:07:49",
@@ -218,7 +218,7 @@ Returns a specific Asset.
     {
         "data": {
             "entity": "Asset",
-            "type": "Series",
+            "category": "Series",
             "id": 11173,
             "status": "published",
             "createdAt": "2013-08-23 19:07:49",
@@ -366,7 +366,7 @@ Returns a specific Asset.
                     "episodes": [
                         {
                             "entity": "Asset",
-                            "type": "Episode",
+                            "category": "Episode",
                             "id": 11392,
                             "number": 40,
                             "title": "Fuera de todo plan",
@@ -385,7 +385,7 @@ Returns a specific Asset.
                         },
                         {
                             "entity": "Asset",
-                            "type": "Episode",
+                            "category": "Episode",
                             "id": 11569,
                             "number": 39,
                             "title": "Griselda se confiesa",
@@ -414,7 +414,7 @@ Returns a specific Asset.
                     "episodes": [
                         {
                             "entity": "Asset",
-                            "type": "Episode",
+                            "category": "Episode",
                             "id": 12780,
                             "number": 81,
                             "title": "El Legado",
@@ -433,7 +433,7 @@ Returns a specific Asset.
                         },
                         {
                             "entity": "Asset",
-                            "type": "Episode",
+                            "category": "Episode",
                             "id": 12781,
                             "number": 80,
                             "title": "Lucha de astucias",
@@ -480,7 +480,7 @@ Updates a specific Asset
     ```js
     {
         "data": {
-            "type": "Movie",
+            "category": "Movie",
             "status": "published",
             "title": "Operación Dragón",
             "titleSeo": "Operación Dragón",
@@ -676,7 +676,7 @@ Returns all Assets.
         "data": [ 
             {
                 "entity": "Asset",
-                "type": "Movie",
+                "category": "Movie",
                 "id": 4754,
                 "status": "published",
                 "createdAt": "2013-08-23 19:07:49",
@@ -793,7 +793,7 @@ Creates a new Asset.
     ```js
     {
         "data": {
-            "type": "Movie",
+            "category": "Movie",
             "status": "published",
             "title": "Operación Dragón",
             "titleSeo": "Operación Dragón",
@@ -977,7 +977,7 @@ Represents a Channel
     {
         "data": {
             "entity": "Channel",
-            "type": "LinearChannel",
+            "category": "LinearChannel",
             "id": 16,
             "status": "published",
             "createdAt": "2014-03-28 00:25:44",
@@ -1049,7 +1049,7 @@ Updates a specific Channel
     ```js
     {
         "data": {
-            "type": "LinearChannel",
+            "category": "LinearChannel",
             "status": "published",
             "createdBy": 3,
             "modifiedBy": 4,
@@ -1127,7 +1127,7 @@ Returns all Channels.
         "data": [
             {
                 "entity": "Channel",
-                "type": "LinearChannel",
+                "category": "LinearChannel",
                 "id": 16,
                 "status": "published",
                 "createdAt": "2014-03-28 00:25:44",
@@ -1706,7 +1706,7 @@ Represents actions against the EPG
         "data": [
             {
                 "entity": "Channel",
-                "type": "LinearChannel",
+                "category": "LinearChannel",
                 "id": 16,
                 "status": "published",
                 "createdAt": "2013-03-28 13:21:35",
@@ -1727,7 +1727,7 @@ Represents actions against the EPG
                     {
                         "id": 123,
                         "entity": "Schedule",
-                        "type": "LinearSchedule",
+                        "category": "LinearSchedule",
                         "scheduleDate": "2013-04-01 00:00:00",
                         "items": [
                             {
@@ -1736,7 +1736,7 @@ Represents actions against the EPG
                                 "endTime": "01:30:00",
                                 "program": {
                                     "entity": "Program",
-                                    "type": "LinearEpisodeProgram",
+                                    "category": "LinearEpisodeProgram",
                                     "id": 3,
                                     "duration": 2,
                                     "showType": "Series",
@@ -1750,7 +1750,7 @@ Represents actions against the EPG
                                 "endTime": "03:00:00",
                                 "program": {
                                     "entity": "Program",
-                                    "type": "LinearMovieProgram",
+                                    "category": "LinearMovieProgram",
                                     "id": 7,
                                     "duration": 2,
                                     "showType": "Movie",
@@ -2354,7 +2354,7 @@ Represents a Page
     {
         "data": {
             "entity": "Page",
-            "type": "Rental",
+            "category": "Rental",
             "id": 1,
             "status": "published",
             "createdAt": "2013-08-23 19:07:49",
@@ -2371,7 +2371,7 @@ Represents a Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "createdAt": "2013-08-23 19:07:49",
@@ -2478,7 +2478,7 @@ Represents a Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "createdAt": "2013-08-23 19:07:49",
@@ -2579,7 +2579,7 @@ Represents a Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "createdAt": "2013-08-23 19:07:49",
@@ -2679,7 +2679,7 @@ Represents a Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "createdAt": "2013-08-23 19:07:49",
@@ -2798,7 +2798,7 @@ Updates a specific Page
     ```js
     {
         "data": {
-            "type": "Rental",
+            "category": "Rental",
             "status": "published",
             "createdBy": 3,
             "modifiedBy": 4,
@@ -2812,7 +2812,7 @@ Updates a specific Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -2914,7 +2914,7 @@ Updates a specific Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -3010,7 +3010,7 @@ Updates a specific Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -3105,7 +3105,7 @@ Updates a specific Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -3227,7 +3227,7 @@ Returns all Pages.
     {
         "data": [
             {
-                "type": "Rental",
+                "category": "Rental",
                 "status": "published",
                 "createdAt": "2013-08-23 19:07:49",
                 "modifiedAt": "2014-08-07 02:50:31",
@@ -3262,7 +3262,7 @@ Creates a new Page.
     ```js
     {
         "data": {
-            "type": "Rental",
+            "category": "Rental",
             "status": "published",
             "createdBy": 3,
             "modifiedBy": 4,
@@ -3276,7 +3276,7 @@ Creates a new Page.
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -3378,7 +3378,7 @@ Creates a new Page.
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -3474,7 +3474,7 @@ Creates a new Page.
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -3569,7 +3569,7 @@ Creates a new Page.
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "status": "published",
                             "title": "operación dragón",
@@ -4344,7 +4344,7 @@ Represents a Program
     {
         "data": {
             "entity": "Program",
-            "type": "LinearEpisodeProgram",
+            "category": "LinearEpisodeProgram",
             "id": 3,
             "status": "published",
             "createdAt": "2014-03-28 00:25:44",
@@ -4399,7 +4399,7 @@ Updates a specific Program
     ```js
     {
         "data": {
-            "type": "LinearEpisodeProgram",
+            "category": "LinearEpisodeProgram",
             "status": "published",
             "duration": 2,
             "externalProgramId": "EP013394160010",
@@ -4460,7 +4460,7 @@ Returns all Programs.
         "data": [
             {
                 "entity": "Program",
-                "type": "LinearEpisodeProgram",
+                "category": "LinearEpisodeProgram",
                 "id": 3,
                 "status": "published",
                 "createdAt": "2014-03-28 00:25:44",
@@ -4519,7 +4519,7 @@ Represents a season
             "episodes": [
                 {
                     "entity": "Asset",
-                    "type": "Episode",
+                    "category": "Episode",
                     "id": 11392,
                     "number": 40,
                     "title": "Fuera de todo plan",
@@ -4538,7 +4538,7 @@ Represents a season
                 },
                 {
                     "entity": "Asset",
-                    "type": "Episode",
+                    "category": "Episode",
                     "id": 11569,
                     "number": 39,
                     "title": "Griselda se confiesa",
@@ -4596,7 +4596,7 @@ Updates a specific Season
             "episodes": [
                 {
                     "entity": "Asset",
-                    "type": "Episode",
+                    "category": "Episode",
                     "id": 11392,
                     "number": 40,
                     "title": "Fuera de todo plan",
@@ -4613,7 +4613,7 @@ Updates a specific Season
                 },
                 {
                     "entity": "Asset",
-                    "type": "Episode",
+                    "category": "Episode",
                     "id": 11569,
                     "number": 39,
                     "title": "Griselda se confiesa",
@@ -4711,7 +4711,7 @@ Creates a new Season in the CMS
             "episodes": [
                 {
                     "entity": "Asset",
-                    "type": "Episode",
+                    "category": "Episode",
                     "id": 11392,
                     "number": 40,
                     "title": "Fuera de todo plan",
@@ -4730,7 +4730,7 @@ Creates a new Season in the CMS
                 },
                 {
                     "entity": "Asset",
-                    "type": "Episode",
+                    "category": "Episode",
                     "id": 11569,
                     "number": 39,
                     "title": "Griselda se confiesa",
