@@ -27,6 +27,7 @@ Represents a Asset
             "status": "published",
             "createdAt": "2013-08-23 19:07:49",
             "modifiedAt": "2014-08-07 02:50:31",
+            "parentShow": null,
             "title": "Operación Dragón",
             "titleSeo": "Operación Dragón",
             "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
@@ -223,6 +224,7 @@ Returns a specific Asset.
             "status": "published",
             "createdAt": "2013-08-23 19:07:49",
             "modifiedAt": "2014-08-07 02:50:31",
+            "parentShow": null,
             "title": "La Viuda Negra",
             "titleSeo": "La Viuda Negra",
             "synopsisShort": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida.",
@@ -472,6 +474,204 @@ Returns a specific Asset.
     }
     ```
 
++ Request Episode
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
++ Response 200
+
+    ```js
+    {
+        "data": {
+            "entity": "Asset",
+            "category": "Episode",
+            "parentShow": {
+                "entity": "Asset",
+                "category": "Series",
+                "id": 11173
+            },
+            "id": 11174,
+            "status": "published",
+            "createdAt": "2013-08-23 19:07:49",
+            "modifiedAt": "2014-08-07 02:50:31",
+            "title": "Abusan de Griselda",
+            "titleShort": "Abusan de Griselda",
+            "synopsisShort": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida.",
+            "synopsis": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida, pero a un alto precio.",
+            "keywords": [
+                "dragon",
+                "ball"
+            ],
+            "duration": 3642,
+            "airDate": "2008-06-17T10:23:36Z",
+            "externalBillingId": "000557397",
+            "parentalRating": {
+                "id": 9,
+                "title": "R"
+            },
+            "genre": {
+                "id": 111,
+                "title": "Acción y Aventura"
+            },
+            "otherGenres": [
+                {
+                    "id": 111,
+                    "title": "Acción y Aventura"
+                },
+                {
+                    "id": 112,
+                    "title": "Dibujos Animados"
+                }
+            ],
+            "distributor": {
+                "id": 12,
+                "name": "Warner Bros."
+            },
+            "studio": {
+                "id": 22,
+                "name": "WDD"
+            },
+            "people": [
+                {
+                    "id": 7312,
+                    "role": "Actor",
+                    "communicationName": "John Saxon"
+                },
+                {
+                    "id": 7313,
+                    "role": "Actor",
+                    "communicationName": "Bruce Lee"
+                },
+                {
+                    "id": 7314,
+                    "role": "Director",
+                    "communicationName": "Robert Clouse"
+                },
+                {
+                    "id": 15010,
+                    "role": "Actor",
+                    "communicationName": "Jim Kelly"
+                },
+                {
+                    "id": 15011,
+                    "role": "Actor",
+                    "communicationName": "Ahna Capri"
+                }
+            ],
+            "pictures": [
+                {
+                    "entity": "Picture",
+                    "id": 2853,
+                    "modifiedAt": "2014-03-28 00:25:46",
+                    "credits": "Tom Smith",
+                    "orientation": "portrait",
+                    "pictureType": "Poster",
+                    "title": "",
+                    "versions": [
+                        {
+                            "profile": "webLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "webLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "224",
+                            "height": "126"
+                        },
+                        {
+                            "profile": "webLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "384",
+                            "height": "216"
+                        },
+                        {
+                            "profile": "mobileLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "96",
+                            "height": "54"
+                        },
+                        {
+                            "profile": "mobileLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "160",
+                            "height": "90"
+                        },
+                        {
+                            "profile": "mobileLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "640",
+                            "height": "360"
+                        }
+                    ]
+                }
+            ],
+            "seasons": null,
+            "videos": [
+                {
+                    "entity": "Video",
+                    "id": 4533,
+                    "audioLanguage": {
+                        "id": 3,
+                        "title": "English"
+                    },
+                    "audioType": "Stereo",
+                    "definition": "SD",
+                    "duration": 3642,
+                    "files": [
+                        {
+                           "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
+                           "type": "HDS" 
+                        },
+                        {
+                           "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
+                           "type": "HLS" 
+                        },
+                        {
+                           "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
+                           "type": "SS" 
+                        }
+                    ],
+                    "resolution": "480i",
+                    "screenFormat": "Widescreen",
+                    "videoType": "full"
+                }
+            ],
+            "publicationEvent": {
+                "entity": "PublicationEvent",
+                "id": 18563,
+                "modifiedAt": "2014-08-07 02:50:31",
+                "startDate": "2014-04-09 06:00:00",
+                "endDate": "2015-03-31 05:59:00",
+                "billingType": "rental",
+                "price": "25.00"
+            }
+        },
+        "messages": []
+    }
+    ```
+
 ### Updates a Asset [PATCH]
 Updates a specific Asset
 
@@ -681,6 +881,7 @@ Returns all Assets.
                 "status": "published",
                 "createdAt": "2013-08-23 19:07:49",
                 "modifiedAt": "2014-08-07 02:50:31",
+                "parentShow": null,
                 "title": "Operación Dragón",
                 "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                 "duration": 3642,
@@ -1739,7 +1940,7 @@ Represents actions against the EPG
                                     "category": "LinearEpisodeProgram",
                                     "id": 3,
                                     "duration": 2,
-                                    "showType": "Series",
+                                    "showCategory": "Series",
                                     "title": "Co-Ed Confidential 4",
                                     "titleShort": "Co-Ed Confidential 4"
                                 }
@@ -1753,7 +1954,7 @@ Represents actions against the EPG
                                     "category": "LinearMovieProgram",
                                     "id": 7,
                                     "duration": 2,
-                                    "showType": "Movie",
+                                    "showCategory": "Movie",
                                     "title": "Furia De Mujer",
                                     "titleShort": "Furia De Mujer"
                                 }
@@ -4366,7 +4567,7 @@ Represents a Program
             },
             "synopsisShort": "Karen cuida de Zach",
             "synopsis": "Karen cuida de Zach",
-            "showType": "Series",
+            "showCategory": "Series",
             "title": "Co-Ed Confidential 4",
             "titleSeo": "Co-Ed Confidential 4",
             "year": 2010,
@@ -4418,7 +4619,7 @@ Updates a specific Program
             },
             "synopsisShort": "Karen cuida de Zach",
             "synopsis": "Karen cuida de Zach",
-            "showType": "Series",
+            "showCategory": "Series",
             "title": "Co-Ed Confidential 4",
             "titleSeo": "Co-Ed Confidential 4",
             "year": 2010,
@@ -4466,7 +4667,7 @@ Returns all Programs.
                 "createdAt": "2014-03-28 00:25:44",
                 "modifiedAt": "2014-03-28 00:25:46",
                 "duration": 2,
-                "showType": "Series",
+                "showCategory": "Series",
                 "title": "Co-Ed Confidential 4",
                 "createdBy": 3,
                 "modifiedBy": 4
