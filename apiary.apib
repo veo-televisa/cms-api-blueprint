@@ -69,27 +69,27 @@ Represents a Asset
                 {
                     "id": 7312,
                     "category": "actor",
-                    "communicationName": "John Saxon"
+                    "displayName": "John Saxon"
                 },
                 {
                     "id": 7313,
                     "category": "actor",
-                    "communicationName": "Bruce Lee"
+                    "displayName": "Bruce Lee"
                 },
                 {
                     "id": 7314,
                     "category": "director",
-                    "communicationName": "Robert Clouse"
+                    "displayName": "Robert Clouse"
                 },
                 {
                     "id": 15010,
                     "category": "actor",
-                    "communicationName": "Jim Kelly"
+                    "displayName": "Jim Kelly"
                 },
                 {
                     "id": 15011,
                     "category": "actor",
-                    "communicationName": "Ahna Capri"
+                    "displayName": "Ahna Capri"
                 }
             ],
             "pictures": [
@@ -266,27 +266,27 @@ Returns a specific Asset.
                 {
                     "id": 7312,
                     "category": "actor",
-                    "communicationName": "John Saxon"
+                    "displayName": "John Saxon"
                 },
                 {
                     "id": 7313,
                     "category": "actor",
-                    "communicationName": "Bruce Lee"
+                    "displayName": "Bruce Lee"
                 },
                 {
                     "id": 7314,
                     "category": "director",
-                    "communicationName": "Robert Clouse"
+                    "displayName": "Robert Clouse"
                 },
                 {
                     "id": 15010,
                     "category": "actor",
-                    "communicationName": "Jim Kelly"
+                    "displayName": "Jim Kelly"
                 },
                 {
                     "id": 15011,
                     "category": "actor",
-                    "communicationName": "Ahna Capri"
+                    "displayName": "Ahna Capri"
                 }
             ],
             "pictures": [
@@ -537,27 +537,27 @@ Returns a specific Asset.
                 {
                     "id": 7312,
                     "category": "actor",
-                    "communicationName": "John Saxon"
+                    "displayName": "John Saxon"
                 },
                 {
                     "id": 7313,
                     "category": "actor",
-                    "communicationName": "Bruce Lee"
+                    "displayName": "Bruce Lee"
                 },
                 {
                     "id": 7314,
                     "category": "director",
-                    "communicationName": "Robert Clouse"
+                    "displayName": "Robert Clouse"
                 },
                 {
                     "id": 15010,
                     "category": "actor",
-                    "communicationName": "Jim Kelly"
+                    "displayName": "Jim Kelly"
                 },
                 {
                     "id": 15011,
                     "category": "actor",
-                    "communicationName": "Ahna Capri"
+                    "displayName": "Ahna Capri"
                 }
             ],
             "pictures": [
@@ -3907,21 +3907,22 @@ Represents a Person
             "id": 14,
             "entity": "person",
             "status": "published",
-            "communicationName": "Helena Bonham Carter",
+            "displayName": "Helena Bonham Carter",
             "firstName": "Helena Bonham",
             "familyName": "Carter",
             "characterName": "Elpidio Valdez",
             "characterImage": {
                 "id": 1,
-                "alt": "Test alt value",
-                "contentType": "image/png",
                 "height": 126,
                 "width": 224,
-                "size": 30827,
-                "url": "https://scablevision-a.akamaihd.net/prod/Picture/C_1_Picture_6046_profile152Image.png"
+                "link": "https://scablevision-a.akamaihd.net/prod/Picture/C_1_Picture_6046_profile152Image.png"
             },
             "category": "actor",
-            "asset": 3
+            "asset": {
+                "entity": "asset",
+                "id": 3,
+                "title": "Harry Potter"
+            }
         },
         "messages": [
             {
@@ -3953,7 +3954,7 @@ Updates a specific Person
     {
         "data": {
             "status": "published",
-            "communicationName": "Helena Bonham Carter",
+            "displayName": "Helena Bonham Carter",
             "firstName": "Helena Bonham",
             "familyName": "Carter",
             "characterName": "Elpidio Valdez",
@@ -3961,7 +3962,11 @@ Updates a specific Person
                 "id": 1
             },
             "category": "actor",
-            "asset": 3
+            "asset": {
+                "entity": "asset",
+                "id": 3,
+                "title": "Harry Potter"
+            }
         }
     }
     ```
@@ -3999,14 +4004,14 @@ Returns all People.
                 "id": 14,
                 "entity": "person",
                 "status": "published",
-                "communicationName": "Helena Bonham Carter",
+                "displayName": "Helena Bonham Carter",
                 "category": "actor"
             },
             {
                 "id": 15,
                 "entity": "person",
                 "status": "published",
-                "communicationName": "Edward Norton",
+                "displayName": "Edward Norton",
                 "category": "actor"
             }
         ],
@@ -4041,7 +4046,7 @@ Creates a new Person in the CMS.
     {
         "data": {
             "status": "published",
-            "communicationName": "Helena Bonham Carter",
+            "displayName": "Helena Bonham Carter",
             "firstName": "Helena Bonham",
             "familyName": "Carter",
             "characterName": "Elpidio Valdez",
@@ -4049,7 +4054,11 @@ Creates a new Person in the CMS.
                 "id": 1
             },
             "category": "actor",
-            "asset": 3
+            "asset": {
+                "entity": "asset",
+                "id": 3,
+                "title": "Harry Potter"
+            }
         }
     }
     ```    
@@ -4087,8 +4096,14 @@ Represents a Picture
             "filesize": "0",
             "orientation": "portrait",
             "pictureType": "poster",
-            "providerId": "televisa.networks.mx",
-            "studio": "MyStudio",
+            "provider": {
+                "id": 1,
+                "title": "televisa.networks.mx"
+            },
+            "studio": {
+                "id": 1,
+                "title": "Sony Pictures"
+            },
             "title": "",
             "createdBy": 3,
             "modifiedBy": 4,
