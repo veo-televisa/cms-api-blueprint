@@ -1819,7 +1819,73 @@ Returns a specific EPG given relevant start and end times, filtered by a Channel
 
 + Response 200
 
-    [EPG][]
+    ```js
+    {
+        "data": {
+            "entity": "channel",
+            "category": "linearChannel",
+            "id": 16,
+            "status": "published",
+            "createdAt": "2013-03-28 13:21:35",
+            "modifiedAt": "2013-03-28 13:21:35",
+            "createdBy": 3,
+            "modifiedBy": 4,
+            "title": "Unicable",
+            "number": 203,
+            "images": [
+                {
+                    "type": "epgTimeline",
+                    "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                    "width": 31,
+                    "height": 47
+                }
+            ],
+            "schedules": [
+                {
+                    "id": 123,
+                    "entity": "schedule",
+                    "category": "linearSchedule",
+                    "scheduleDate": "2013-04-01 00:00:00",
+                    "items": [
+                        {
+                            "id": 392,
+                            "startTime": "00:30:00",
+                            "endTime": "01:30:00",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearEpisodeProgram",
+                                "id": 3,
+                                "duration": 2,
+                                "subCategory": "series",
+                                "title": "Co-Ed Confidential 4",
+                                "titleShort": "Co-Ed Confidential 4"
+                            }
+                        },
+                        {
+                            "id": 393,
+                            "startTime": "01:30:00",
+                            "endTime": "03:00:00",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearMovieProgram",
+                                "id": 7,
+                                "duration": 2,
+                                "subCategory": "movie",
+                                "title": "Furia De Mujer",
+                                "titleShort": "Furia De Mujer"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
 
 # Group Business - Genre
 Represents actions against Genre objects
@@ -3703,7 +3769,6 @@ Represents a Parental Rating
             "id": 1,
             "title": "G",
             "code": "G",
-            "level": 0,
             "entity": "parentalRating"
         },
         "messages": []
@@ -3734,7 +3799,6 @@ Updates a specific Parental Rating
         "data": {
             "title": "G",
             "code": "G",
-            "level": 0
         }
     }
     ```
@@ -3773,14 +3837,12 @@ Returns all Parental Rating.
                     "id": 1,
                     "title": "G",
                     "code": "G",
-                    "level": 0,
                     "entity": "parentalRating"
                 },
                 {
                   "id": 2,
                   "title": "PG",
                   "code": "PG",
-                  "level": 1,
                   "entity": "parentalRating"
                 }
             ],
@@ -3816,7 +3878,6 @@ Creates a new Parental Rating.
         "data": {
             "title": "G",
             "code": "G",
-            "level": 0
         }
     }
     ```    
@@ -4021,7 +4082,6 @@ Represents a Picture
             "createdAt": "2014-03-28 00:25:44",
             "modifiedAt": "2014-03-28 00:25:46",
             "assetId": "11173",
-            "checksum": "",
             "credits": "Tom Smith",
             "externalPictureId": "TELE0000005493762057",
             "filesize": "0",
@@ -4117,7 +4177,6 @@ Updates a specific Picture
         "data": {
             "status": "published",
             "assetId": "11173",
-            "checksum": "",
             "credits": "Tom Smith",
             "externalPictureId": "TELE0000005493762057",
             "filesize": "0",
@@ -4256,7 +4315,6 @@ Creates a new Picture.
         "data": {
             "status": "published",
             "assetId": "11173",
-            "checksum": "",
             "credits": "Tom Smith",
             "externalPictureId": "TELE0000005493762057",
             "filesize": "0",
@@ -4875,8 +4933,6 @@ Represents a Video
                 "title": "English"
             },
             "audioType": "stereo",
-            "checksum": "f35494cf15c017a6e8338e39fc0bf027",
-            "dataCenterOrigin": "Cablevision",
             "definition": "SD",
             "externalVideoAssetId": "ASST0000000001033132",
             "duration": 3642,
@@ -4899,8 +4955,7 @@ Represents a Video
             "screenFormat": "widescreen",
             "createdBy": 3,
             "modifiedBy": 4,
-            "videoType": "full",
-            "workflowTemplateGUID": "7e63ecfd-0305-4aba-bb88-1c35fdb18337"
+            "videoType": "full"
         },
         "messages": []
     }
@@ -4936,8 +4991,6 @@ Updates a specific Video
                 "id": 3
             },
             "audioType": "stereo",
-            "checksum": "f35494cf15c017a6e8338e39fc0bf027",
-            "dataCenterOrigin": "Cablevision",
             "definition": "SD",
             "externalVideoAssetId": "ASST0000000001033132",
             "duration": 3642,
@@ -4960,8 +5013,7 @@ Updates a specific Video
             "screenFormat": "widescreen",
             "createdBy": 3,
             "modifiedBy": 4,
-            "videoType": full,
-            "workflowTemplateGUID": "7e63ecfd-0305-4aba-bb88-1c35fdb18337",
+            "videoType": full
         }
     }
     ```
@@ -5044,8 +5096,6 @@ Creates a new Video.
                 "id": 3
             },
             "audioType": "stereo",
-            "checksum": "f35494cf15c017a6e8338e39fc0bf027",
-            "dataCenterOrigin": "Cablevision",
             "definition": "SD",
             "externalVideoAssetId": "ASST0000000001033132",
             "duration": 3642,
@@ -5068,8 +5118,7 @@ Creates a new Video.
             "screenFormat": "widescreen",
             "createdBy": 3,
             "modifiedBy": 4,
-            "videoType": "full",
-            "workflowTemplateGUID": "7e63ecfd-0305-4aba-bb88-1c35fdb18337"
+            "videoType": "full"
         }
     }
     ```
