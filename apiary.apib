@@ -7,6 +7,329 @@ Please be sure to validate your response examples with [JSONLint][1].
 
 [1]:  http://jsonlint.com/
 
+
+
+# Group Business - Dashboard
+Actions to show dashboard
+
+## Dashboard [/cms/dashboard]
+Show the dashboard
+
+### Retrieve the dashboard [GET]
+Retrieve the dashboard.
+
+Dashboard contains 3 arrays of assets:
+  1. **newPendingAssests**: Newly arrived assets that are not published
+  2. **relicensedAssets**: Assets that are not published with new future license
+  3. **aboutToExpireAssets**: Assets about to hit endDate -> 24 hours before
+
+
+
++ Request
+
+    + Headers
+
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "newPendingAssests": [
+                {
+                    "entity": "asset",
+                    "category": "movie",
+                    "id": 4754,
+                    "status": "draft",
+                    "createdAt": "2013-08-23T19:07:49Z",
+                    "modifiedAt": "2014-08-07T02:50:31Z",
+                    "parentShow": null,
+                    "title": "Operación Dragón",
+                    "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                    "duration": 3642,
+                    "pictures": [
+                        {
+                            "entity": "picture",
+                            "id": 2853,
+                            "status": "published",
+                            "modifiedAt": "2014-03-28T00:25:46Z",
+                            "credits": "Tom Smith",
+                            "orientation": "portrait",
+                            "pictureType": "poster",
+                            "title": "",
+                            "versions": [
+                                {
+                                    "profile": "webLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "webLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "224",
+                                    "height": "126"
+                                },
+                                {
+                                    "profile": "webLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "384",
+                                    "height": "216"
+                                },
+                                {
+                                    "profile": "mobileLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "96",
+                                    "height": "54"
+                                },
+                                {
+                                    "profile": "mobileLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "160",
+                                    "height": "90"
+                                },
+                                {
+                                    "profile": "mobileLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "640",
+                                    "height": "360"
+                                }
+                            ]
+                        }
+                    ],
+                    "publicationEvent": {
+                        "entity": "publicationEvent",
+                        "id": 18563,
+                        "status": "published",
+                        "createdAt": "2013-08-23T19:07:49Z",
+                        "modifiedAt": "2014-08-07T02:50:31Z",
+                        "startDate": "2014-04-09T06:00:00Z",
+                        "endDate": "2015-03-31T05:59:00Z",
+                        "billingType": "rental",
+                        "price": "25.00",
+                        "createdBy": 3,
+                        "modifiedBy": 4
+                    }
+                }
+            ],
+            "relicensedAssets": [
+                {
+                    "entity": "asset",
+                    "category": "movie",
+                    "id": 4754,
+                    "status": "unpublished",
+                    "createdAt": "2013-08-23T19:07:49Z",
+                    "modifiedAt": "2014-08-07T02:50:31Z",
+                    "parentShow": null,
+                    "title": "Operación Dragón 2",
+                    "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                    "duration": 3642,
+                    "pictures": [
+                        {
+                            "entity": "picture",
+                            "id": 2853,
+                            "status": "published",
+                            "modifiedAt": "2014-03-28T00:25:46Z",
+                            "credits": "Tom Smith",
+                            "orientation": "portrait",
+                            "pictureType": "poster",
+                            "title": "",
+                            "versions": [
+                                {
+                                    "profile": "webLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "webLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "224",
+                                    "height": "126"
+                                },
+                                {
+                                    "profile": "webLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "384",
+                                    "height": "216"
+                                },
+                                {
+                                    "profile": "mobileLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "96",
+                                    "height": "54"
+                                },
+                                {
+                                    "profile": "mobileLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "160",
+                                    "height": "90"
+                                },
+                                {
+                                    "profile": "mobileLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "640",
+                                    "height": "360"
+                                }
+                            ]
+                        }
+                    ],
+                    "publicationEvent": {
+                        "entity": "publicationEvent",
+                        "id": 18563,
+                        "status": "published",
+                        "createdAt": "2013-08-23T19:07:49Z",
+                        "modifiedAt": "2014-08-07T02:50:31Z",
+                        "startDate": "2014-04-09T06:00:00Z",
+                        "endDate": "2015-03-31T05:59:00Z",
+                        "billingType": "rental",
+                        "price": "25.00",
+                        "createdBy": 3,
+                        "modifiedBy": 4
+                    }
+                }
+            ],
+            "aboutToExpireAssets": [
+                {
+                    "entity": "asset",
+                    "category": "movie",
+                    "id": 4754,
+                    "status": "published",
+                    "createdAt": "2013-08-23T19:07:49Z",
+                    "modifiedAt": "2014-08-07T02:50:31Z",
+                    "parentShow": null,
+                    "title": "Operación Dragón 3",
+                    "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                    "duration": 3642,
+                    "pictures": [
+                        {
+                            "entity": "picture",
+                            "id": 2853,
+                            "status": "published",
+                            "modifiedAt": "2014-03-28T00:25:46Z",
+                            "credits": "Tom Smith",
+                            "orientation": "portrait",
+                            "pictureType": "poster",
+                            "title": "",
+                            "versions": [
+                                {
+                                    "profile": "webLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "webLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "224",
+                                    "height": "126"
+                                },
+                                {
+                                    "profile": "webLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "384",
+                                    "height": "216"
+                                },
+                                {
+                                    "profile": "mobileLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "96",
+                                    "height": "54"
+                                },
+                                {
+                                    "profile": "mobileLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "160",
+                                    "height": "90"
+                                },
+                                {
+                                    "profile": "mobileLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "640",
+                                    "height": "360"
+                                }
+                            ]
+                        }
+                    ],
+                    "publicationEvent": {
+                        "entity": "publicationEvent",
+                        "id": 18563,
+                        "status": "published",
+                        "createdAt": "2013-08-23T19:07:49Z",
+                        "modifiedAt": "2014-08-07T02:50:31Z",
+                        "startDate": "2014-04-09T06:00:00Z",
+                        "endDate": "2015-03-15T05:59:00Z",
+                        "billingType": "rental",
+                        "price": "25.00",
+                        "createdBy": 3,
+                        "modifiedBy": 4
+                    }
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+
+
+
 # Group Business - Asset
 Represents actions against Asset objects
 
@@ -163,7 +486,7 @@ Represents a Asset
             ],
             "videos": [
                 {
-                    
+
                     "entity": "video",
                     "id": 4533,
                     "status": "published",
@@ -199,7 +522,7 @@ Returns a specific Asset.
 + Request Movie
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -210,7 +533,7 @@ Returns a specific Asset.
 + Request Series
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -479,7 +802,7 @@ Returns a specific Asset.
 + Request Episode
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -645,15 +968,15 @@ Returns a specific Asset.
                     "files": [
                         {
                            "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
-                           "type": "hds" 
+                           "type": "hds"
                         },
                         {
                            "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
-                           "type": "hls" 
+                           "type": "hls"
                         },
                         {
                            "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
-                           "type": "ss" 
+                           "type": "ss"
                         }
                     ],
                     "resolution": "480i",
@@ -740,7 +1063,7 @@ Updates a specific Asset
             ],
             "videos": [
                 {
-                    
+
                     "id": 4533
                 }
             ],
@@ -750,10 +1073,10 @@ Updates a specific Asset
         }
     }
     ```
-    
+
     + Headers
-            
-            
+
+
             X-Auth-Token: qwerty12345
 
 
@@ -767,7 +1090,7 @@ Deletes an Asset
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -782,7 +1105,7 @@ Returns all Assets.
     ```js
     {
         "headers": {},
-        "data": [ 
+        "data": [
             {
                 "entity": "asset",
                 "category": "movie",
@@ -795,7 +1118,7 @@ Returns all Assets.
                 "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
                 "duration": 3642,
                 "pictures": [
-                {
+                  {
                     "entity": "picture",
                     "id": 2853,
                     "status": "published",
@@ -860,8 +1183,8 @@ Returns all Assets.
                             "height": "360"
                         }
                     ]
-                }
-            ],
+                  }
+                ],
                 "publicationEvent": {
                     "entity": "publicationEvent",
                     "id": 18563,
@@ -887,7 +1210,7 @@ Retrieves all Assets.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -960,7 +1283,7 @@ Creates a new Asset.
             ],
             "videos": [
                 {
-                    
+
                     "id": 4533
                 }
             ],
@@ -970,14 +1293,14 @@ Creates a new Asset.
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Asset][]
 
 # Group Business - Channel
@@ -1053,7 +1376,7 @@ Returns a specific Channel.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1115,9 +1438,9 @@ Updates a specific Channel
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1131,7 +1454,7 @@ Deletes a Channel
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1178,7 +1501,7 @@ Retrieves all Channels.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1217,7 +1540,7 @@ Returns a specific Country.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1237,9 +1560,9 @@ Updates a specific Country
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1253,7 +1576,7 @@ Deletes a country
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1294,7 +1617,7 @@ Retrieves all countries.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1313,14 +1636,14 @@ Creates a new Country.
             "title": "United States"
         }
     }
-    ```    
+    ```
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Country][]
 
 # Group Business - Device Configuration
@@ -1361,7 +1684,7 @@ Returns a specific Device Configuration.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1391,10 +1714,10 @@ Updates a specific Device Configuration
         }
     }
     ```
-    
+
     + Headers
-            
-            
+
+
             X-Auth-Token: qwerty12345
 
 
@@ -1408,7 +1731,7 @@ Deletes a Device Configuration
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1437,14 +1760,14 @@ Creates a new Device Configuration.
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Device Configuration][]
 
 ## Labels [/cms/business/device-config/labels/{key}]
@@ -1481,7 +1804,7 @@ Returns the Labels for a Device's Configuration
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1511,10 +1834,10 @@ Updates the Labels for a Device's Configuration
         ]
     }
     ```
-    
+
     + Headers
-            
-            
+
+
             X-Auth-Token: qwerty12345
 
 
@@ -1528,7 +1851,7 @@ Deletes Labels for a Device's Configuration
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1557,14 +1880,14 @@ Creates the Labels for a Device's Configuration
         ]
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Labels][]
 
 # Group Business - Distributor
@@ -1603,7 +1926,7 @@ Returns a specific Distributor.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1626,9 +1949,9 @@ Updates a specific Distributor
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1642,7 +1965,7 @@ Deletes a distributor
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1685,7 +2008,7 @@ Retrieves all distributors.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1707,14 +2030,14 @@ Creates a new Distributor.
             "contact": "Juan Perez"
         }
     }
-    ```    
+    ```
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Distributor][]
 
 # Group Business - EPG
@@ -1728,7 +2051,7 @@ Represents actions against the EPG
     + end (int, `1424204313`) ... The end Unix timestamp of the EPG.
 
 + Model (application/json)
-    
+
     ```js
     {
         "headers": {},
@@ -1806,7 +2129,7 @@ Returns a specific EPG given relevant start and end times
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -1819,7 +2142,7 @@ Represents actions against the EPG, filtered by Channel
 + Parameters
     + start (int, `1423720800`) ... The start Unix timestamp of the Schedule.
     + end (int, `1424204313`) ... The end Unix timestamp of the Schedule.
-    + channelId (int, `16`) ... The id of the schedule channel 
+    + channelId (int, `16`) ... The id of the schedule channel
 
 ### Retrieve the EPG [GET]
 Returns a specific EPG given relevant start and end times, filtered by a Channel
@@ -1827,7 +2150,7 @@ Returns a specific EPG given relevant start and end times, filtered by a Channel
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -1946,7 +2269,7 @@ Returns a specific Genre.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1975,9 +2298,9 @@ Updates a specific Genre
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -1991,7 +2314,7 @@ Deletes a Genre
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -2043,7 +2366,7 @@ Retrieves all genres.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -2072,14 +2395,14 @@ Creates a new Genre.
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Genre][]
 
 # Group Business - Geoblocking
@@ -2111,7 +2434,7 @@ Returns a specific Geoblocking.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -2131,9 +2454,9 @@ Updates a specific Geoblocking
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -2147,7 +2470,7 @@ Deletes a Geoblocking
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -2188,7 +2511,7 @@ Retrieves all geoblockings.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -2207,14 +2530,14 @@ Creates a new Geoblocking.
             "title": "Guatemala"
         }
     }
-    ```    
+    ```
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Geoblocking][]
 
 # Group Business - Navigation
@@ -2273,7 +2596,7 @@ Returns a specific Navigation.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -2319,10 +2642,10 @@ Updates a specific Navigation
             ]
         }
     }
-    ```    
-    
+    ```
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -2336,7 +2659,7 @@ Deletes a Navigation
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -2377,7 +2700,7 @@ Retrieves all geoblockings.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -2423,14 +2746,14 @@ Creates a new Navigation.
             ]
         }
     }
-    ```    
+    ```
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Navigation][]
 
 # Group Business - Page
@@ -2887,7 +3210,7 @@ Returns a specific Page.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -3300,9 +3623,9 @@ Updates a specific Page
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -3316,7 +3639,7 @@ Deletes a Page
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -3352,7 +3675,7 @@ Retrieves all pages.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -3764,14 +4087,14 @@ Creates a new Page.
             ]
         }
     }
-    ```    
+    ```
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Page][]
 
 # Group Business - Parental Rating
@@ -3804,7 +4127,7 @@ Returns a specific Parental Rating.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -3825,9 +4148,9 @@ Updates a specific Parental Rating
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -3841,7 +4164,7 @@ Deletes a Parental Rating
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -3884,7 +4207,7 @@ Retrieves all geoblockings.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -3904,14 +4227,14 @@ Creates a new Parental Rating.
             "code": "G",
         }
     }
-    ```    
+    ```
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Parental Rating][]
 
 # Group Business - Person
@@ -3963,7 +4286,7 @@ Returns a specific Person.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -3995,9 +4318,9 @@ Updates a specific Person
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4011,7 +4334,7 @@ Deletes a Person
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4055,7 +4378,7 @@ Retrieves all People.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -4087,9 +4410,9 @@ Creates a new Person in the CMS.
             }
         }
     }
-    ```    
+    ```
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4201,7 +4524,7 @@ Returns a specific Picture.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4288,9 +4611,9 @@ Updates a specific Picture
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4304,7 +4627,7 @@ Deletes a Picture
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4340,7 +4663,7 @@ Retrieves all pictures.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4428,12 +4751,12 @@ Creates a new Picture.
     }
     ```
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Picture][]
 
 # Group Business - Program
@@ -4491,7 +4814,7 @@ Returns a specific Program.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4533,9 +4856,9 @@ Updates a specific Program
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4549,7 +4872,7 @@ Deletes a Program
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4589,7 +4912,7 @@ Retrieves all Programs.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4679,7 +5002,7 @@ Returns a specific Season.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -4712,9 +5035,9 @@ Updates a specific Season
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4728,7 +5051,7 @@ Deletes a Season
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4767,7 +5090,7 @@ Retrieves all Seasons.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -4778,7 +5101,7 @@ Retrieves all Seasons.
 Creates a new Season in the CMS
 
 + Request
-    
+
     ```js
     {
         "data": {
@@ -4802,7 +5125,7 @@ Creates a new Season in the CMS
     ```
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 201
@@ -4845,7 +5168,7 @@ Returns a specific Studio.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -4866,9 +5189,9 @@ Updates a specific Studio
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4882,7 +5205,7 @@ Deletes a studio
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -4924,7 +5247,7 @@ Retrieves all Studios.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -4935,7 +5258,7 @@ Retrieves all Studios.
 Creates a new Studio in the CMS
 
 + Request
-    
+
     ```js
     {
         "data": {
@@ -4947,7 +5270,7 @@ Creates a new Studio in the CMS
     ```
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 201
@@ -4989,15 +5312,15 @@ Represents a Video
             "files": [
                 {
                    "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
-                   "type": "hds" 
+                   "type": "hds"
                 },
                 {
                    "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
-                   "type": "hls" 
+                   "type": "hls"
                 },
                 {
                    "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
-                   "type": "ss" 
+                   "type": "ss"
                 }
             ],
             "originalFilePath": "//192.168.101.108/ifs/prod_ingestion/harmonic/veo_4533.mpg",
@@ -5017,7 +5340,7 @@ Returns a specific Video.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -5047,15 +5370,15 @@ Updates a specific Video
             "files": [
                 {
                    "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
-                   "type": "hds" 
+                   "type": "hds"
                 },
                 {
                    "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
-                   "type": "hls" 
+                   "type": "hls"
                 },
                 {
                    "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
-                   "type": "ss" 
+                   "type": "ss"
                 }
             ],
             "originalFilePath": "//192.168.101.108/ifs/prod_ingestion/harmonic/veo_4533.mpg",
@@ -5067,10 +5390,10 @@ Updates a specific Video
         }
     }
     ```
-    
+
     + Headers
-            
-            
+
+
             X-Auth-Token: qwerty12345
 
 
@@ -5084,7 +5407,7 @@ Deletes a Video
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -5101,7 +5424,7 @@ Returns all Videos.
         "headers": {},
         "data": [
             {
-                
+
                 "entity": "video",
                 "id": 4533,
                 "status": "published",
@@ -5123,7 +5446,7 @@ Retrieves all videos.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -5153,15 +5476,15 @@ Creates a new Video.
             "files": [
                 {
                    "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
-                   "type": "hds" 
+                   "type": "hds"
                 },
                 {
                    "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
-                   "type": "hls" 
+                   "type": "hls"
                 },
                 {
                    "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
-                   "type": "ss" 
+                   "type": "ss"
                 }
             ],
             "originalFilePath": "//192.168.101.108/ifs/prod_ingestion/harmonic/veo_4533.mpg",
@@ -5173,14 +5496,14 @@ Creates a new Video.
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
 + Response 201
-    
+
     [Video][]
 
 # Group System - Authentication
@@ -5337,7 +5660,7 @@ Retrieves navigation menu for the CMS. This is simply an enumeration of the Enti
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -5386,7 +5709,7 @@ Returns all available publication statuses
                 "friendlyKey": "expired",
                 "title": "Expired"
             }
-            
+
         ]
     }
     ```
@@ -5397,7 +5720,7 @@ Retrieves all available publication statuses
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -5425,9 +5748,9 @@ Executes a transition for a given entity
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
-            
+
 + Response 200 (application/json)
 
 + Response 500 (application/json)
@@ -5457,9 +5780,9 @@ Retrieve the user's history given a userId
 Retrieve the user's history given a userId, ordered by last action date descending.
 
 + Request
-        
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200 (application/json)
@@ -5532,10 +5855,10 @@ Retrieve the user's history given a userId, ordered by last action date descendi
 Creates a new UserHistory record
 
 + Request
-    
+
     ```js
     {
-        "data": 
+        "data":
             {
                 "action": {
                         "type": "publish",
@@ -5549,18 +5872,18 @@ Creates a new UserHistory record
             }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
-    
+
 
 + Response 201
 
     ```js
     {
         "headers": {},
-        "data": 
+        "data":
             {
                 "id": 3,
                 "userId": 9,
@@ -5582,9 +5905,9 @@ Creates a new UserHistory record
 Deletes a specific User's History.
 
 + Request
-        
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 204
@@ -5596,9 +5919,9 @@ Retrieve the global history of all users
 Retrieve global history across all users, ordered by last action date descending.
 
 + Request
-        
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200 (application/json)
@@ -5684,7 +6007,7 @@ Returns a specific User.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 + Response 200
@@ -5718,9 +6041,9 @@ Updates a specific User.
         }
     }
     ```
-    
+
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -5746,7 +6069,7 @@ Deletes a specific User.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -5787,7 +6110,7 @@ Retrieves all users.
 + Request
 
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -5809,9 +6132,9 @@ Creates a new User in the CMS.
             "role": "admin"
         }
     }
-    ```    
+    ```
     + Headers
-            
+
             X-Auth-Token: qwerty12345
 
 
@@ -5830,6 +6153,3 @@ Creates a new User in the CMS.
         }
     }
     ```
-
-
-
