@@ -5871,15 +5871,9 @@ Creates a new UserHistory record
     {
         "data":
             {
-                "action": {
-                        "type": "publish",
-                        "date": "2014-01-03T06:30:00Z"
-                },
-                "entity": {
-                        "id": 4754,
-                        "title": "Spacejam",
-                        "entity": "asset"
-                }
+                "action": "draft",
+                "objectId": 4754,
+                "objectEntity": "asset"
             }
     }
     ```
@@ -5896,14 +5890,15 @@ Creates a new UserHistory record
         "headers": {},
         "data":
             {
-                "id": 3,
-                "userId": 9,
+                "id": 1,
                 "entity": "userHistory",
-                "action": {
-                        "type": "publish",
-                        "date": "2014-01-03T06:30:00Z"
-                },
-                "entity": {
+                "createdAt": "2013-08-23T19:07:49Z",
+                "modifiedAt": null,
+                "createdBy": 9,
+                "action": "draft",
+                "objectId": 4754,
+                "objectEntity": "asset",
+                "object": {
                         "id": 4754,
                         "title": "Spacejam",
                         "entity": "asset"
