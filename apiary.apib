@@ -9465,8 +9465,9 @@ Attempts to login to the site. Upon successful authentication, a token will be p
 
     ```js
     {
-        "username": "user@gmail.com",
-        "password": "password1"
+        "username": "testUser1",
+        "password": "testpass",
+        "clientId": "testClient1"
     }
     ```
 
@@ -9476,13 +9477,36 @@ Attempts to login to the site. Upon successful authentication, a token will be p
     {
         "headers": {},
         "data": {
-            "token": "qwerty12345"
-            },
-            "messages": []
+            "accessToken": "5c9acab13e2a5841a9037f035e8f2edd543d7692",
+            "expiresIn": 3600,
+            "refreshToken": "d1f47af76700668ed0fdce9f7b947945aa20c85d",
+            "user": {
+                "createdAt": "2015-04-23T03:14:07Z",
+                "createdBy": 0,
+                "displayName": "testDisplay1",
+                "email": "test@veo.tv",
+                "entity": "user",
+                "familyName": "testFamily1",
+                "firstName": "testFirst1",
+                "id": 1,
+                "modifiedAt": "2015-04-23T03:14:07Z",
+                "role": {
+                    "createdAt": "2015-04-23T03:14:07Z",
+                    "createdBy": 0,
+                    "entity": "role",
+                    "id": 1,
+                    "modifiedAt": "2015-04-23T03:14:07Z",
+                    "parent": null,
+                    "roleId": "admin"
+                },
+                "username": "testUser1"
+            }
+        },
+        "messages": []
     }
     ```
 
-+ Response 403
++ Response 401
 
     ```js
     {
@@ -9490,7 +9514,8 @@ Attempts to login to the site. Upon successful authentication, a token will be p
         "data": { },
         "messages": [
             {
-                "error": "Invalid Credentials"
+                "value": "Invalid username and password combination",
+                "context": null
             }
         ]
     }
