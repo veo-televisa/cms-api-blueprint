@@ -10101,3 +10101,302 @@ Creates a new User in the CMS.
         }
     }
     ```
+
+# Group System - Search
+Represents the search engine
+
+## Search Assets [/search{?q}{?sort}{?sortdir}{?groupBy}{?offset}{?limit}]
+Search result for assets search
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {
+            "total": 1,
+            "summary": [
+                {
+                    "total": 1,
+                    "field": "category",
+                    "value": "movies"
+                },
+                {
+                    "total": 0,
+                    "field": "category",
+                    "value": "telenovelas"
+                },
+                {
+                    "total": 0,
+                    "field": "category",
+                    "value": "series"
+                },
+                {
+                    "total": 0,
+                    "field": "category",
+                    "value": "news"
+                },
+                {
+                    "total": 0,
+                    "field": "category",
+                    "value": "shows"
+                },
+                {
+                    "total": 0,
+                    "field": "category",
+                    "value": "sports"
+                },
+                {
+                    "total": 0,
+                    "field": "billingType",
+                    "value": "rental"
+                }
+            ],
+            "ttl": 0
+        },
+        "data": [
+                {
+                    "entity": "asset",
+                    "category": "movie",
+                    "parentShow": null,
+                    "id": 4754,
+                    "title": "Operación Dragón",
+                    "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                    "duration": 3642,
+                    "airDate": "2008-06-17T10:23:36Z",
+                    "parentalRating": {
+                        "id": 9,
+                        "title": "R"
+                    },
+                    "genre": {
+                        "id": 111,
+                        "title": "Acción y Aventura"
+                    },
+                    "pictures": [
+                        {
+                            "entity": "picture",
+                            "id": 2853,
+                            "modifiedAt": "2014-03-28T00:25:46Z",
+                            "credits": "Tom Smith",
+                            "orientation": "portrait",
+                            "pictureType": "poster",
+                            "title": "",
+                            "versions": [
+                                {
+                                    "profile": "webLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "webLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "224",
+                                    "height": "126"
+                                },
+                                {
+                                    "profile": "webLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "384",
+                                    "height": "216"
+                                },
+                                {
+                                    "profile": "mobileLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "96",
+                                    "height": "54"
+                                },
+                                {
+                                    "profile": "mobileLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "160",
+                                    "height": "90"
+                                },
+                                {
+                                    "profile": "mobileLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "640",
+                                    "height": "360"
+                                }
+                            ]
+                        }
+                    ],
+                    "publicationEvent": {
+                        "entity": "publicationEvent",
+                        "id": 18563,
+                        "startDate": "2014-04-09T06:00:00Z",
+                        "endDate": "2015-03-31T05:59:00Z",
+                        "billingType": "rental",
+                        "price": "25.00"
+                    }
+                }
+        ],
+        "messages": []
+    }
+    ```
+
+### Search Assets [GET]
++ Parameters
+    + q (required, string, `Galilea%20Montijo+AND+type:(Movie+OR+Series)`) ... The search query and filters
+        + Values
+            + `Galilea%20Montijo`                                ... Full text search for `Galilea Montijo`
+            + `genre:Drama+OR+genre:Suspenso`                    ... Filter Assets by Genre
+            + `category:movie`                                   ... Filter by category (movie, series, telenovela, episode)
+            + `entity:asset`                                     ... For Assets
+            + `entity:program`                                   ... For Programs
+            + `parentalRating:PG`                                ... Filter Assets by Parental Rating
+            + `Galilea%20Montijo+AND+type:(Movie+OR+Series)`     ... Full search query example
+    + sort = `relevance` (optional, string, `relevance`)         ... Results sorting
+        + Values
+            + `popularity` ... Sorts by view_count.
+            + `airDate`    ... Sorts airDate.
+            + `rating`     ... Sorts by average_rating.
+            + `title`      ... Sorts by sort_title.
+            + `relevance`  ... Sorts by relevance.
+    + sortdir = `asc` (optional, string, `asc`) ... Sort direction.
+        + Values
+            + `asc`    ... Ascending order.
+            + `desc`   ... Descending order.
+    + groupBy (optional, string, `genre`) ... Group by.
+        + Values
+            + `genre`    ... Group by genre.
+            + `category` ... Group by category.
+            + `entity`   ... Group by entity.
+    + offset = `0` (optional, number, `0`) ... Search results offset.
+    + limit (optional, number, `120`) ... Search results limit.
+
++ Response 200
+
+    [Search Assets][]
+
++ Response 200 (application/json)
+
+    ```js
+    {
+        "headers": {
+            "total": 1,
+            "groups": 1,
+            "groupByField": "genre",
+            "ttl": 0
+        },
+        "data": [
+                {
+                    "groupByValue": "Drama",
+                    "total": 1,
+                    "items": [
+                        {
+                            "entity": "asset",
+                            "category": "movie",
+                            "parentShow": null,
+                            "id": 4754,
+                            "title": "Operación Dragón",
+                            "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                            "duration": 3642,
+                            "airDate": "2008-06-17T10:23:36Z",
+                            "parentalRating": {
+                                "id": 9,
+                                "title": "R"
+                            },
+                            "genre": {
+                                "id": 111,
+                                "title": "Drama"
+                            },
+                            "pictures": [
+                                {
+                                    "entity": "picture",
+                                    "id": 2853,
+                                    "modifiedAt": "2014-03-28T00:25:46Z",
+                                    "credits": "Tom Smith",
+                                    "orientation": "portrait",
+                                    "pictureType": "poster",
+                                    "title": "",
+                                    "versions": [
+                                        {
+                                            "profile": "webLandscapeSmall",
+                                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "webLandscapeMedium",
+                                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                            "width": "224",
+                                            "height": "126"
+                                        },
+                                        {
+                                            "profile": "webLandscapeLarge",
+                                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                            "width": "384",
+                                            "height": "216"
+                                        },
+                                        {
+                                            "profile": "mobileLandscapeSmall",
+                                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                            "width": "96",
+                                            "height": "54"
+                                        },
+                                        {
+                                            "profile": "mobileLandscapeMedium",
+                                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                            "width": "160",
+                                            "height": "90"
+                                        },
+                                        {
+                                            "profile": "mobileLandscapeLarge",
+                                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileRetinaLandscapeSmall",
+                                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                            "width": "192",
+                                            "height": "108"
+                                        },
+                                        {
+                                            "profile": "mobileRetinaLandscapeMedium",
+                                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                            "width": "320",
+                                            "height": "180"
+                                        },
+                                        {
+                                            "profile": "mobileRetinaLandscapeLarge",
+                                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                            "width": "640",
+                                            "height": "360"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "publicationEvent": {
+                                "entity": "publicationEvent",
+                                "id": 18563,
+                                "startDate": "2014-04-09T06:00:00Z",
+                                "endDate": "2015-03-31T05:59:00Z",
+                                "billingType": "rental",
+                                "price": "25.00"
+                            }
+                        }
+                   ]
+               }
+          ],
+          "messages": []
+    }
+    ```
