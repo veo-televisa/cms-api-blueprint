@@ -10418,6 +10418,116 @@ Attempts to login to the site. Upon successful authentication, a token will be p
     }
     ```
 
+## Refresh token [/cms/system/authentication/login]
+Attempts to refresh access token
+
+### Refresh access token [POST]
+Attempts to get a new access token using a refresh token. On success, a new token will be provided, which should be used in all subsequent authenticated requests
+
++ Request (application/json)
+
+    ```js
+    {
+        "refreshToken": "11c74b33e511170a219c97321055a2e0ac2d512d",
+        "grantType": "refresh_token",
+        "clientId": "testClient1"
+    }
+    ```
+
++ Response 200
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "accessToken": "d90aa784682a2c492a38416be117a37346c7bf5b",
+            "expiresIn": 3600,
+            "user": {
+                "createdAt": "2015-04-23T03:14:07Z",
+                "createdBy": 0,
+                "displayName": "testDisplay1",
+                "email": "test@veo.tv",
+                "entity": "user",
+                "familyName": "testFamily1",
+                "firstName": "testFirst1",
+                "id": 1,
+                "modifiedAt": "2015-04-23T03:14:07Z",
+                "role": {
+                    "createdAt": "2015-04-23T03:14:07Z",
+                    "createdBy": 0,
+                    "entity": "role",
+                    "id": 1,
+                    "modifiedAt": "2015-04-23T03:14:07Z",
+                    "parent": null,
+                    "roleId": "admin"
+                },
+                "username": "testUser1"
+            }
+        },
+        "messages": []
+    }
+    ```
+
++ Response 400
+
+    ```js
+    {
+        "headers": {},
+        "data": { },
+        "messages": [
+            {
+                "value": "Invalid refresh token",
+                "context": null
+            }
+        ]
+    }
+    ```
+
++ Response 400
+
+    ```js
+    {
+        "headers": {},
+        "data": { },
+        "messages": [
+            {
+                "value": "This client is invalid or must authenticate using a client secret",
+                "context": null
+            }
+        ]
+    }
+    ```
+
++ Response 400
+
+    ```js
+    {
+        "headers": {},
+        "data": { },
+        "messages": [
+            {
+                "value": "Missing parameter: \"refreshToken\" is required",
+                "context": null
+            }
+        ]
+    }
+    ```
+
++ Response 400
+
+    ```js
+    {
+        "headers": {},
+        "data": { },
+        "messages": [
+            {
+                "value": "Client credentials were not found in the headers or body",
+                "context": null
+            }
+        ]
+    }
+    ```
+
 ## Logout [/cms/system/authentication/logout]
 Attempts to logout of the CMS
 
