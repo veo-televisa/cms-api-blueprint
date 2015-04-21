@@ -11360,6 +11360,19 @@ Attempts to login to the site. Upon successful authentication, a token will be p
                 },
                 "username": "testUser1"
             }
+            "acl": {
+                "deny_by_default": true,
+                "adminRoleId": "admin",
+                "defaultAdminPriviliges": 31,
+                "Cms\\Controller\\Auth::token": {
+                    "guest": 3
+                },
+                "Cms\\V1\\Rest\\Asset\\Controller::entity": {
+                    "viewer": 1,
+                    "editor": 23,
+                    "admin": 31
+                }
+            }
         },
         "messages": []
     }
