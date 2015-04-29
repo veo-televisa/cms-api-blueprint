@@ -782,7 +782,7 @@ Returns all Assets.
 
     ```js
     {
-    "headers": {},
+    "headers": {"count": 10},
     "data": [
         {
             "entity": "asset",
@@ -1983,7 +1983,7 @@ Returns all Channels.
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 11},
         "data": [
             {
                 "entity": "channel",
@@ -2305,7 +2305,7 @@ Returns all Countries.
 
     ```js
         {
-            "headers": {},
+            "headers": {"count": 10},
             "data": [
                 {
                     "id": 1,
@@ -2535,11 +2535,11 @@ Represents the Labels for a Device's Configuration
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 1},
         "data": [
             {
                 "login": {
-                    "accountOnHoldMessageSky": "Su cuenta está inactivo. Para tener acceso al contenido de BlueToGo revisa su perfil BlueToGo.",
+                    "accountOnHoldMessageSky": "Su cuenta está inactiva. Para tener acceso al contenido de BlueToGo revise su perfil BlueToGo.",
                     "learnMoreNoDot": "Más información",
                     "manageProfile": "Administrar Perfil",
                     "genres": {
@@ -2734,7 +2734,7 @@ Returns all Distributors.
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 10},
         "data": [
             {
                 "id": 1,
@@ -2857,7 +2857,7 @@ Represents actions against the EPG
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 9},
         "data": [
             {
                 "entity": "channel",
@@ -3424,7 +3424,7 @@ Returns a specific EPG given relevant start and end times, filtered by a Channel
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 10},
         "data": [
             {
                 "entity": "channel",
@@ -4119,7 +4119,7 @@ Returns all Genres.
 
     ```js
         {
-            "headers": {},
+            "headers": {"count": 10},
             "data": [
                 {
                     "id": 10,
@@ -4464,7 +4464,7 @@ Returns all Geoblocking.
 
     ```js
         {
-            "headers": {},
+            "headers": {"count": 10},
             "data": [
                 {
                     "id": 1,
@@ -4693,7 +4693,7 @@ Returns all Navigation.
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 10},
         "data": [
             {
                 "id": 1,
@@ -5708,7 +5708,7 @@ Returns all Pages.
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 10},
         "data": [
             {
                 "category": "rental",
@@ -6314,7 +6314,7 @@ Returns all Parental Rating.
 
     ```js
         {
-            "headers": {},
+            "headers": {"count": 10},
             "data": [
                 {
                     "id": 1,
@@ -6531,7 +6531,7 @@ Returns all People.
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 10},
         "data": [
             {
                 "id": 14,
@@ -6881,7 +6881,7 @@ Returns all Pictures.
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 11},
         "data": [
             {
                 "entity": "picture",
@@ -7233,7 +7233,7 @@ Returns all Programs.
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 10},
         "data": [
             {
                 "entity": "program",
@@ -7608,7 +7608,7 @@ Returns all Seasons.
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 10},
         "data": [
             {
                 "status": "published",
@@ -7843,7 +7843,7 @@ Returns all Studios.
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 11},
         "data": [
             {
                 "id": 1,
@@ -8100,7 +8100,7 @@ Returns all Videos.
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 10},
         "data": [
             {
 
@@ -8321,7 +8321,7 @@ Dashboard contains 3 arrays of assets:
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 11},
         "data": {
             "newPendingAssets": {
                 "title": "New pending assets",
@@ -11630,7 +11630,7 @@ Returns all available publication statuses
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 5},
         "data": [
             {
                 "id": 1,
@@ -11730,7 +11730,7 @@ Retrieve the user's history given a userId
     + id (string, `1`) ... The id of the User.
 
 ### Retrieve User History [GET]
-Retrieve the user's history given a userId, ordered by last action date descending.
+Retrieve the users history given a userId, ordered by last action date descending.
 
 + Request
 
@@ -11742,6 +11742,7 @@ Retrieve the user's history given a userId, ordered by last action date descendi
 
     ```js
     {
+        "headers": {"count": 3},
         "data": [
             {
                 "id": 1,
@@ -11853,7 +11854,7 @@ Creates a new UserHistory record
     ```
 
 ### Deletes a User History [DELETE]
-Deletes a specific User's History.
+Deletes a specific Users History.
 
 + Request
 
@@ -11879,7 +11880,7 @@ Retrieve global history across all users, ordered by last action date descending
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 4},
         "data": [
             {
                 "id": 1,
@@ -12037,7 +12038,7 @@ Returns all Users.
 
     ```js
     {
-        "headers": {},
+        "headers": {"count": 10},
         "data": [
             {
                 "id": 1,
