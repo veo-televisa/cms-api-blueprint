@@ -13076,16 +13076,16 @@ Search result for assets search
 
 ### Search Assets [GET]
 + Parameters
-    + q (required, string, `Galilea%20Montijo+AND+type:(Movie+OR+Series)`) ... The search query and filters
+    + q (required, string, `Galilea+Montijo+AND+type:(Movie+OR+Series)`) ... The search query and filters
         + Values
-            + `Galilea%20Montijo`                                ... Full text search for `Galilea Montijo`
-            + `genre:Drama+OR+genre:Suspenso`                    ... Filter Assets by Genre
-            + `category:movie`                                   ... Filter by category (movie, series, telenovela, episode)
-            + `entity:asset`                                     ... For Assets
-            + `entity:program`                                   ... For Programs
-            + `parentalRating:PG`                                ... Filter Assets by Parental Rating
-            + `Galilea%20Montijo+AND+type:(Movie+OR+Series)`     ... Full search query example
-    + sort = `relevance` (optional, string, `relevance`)         ... Results sorting
+            + `Galilea+Montijo`                                ... Full text search for `Galilea Montijo`
+            + `genre:(Drama+OR+genre:Suspenso)`                ... Filter Assets by Genre
+            + `category:(movie)`                               ... Filter by category (movie, series, telenovela, episode)
+            + `entity:(asset)`                                 ... For Assets
+            + `entity:(program)`                               ... For Programs
+            + `parentalRating:(PG)`                            ... Filter Assets by Parental Rating
+            + `Galilea+Montijo+AND+type:(Movie+OR+Series)`     ... Full search query example
+    + sort = `relevance` (optional, string, `relevance`)       ... Results sorting
         + Values
             + `popularity` ... Sorts by view_count.
             + `airDate`    ... Sorts airDate.
