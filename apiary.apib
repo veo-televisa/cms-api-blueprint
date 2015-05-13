@@ -2226,6 +2226,53 @@ Retrieves all Channels.
 
 
 
+# Group Business - Lock
+Represents actions against any entity when locking
+
+## Locking entity [/{entity}/{id}/lock]
+Called when locking an entity.
+
++ Parameters
+    + entity (entity, `studio`) ... The name of the entity.
+    + id (id, `1`) ... The id of the entity.
+    + lock (string, `lock`) ... The locking action.
+
+
+### Locking entity [GET]
+Locks a specific resource.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 204
+
+
+## Unlocking entity [/{entity}/{id}/unlock]
+Called when locking an entity.
+
++ Parameters
+    + entity (entity, `studio`) ... The name of the entity.
+    + id (id, `1`) ... The id of the entity.
+    + unlock (string, `lock`) ... The locking action.
+
+
+### Unlocking entity [GET]
+Locks a specific resource.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 204
+
+
 # Group Business - Country
 Represents actions against Country objects
 
