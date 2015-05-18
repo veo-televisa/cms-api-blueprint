@@ -683,7 +683,6 @@ Updates a specific Asset
 
     ```js
     {
-        "data": {
             "category": "movie",
             "status": "published",
             "title": "Operación Dragón",
@@ -748,7 +747,6 @@ Updates a specific Asset
             "publicationEvent": {
                 "id": 18563
             }
-        }
     }
     ```
 
@@ -1740,7 +1738,6 @@ Creates a new Asset.
 
     ```js
     {
-        "data": {
             "category": "movie",
             "status": "published",
             "title": "Operación Dragón",
@@ -1805,7 +1802,6 @@ Creates a new Asset.
             "publicationEvent": {
                 "id": 18563
             }
-        }
     }
     ```
 
@@ -1906,7 +1902,6 @@ Updates a specific Channel
 
     ```js
     {
-        "data": {
             "category": "linearChannel",
             "status": "published",
             "createdBy": 3,
@@ -1950,7 +1945,6 @@ Updates a specific Channel
                     "height": 47
                 }
             ]
-        }
     }
     ```
 
@@ -2317,9 +2311,7 @@ Updates a specific Country
 
     ```js
     {
-        "data": {
             "title": "United States"
-        }
     }
     ```
 
@@ -2434,9 +2426,7 @@ Creates a new Country.
 
     ```js
     {
-        "data": {
             "title": "United States"
-        }
     }
     ```
     + Headers
@@ -2501,7 +2491,6 @@ Updates a specific Device Configuration
 
     ```js
     {
-        "data": {
             "status": "published",
             "properties": {
                "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
@@ -2513,7 +2502,6 @@ Updates a specific Device Configuration
                "minimunSecondsBufferVideo": 1,
                "maximunSecondsBufferVideo": 5
             }
-        }
     }
     ```
 
@@ -2547,7 +2535,6 @@ Creates a new Device Configuration.
 
     ```js
     {
-        "data": {
             "status": "published",
             "properties": {
                "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
@@ -2559,7 +2546,6 @@ Creates a new Device Configuration.
                "minimunSecondsBufferVideo": 1,
                "maximunSecondsBufferVideo": 5
             }
-        }
     }
     ```
 
@@ -2743,12 +2729,10 @@ Updates a specific Distributor
 
     ```js
     {
-        "data": {
             "status": "published",
             "name": "televisa.networks.mx",
             "code": "televisa.networks.mx",
             "contact": "Juan Perez"
-        }
     }
     ```
 
@@ -2873,12 +2857,10 @@ Creates a new Distributor.
 
     ```js
     {
-        "data": {
             "status": "published",
             "name": "televisa.networks.mx",
             "code": "televisa.networks.mx",
             "contact": "Juan Perez"
-        }
     }
     ```
     + Headers
@@ -4310,6 +4292,7 @@ If successful, the API will return the full list of Genres, reflecting all the c
 + Request
 
     ```js
+
     [
         {
             "id": 24,
@@ -4325,6 +4308,7 @@ If successful, the API will return the full list of Genres, reflecting all the c
             "parent": null
         }
     ]
+
     ```
 
     + Headers
@@ -4380,9 +4364,7 @@ Updates a specific Geoblocking
 
     ```js
     {
-        "data": {
             "title": "Guatemala"
-        }
     }
     ```
 
@@ -4497,9 +4479,7 @@ Creates a new Geoblocking.
 
     ```js
     {
-        "data": {
             "title": "Guatemala"
-        }
     }
     ```
     + Headers
@@ -4811,8 +4791,6 @@ Updates a specific Navigation
 
     ```js
     {
-        "headers": {},
-        "data": {
             "title": "Main menu",
             "key": "main-menu",
             "items": [
@@ -5071,7 +5049,6 @@ Updates a specific Navigation
                     ]
                 }
             ]
-        }
     }
     ```
 
@@ -5181,8 +5158,6 @@ Creates a new Navigation.
 
     ```js
     {
-        "headers": {},
-        "data": {
             "title": "Main menu",
             "key": "main-menu",
             "items": [
@@ -5441,7 +5416,6 @@ Creates a new Navigation.
                     ]
                 }
             ]
-        }
     }
     ```
     + Headers
@@ -5922,7 +5896,6 @@ Updates a specific Page
 
     ```js
     {
-        "data": {
             "category": "rental",
             "status": "published",
             "createdBy": 3,
@@ -6317,7 +6290,6 @@ Updates a specific Page
                     ]
                 }
             ]
-        }
     }
     ```
 
@@ -6468,7 +6440,6 @@ Creates a new Page.
 
     ```js
     {
-        "data": {
             "category": "rental",
             "status": "published",
             "createdBy": 3,
@@ -6863,7 +6834,6 @@ Creates a new Page.
                     ]
                 }
             ]
-        }
     }
     ```
     + Headers
@@ -6920,10 +6890,8 @@ Updates a specific Parental Rating
 
     ```js
     {
-        "data": {
             "title": "G",
             "code": "G",
-        }
     }
     ```
 
@@ -7048,10 +7016,8 @@ Creates a new Parental Rating.
 
     ```js
     {
-        "data": {
             "title": "G",
             "code": "G",
-        }
     }
     ```
     + Headers
@@ -7125,7 +7091,6 @@ Updates a specific Person
 
     ```js
     {
-        "data": {
             "status": "published",
             "displayName": "Helena Bonham Carter",
             "familyName": "Carter",
@@ -7139,7 +7104,6 @@ Updates a specific Person
                 "id": 3,
                 "title": "Harry Potter"
             }
-        }
     }
     ```
 
@@ -7273,7 +7237,6 @@ Creates a new Person in the CMS.
 
     ```js
     {
-        "data": {
             "status": "published",
             "displayName": "Helena Bonham Carter",
             "familyName": "Carter",
@@ -7287,7 +7250,6 @@ Creates a new Person in the CMS.
                 "id": 3,
                 "title": "Harry Potter"
             }
-        }
     }
     ```
     + Headers
@@ -7414,7 +7376,6 @@ Updates a specific Picture
 
     ```js
     {
-        "data": {
             "status": "published",
             "assetId": "11173",
             "credits": "Tom Smith",
@@ -7482,7 +7443,6 @@ Updates a specific Picture
                     "height": "360"
                 }
             ]
-        }
     }
     ```
 
@@ -7643,7 +7603,6 @@ Creates a new Picture.
 
     ```js
     {
-        "data": {
             "status": "published",
             "assetId": "11173",
             "credits": "Tom Smith",
@@ -7711,7 +7670,6 @@ Creates a new Picture.
                     height: "360"
                 }
             ]
-        }
     }
     ```
     + Headers
@@ -7801,7 +7759,6 @@ Updates a specific Program
 
     ```js
     {
-        "data": {
             "category": "linearEpisodeProgram",
             "status": "published",
             "duration": 2,
@@ -7833,7 +7790,6 @@ Updates a specific Program
                     "height": 47
                 }
             ]
-        }
     }
     ```
 
@@ -8193,7 +8149,6 @@ Updates a specific Season
 
     ```js
     {
-        "data": {
             "status": "published",
             "createdBy": 3,
             "modifiedBy": 4,
@@ -8209,7 +8164,6 @@ Updates a specific Season
                     "id": 11569
                 }
             ]
-        }
     }
     ```
 
@@ -8362,7 +8316,6 @@ Creates a new Season in the CMS
 
     ```js
     {
-        "data": {
             "status": "published",
             "createdBy": 3,
             "modifiedBy": 4,
@@ -8378,7 +8331,6 @@ Creates a new Season in the CMS
                     "id": 11569
                 }
             ]
-        }
     }
     ```
 
@@ -8440,11 +8392,9 @@ Updates a specific Studio
 
     ```js
     {
-        "data": {
             "status": "published",
             "name": "FOX",
             "code": "FOX"
-        }
     }
     ```
 
@@ -8573,11 +8523,9 @@ Creates a new Studio in the CMS
 
     ```js
     {
-        "data": {
             "status": "published",
             "name": "FOX",
             "code": "FOX"
-        }
     }
     ```
 
@@ -12330,12 +12278,9 @@ Creates a new UserHistory record
 
     ```js
     {
-        "data":
-            {
                 "action": "draft",
                 "objectId": 4754,
                 "objectEntity": "asset"
-            }
     }
     ```
 
@@ -12517,10 +12462,8 @@ Updates a specific User.
 
     ```js
     {
-        "data": {
-            "name": "John Doe",
-            "email": "johndoe@mymail.com"
-        }
+        "name": "John Doe",
+        "email": "johndoe@mymail.com"
     }
     ```
 
@@ -12729,14 +12672,12 @@ Creates a new User in the CMS.
 
     ```js
     {
-        "data": {
-            "email": "test@veo.tv",
-            "username": "test.user",
-            "name": "Test User",
-            "role": {
-                "id": 2
-            }
-        }
+          "email": "test@veo.tv",
+          "username": "test.user",
+          "name": "Test User",
+          "role": {
+              "id": 2
+          }
     }
     ```
 
