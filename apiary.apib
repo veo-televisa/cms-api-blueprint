@@ -4054,53 +4054,8 @@ Represents a genre
     }
     ```
 
-### Retrieve a Genre [GET]
-Returns a specific Genre.
-
-+ Request
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Genre][]
-
-### Updates a Genre [PATCH]
-Updates a specific Genre
-
-+ Request
-
-    ```js
-    {
-        "data": {
-            "title": "Deportes",
-            "entity": "genre",
-            "items": [
-                {
-                    "id": 515
-                },
-                {
-                    "id": 518
-                }
-            ]
-        }
-    }
-    ```
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Genre][]
-
 ### Deletes a Genre [DELETE]
-Deletes a Genre
+Deletes a Genre. This endpoint should be called whenever a new Genre is removed in the CMS UI.
 
 + Request
 
@@ -4113,231 +4068,130 @@ Deletes a Genre
 
 
 ## List Genres [/business/genre]
-Returns all Genres.
+Returns all Genres. This endpoint should be called to populate or refresh the Genres in the CMS UI.
 
 + Model (application/json)
 
     ```js
-        {
-            "headers": {"count": 10},
-            "data": [
-                {
-                    "id": 10,
-                    "title": "Deportes 10",
-                    "entity": "genre",
-                    "createdAt": "2013-08-23T19:07:49Z",
-                    "modifiedAt": "2014-08-07T02:50:31Z",
-                    "createdBy": 3,
-                    "modifiedBy": 4,
-                    "items": [
-                        {
-                            "id": 515,
-                            "title": "Futbol",
-                            "entity": "genre"
-                        },
-                        {
-                            "id": 518,
-                            "title": "Beisbol",
-                            "entity": "genre"
-                        }
-                    ]
-                },
-                {
-                    "id": 9,
-                    "title": "Deportes 9",
-                    "entity": "genre",
-                    "createdAt": "2013-08-23T19:07:49Z",
-                    "modifiedAt": "2014-08-07T02:50:31Z",
-                    "createdBy": 3,
-                    "modifiedBy": 4,
-                    "items": [
-                        {
-                            "id": 515,
-                            "title": "Futbol",
-                            "entity": "genre"
-                        },
-                        {
-                            "id": 518,
-                            "title": "Beisbol",
-                            "entity": "genre"
-                        }
-                    ]
-                },
-                {
-                    "id": 8,
-                    "title": "Deportes 8",
-                    "entity": "genre",
-                    "createdAt": "2013-08-23T19:07:49Z",
-                    "modifiedAt": "2014-08-07T02:50:31Z",
-                    "createdBy": 3,
-                    "modifiedBy": 4,
-                    "items": [
-                        {
-                            "id": 515,
-                            "title": "Futbol",
-                            "entity": "genre"
-                        },
-                        {
-                            "id": 518,
-                            "title": "Beisbol",
-                            "entity": "genre"
-                        }
-                    ]
-                },
-                {
-                    "id": 7,
-                    "title": "Deportes 7",
-                    "entity": "genre",
-                    "createdAt": "2013-08-23T19:07:49Z",
-                    "modifiedAt": "2014-08-07T02:50:31Z",
-                    "createdBy": 3,
-                    "modifiedBy": 4,
-                    "items": [
-                        {
-                            "id": 515,
-                            "title": "Futbol",
-                            "entity": "genre"
-                        },
-                        {
-                            "id": 518,
-                            "title": "Beisbol",
-                            "entity": "genre"
-                        }
-                    ]
-                },
-                {
-                    "id": 6,
-                    "title": "Deportes 6",
-                    "entity": "genre",
-                    "createdAt": "2013-08-23T19:07:49Z",
-                    "modifiedAt": "2014-08-07T02:50:31Z",
-                    "createdBy": 3,
-                    "modifiedBy": 4,
-                    "items": [
-                        {
-                            "id": 515,
-                            "title": "Futbol",
-                            "entity": "genre"
-                        },
-                        {
-                            "id": 518,
-                            "title": "Beisbol",
-                            "entity": "genre"
-                        }
-                    ]
-                },
-                {
-                    "id": 5,
-                    "title": "Deportes 5",
-                    "entity": "genre",
-                    "createdAt": "2013-08-23T19:07:49Z",
-                    "modifiedAt": "2014-08-07T02:50:31Z",
-                    "createdBy": 3,
-                    "modifiedBy": 4,
-                    "items": [
-                        {
-                            "id": 515,
-                            "title": "Futbol",
-                            "entity": "genre"
-                        },
-                        {
-                            "id": 518,
-                            "title": "Beisbol",
-                            "entity": "genre"
-                        }
-                    ]
-                },
-                {
-                    "id": 4,
-                    "title": "Deportes 4",
-                    "entity": "genre",
-                    "createdAt": "2013-08-23T19:07:49Z",
-                    "modifiedAt": "2014-08-07T02:50:31Z",
-                    "createdBy": 3,
-                    "modifiedBy": 4,
-                    "items": [
-                        {
-                            "id": 515,
-                            "title": "Futbol",
-                            "entity": "genre"
-                        },
-                        {
-                            "id": 518,
-                            "title": "Beisbol",
-                            "entity": "genre"
-                        }
-                    ]
-                },
-                {
-                    "id": 3,
-                    "title": "Deportes 3",
-                    "entity": "genre",
-                    "createdAt": "2013-08-23T19:07:49Z",
-                    "modifiedAt": "2014-08-07T02:50:31Z",
-                    "createdBy": 3,
-                    "modifiedBy": 4,
-                    "items": [
-                        {
-                            "id": 515,
-                            "title": "Futbol",
-                            "entity": "genre"
-                        },
-                        {
-                            "id": 518,
-                            "title": "Beisbol",
-                            "entity": "genre"
-                        }
-                    ]
-                },
-                {
-                    "id": 2,
-                    "title": "Deportes 2",
-                    "entity": "genre",
-                    "createdAt": "2013-08-23T19:07:49Z",
-                    "modifiedAt": "2014-08-07T02:50:31Z",
-                    "createdBy": 3,
-                    "modifiedBy": 4,
-                    "items": [
-                        {
-                            "id": 515,
-                            "title": "Futbol",
-                            "entity": "genre"
-                        },
-                        {
-                            "id": 518,
-                            "title": "Beisbol",
-                            "entity": "genre"
-                        }
-                    ]
-                },
-                {
-                    "id": 1,
-                    "title": "Deportes 1",
-                    "entity": "genre",
-                    "createdAt": "2013-08-23T19:07:49Z",
-                    "modifiedAt": "2014-08-07T02:50:31Z",
-                    "createdBy": 3,
-                    "modifiedBy": 4,
-                    "items": [
-                        {
-                            "id": 515,
-                            "title": "Futbol",
-                            "entity": "genre"
-                        },
-                        {
-                            "id": 518,
-                            "title": "Beisbol",
-                            "entity": "genre"
-                        }
-                    ]
-                }
-            ],
-            "messages": [
-                {
-                    "success": "Data successfully retrieved"
-                }
-            ]
-        }
+    {
+        "headers": {
+            "count": 128
+        },
+        "data": [
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "genre",
+                "id": 24,
+                "items": [],
+                "modifiedAt": "2015-01-19T18:25:38Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "Futbol"
+            },
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "genre",
+                "id": 25,
+                "items": [],
+                "modifiedAt": "2015-01-19T18:25:38Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "Entretenimiento"
+            },
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "genre",
+                "id": 26,
+                "items": [],
+                "modifiedAt": "2015-01-19T18:25:38Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "Noticias"
+            },
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "genre",
+                "id": 28,
+                "items": [
+                    {
+                        "createdAt": "2013-03-21T17:22:12Z",
+                        "createdBy": 1,
+                        "entity": "genre",
+                        "id": 500,
+                        "items": [],
+                        "modifiedAt": "2015-01-19T18:25:38Z",
+                        "modifiedBy": null,
+                        "status": "published",
+                        "title": "Concierto"
+                    },
+                    {
+                        "createdAt": "2013-03-21T17:22:12Z",
+                        "createdBy": 1,
+                        "entity": "genre",
+                        "id": 510,
+                        "items": [],
+                        "modifiedAt": "2015-01-19T18:25:38Z",
+                        "modifiedBy": null,
+                        "status": "published",
+                        "title": "Futbol Soccer"
+                    },
+                    {
+                        "createdAt": "2013-03-21T17:22:12Z",
+                        "createdBy": 1,
+                        "entity": "genre",
+                        "id": 509,
+                        "items": [],
+                        "modifiedAt": "2015-01-19T18:25:38Z",
+                        "modifiedBy": null,
+                        "status": "published",
+                        "title": "Hockey"
+                    },
+                    {
+                        "createdAt": "2013-03-21T17:22:12Z",
+                        "createdBy": 1,
+                        "entity": "genre",
+                        "id": 511,
+                        "items": [],
+                        "modifiedAt": "2015-01-19T18:25:38Z",
+                        "modifiedBy": null,
+                        "status": "published",
+                        "title": "Tenis"
+                    },
+                ],
+                "modifiedAt": "2015-01-19T18:25:38Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "Deportes"
+            },
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "genre",
+                "id": 646,
+                "items": [],
+                "modifiedAt": "2015-01-20T21:50:46Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "Olympics"
+            },
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "genre",
+                "id": 664,
+                "items": [],
+                "modifiedAt": "2015-01-20T21:50:46Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "Water skiing"
+            }
+        ],
+        "messages": []
+    }
     ```
 
 ### Retrieve all Genres [GET]
@@ -4355,24 +4209,21 @@ Retrieves all genres.
     [List Genres][]
 
 ### Creates a Genre [POST]
-Creates a new Genre.
+Creates a new Genre. This endpoint should be called whenever a new Genre is added in the CMS UI.
+
+The client must enter the rank of the Genre.
+
+If the Genre is to be placed under a new parent, the parent field should be populated with the parent's identifier.
+If the Genre is to be made top-level, the parent field can be populated with null
 
 + Request
 
     ```js
     {
-        "data": {
-            "title": "Deportes",
-            "entity": "genre",
-            "items": [
-                {
-                    "id": 515
-                },
-                {
-                    "id": 518
-                }
-            ]
-        }
+        "title": "testSport",
+        "entity": "genre",
+        "parent": 28,
+        "rank": 0
     }
     ```
 
@@ -4383,7 +4234,60 @@ Creates a new Genre.
 
 + Response 201
 
-    [Genre][]
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "createdAt": "2015-05-18T11:15:45Z",
+            "createdBy": 1,
+            "entity": "genre",
+            "id": 808,
+            "items": [],
+            "modifiedAt": "2015-05-18T11:15:45Z",
+            "modifiedBy": 1,
+            "rank": 0,
+            "status": "draft",
+            "title": "testSport"
+        },
+        "messages": []
+    }
+    ```
+
+### Updates a list of genres [PATCH]
+Updates a list of Genres, including their metadata, order, and parent assocation. This API should be called whenever clicking the save button in the Genre UI, which will save, re-ordering, parent linking, and metadata changes.
+
+If a Genre's rank is changed, then the client should also submit *all of the siblings* of that genre with their respective new ranks. *It is solely up to the client to preserve ordering*.
+
+If successful, the API will return the full list of Genres, reflecting all the changes - which can be used to reload the DOM.
+
++ Request
+
+    ```js
+    [
+        {
+            "id": 24,
+            "rank": 0
+        },
+        {
+            "id": 25,
+            "title": "Entretenimiento",
+            "rank": 1
+        },
+        {
+            "id": 500,
+            "parent": null
+        }
+    ]
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 201
+
+    [List Genres][]
 
 # Group Business - Geoblocking
 Represents actions against Geoblocking objects
