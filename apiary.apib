@@ -12428,19 +12428,20 @@ Represents a user
     {
         "headers": {},
         "data": {
-            "id": 1,
             "createdAt": "2015-04-23T03:14:07Z",
             "createdBy": 1,
-            "modifiedAt": "2015-05-21T11:50:18Z",
+            "email": "test@veo.tv",
             "entity": "user",
-            "name": "John Doe",
-            "username": "john.doe",
-            "email": "johndoe@mymail.com",
+            "id": 2,
+            "modifiedAt": "2015-04-23T03:14:07Z",
+            "modifiedBy": 1,
+            "name": "Test User",
             "role": {
+                "entity": "user",
                 "id": 2,
-                "entity": "role",
-                "roleId": "admin"
-            }
+                "roleId": "editor"
+            },
+            "username": "test.user"
         },
         "messages": []
     }
@@ -12507,114 +12508,154 @@ Returns all Users.
         "headers": {"count": 10},
         "data": [
             {
+                "createdAt": "2015-05-21T10:25:22Z",
+                "createdBy": 0,
+                "entity": "user",
                 "id": 1,
-                "entity": "user",
-                "name": "John Doe",
-                "username": "jane.doe",
+                "modifiedAt": "2015-05-21T10:25:22Z",
+                "modifiedBy": 0,
+                "name": "Admin",
                 "role": {
+                    "entity": "user",
                     "id": 1,
-                    "entity": "role",
                     "roleId": "admin"
-                }
-            },
+                },
+                "username": "admin"
+                },
             {
-                "id": 82,
+                "createdAt": "2015-05-21T10:25:22Z",
+                "createdBy": 1,
                 "entity": "user",
-                "name": "Jane Doe",
-                "username": "jane.doe",
-                "role": {
-                    "id": 2,
-                    "entity": "role",
-                    "roleId": "editor"
-                }
-            },
-            {
-                "id": 72,
-                "entity": "user",
-                "name": "Jane Doe",
-                "username": "jane.doe",
-                "role": {
-                    "id": 2,
-                    "entity": "role",
-                    "roleId": "editor"
-                }
-            },
-            {
-                "id": 62,
-                "entity": "user",
-                "name": "Jane Doe",
-                "username": "jane.doe",
-                "role": {
-                    "id": 2,
-                    "entity": "role",
-                    "roleId": "editor"
-                }
-            },
-            {
                 "id": 2,
-                "entity": "user",
-                "name": "Jane Doe",
-                "username": "jane.doe",
+                "modifiedAt": "2015-05-21T10:25:22Z",
+                "modifiedBy": null,
+                "name": "User 1",
                 "role": {
+                    "entity": "user",
                     "id": 2,
-                    "entity": "role",
                     "roleId": "editor"
-                }
+                },
+                "username": "user1"
             },
             {
-                "id": 52,
+                "createdAt": "2015-05-21T10:25:22Z",
+                "createdBy": 1,
                 "entity": "user",
-                "name": "Jane Doe",
-                "username": "jane.doe",
+                "id": 3,
+                "modifiedAt": "2015-05-21T10:25:22Z",
+                "modifiedBy": null,
+                "name": "User 2",
                 "role": {
+                    "entity": "user",
                     "id": 2,
-                    "entity": "role",
                     "roleId": "editor"
-                }
+                },
+                "username": "user2"
             },
             {
-                "id": 42,
+                "createdAt": "2015-05-21T10:25:22Z",
+                "createdBy": 1,
                 "entity": "user",
-                "name": "Jane Doe",
-                "username": "jane.doe",
+                "id": 4,
+                "modifiedAt": "2015-05-21T10:25:22Z",
+                "modifiedBy": null,
+                "name": "User 3",
                 "role": {
+                    "entity": "user",
                     "id": 2,
-                    "entity": "role",
                     "roleId": "editor"
-                }
+                },
+                "username": "user3"
             },
             {
-                "id": 32,
+                "createdAt": "2015-05-21T10:25:22Z",
+                "createdBy": 1,
                 "entity": "user",
-                "name": "Jane Doe",
-                "username": "jane.doe",
+                "id": 5,
+                "modifiedAt": "2015-05-21T10:25:22Z",
+                "modifiedBy": null,
+                "name": "User 4",
                 "role": {
+                    "entity": "user",
                     "id": 2,
-                    "entity": "role",
                     "roleId": "editor"
-                }
+                },
+                "username": "user4"
             },
             {
-                "id": 22,
+                "createdAt": "2015-05-21T10:25:22Z",
+                "createdBy": 1,
                 "entity": "user",
-                "name": "Jane Doe",
-                "username": "jane.doe",
+                "id": 6,
+                "modifiedAt": "2015-05-21T10:25:22Z",
+                "modifiedBy": null,
+                "name": "User 5",
                 "role": {
+                    "entity": "user",
                     "id": 2,
-                    "entity": "role",
                     "roleId": "editor"
-                }
+                },
+                "username": "user5"
             },
             {
-                "id": 12,
+                "createdAt": "2015-05-21T10:25:22Z",
+                "createdBy": 1,
                 "entity": "user",
-                "name": "Jane Doe",
-                "username": "jane.doe",
+                "id": 7,
+                "modifiedAt": "2015-05-21T10:25:22Z",
+                "modifiedBy": null,
+                "name": "User 6",
                 "role": {
+                    "entity": "user",
                     "id": 2,
-                    "entity": "role",
                     "roleId": "editor"
-                }
+                },
+                "username": "user6"
+            },
+            {
+                "createdAt": "2015-05-21T10:25:22Z",
+                "createdBy": 1,
+                "entity": "user",
+                "id": 8,
+                "modifiedAt": "2015-05-21T10:25:22Z",
+                "modifiedBy": null,
+                "name": "User 7",
+                "role": {
+                    "entity": "user",
+                    "id": 2,
+                    "roleId": "editor"
+                },
+                "username": "user7"
+            },
+            {
+                "createdAt": "2015-05-21T10:25:22Z",
+                "createdBy": 1,
+                "entity": "user",
+                "id": 9,
+                "modifiedAt": "2015-05-21T10:25:22Z",
+                "modifiedBy": null,
+                "name": "User 8",
+                "role": {
+                    "entity": "user",
+                    "id": 2,
+                    "roleId": "editor"
+                },
+                "username": "user8"
+            },
+            {
+                "createdAt": "2015-05-21T10:25:22Z",
+                "createdBy": 1,
+                "entity": "user",
+                "id": 10,
+                "modifiedAt": "2015-05-21T10:25:22Z",
+                "modifiedBy": null,
+                "name": "User 9",
+                "role": {
+                    "entity": "user",
+                    "id": 2,
+                    "roleId": "editor"
+                },
+                "username": "user9"
             }
         ]
     }
@@ -12642,11 +12683,11 @@ Creates a new User in the CMS.
     ```js
     {
         "data": {
-            "name": "John Doe",
-            "username": "johndoe",
-            "email": "johndoe@mymail.com",
+            "email": "test@veo.tv",
+            "username": "test.user",
+            "name": "Test User",
             "role": {
-                "id": 1
+                "id": 2
             }
         }
     }
