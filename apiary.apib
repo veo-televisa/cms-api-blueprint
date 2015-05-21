@@ -12422,6 +12422,30 @@ Represents actions against CMS User objects
 ## User [/system/user/{id}]
 Represents a user
 
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "id": 1,
+            "createdAt": "2015-04-23T03:14:07Z",
+            "createdBy": 1,
+            "modifiedAt": "2015-05-21T11:50:18Z",
+            "entity": "user",
+            "name": "John Doe",
+            "username": "john.doe",
+            "email": "johndoe@mymail.com",
+            "role": {
+                "id": 2,
+                "entity": "role",
+                "roleId": "admin"
+            }
+        },
+        "messages": []
+    }
+    ```
+
 + Parameters
     + id (string, `1`) ... The id of the User.
 
@@ -12436,19 +12460,7 @@ Returns a specific User.
 
 + Response 200
 
-    ```js
-    {
-        "headers": {},
-        "data": {
-            "id": 1,
-            "entity": "user",
-            "firstName": "John",
-            "lastName": "Doe",
-            "username": "johndoe@mymail.com",
-            "role": "admin"
-        }
-    }
-    ```
+    [User][]
 
 ### Updates a User [PATCH]
 Updates a specific User.
@@ -12458,10 +12470,8 @@ Updates a specific User.
     ```js
     {
         "data": {
-            "firstName": "John",
-            "lastName": "Doe",
-            "username": "johndoe@mymail.com",
-            "role": "admin"
+            "name": "John Doe",
+            "email": "johndoe@mymail.com"
         }
     }
     ```
@@ -12473,19 +12483,7 @@ Updates a specific User.
 
 + Response 200
 
-    ```js
-    {
-        "headers": {},
-        "data": {
-            "id": 1,
-            "entity": "user",
-            "firstName": "John",
-            "lastName": "Doe",
-            "username": "johndoe@mymail.com",
-            "role": "admin"
-        }
-    }
-    ```
+    [User][]
 
 ### Deletes a User [DELETE]
 Deletes a specific User.
@@ -12511,82 +12509,112 @@ Returns all Users.
             {
                 "id": 1,
                 "entity": "user",
-                "firstName": "John",
-                "lastName": "Doe",
-                "username": "johndoe@mymail.com",
-                "role": "admin"
+                "name": "John Doe",
+                "username": "jane.doe",
+                "role": {
+                    "id": 1,
+                    "entity": "role",
+                    "roleId": "admin"
+                }
             },
             {
                 "id": 82,
                 "entity": "user",
-                "firstName": "Jane",
-                "lastName": "Doe",
-                "username": "janedoe@mymail.com",
-                "role": "basic"
+                "name": "Jane Doe",
+                "username": "jane.doe",
+                "role": {
+                    "id": 2,
+                    "entity": "role",
+                    "roleId": "editor"
+                }
             },
             {
                 "id": 72,
                 "entity": "user",
-                "firstName": "Jane",
-                "lastName": "Doe",
-                "username": "janedoe@mymail.com",
-                "role": "basic"
+                "name": "Jane Doe",
+                "username": "jane.doe",
+                "role": {
+                    "id": 2,
+                    "entity": "role",
+                    "roleId": "editor"
+                }
             },
             {
                 "id": 62,
                 "entity": "user",
-                "firstName": "Jane",
-                "lastName": "Doe",
-                "username": "janedoe@mymail.com",
-                "role": "basic"
+                "name": "Jane Doe",
+                "username": "jane.doe",
+                "role": {
+                    "id": 2,
+                    "entity": "role",
+                    "roleId": "editor"
+                }
             },
             {
                 "id": 2,
                 "entity": "user",
-                "firstName": "Jane",
-                "lastName": "Doe",
-                "username": "janedoe@mymail.com",
-                "role": "basic"
+                "name": "Jane Doe",
+                "username": "jane.doe",
+                "role": {
+                    "id": 2,
+                    "entity": "role",
+                    "roleId": "editor"
+                }
             },
             {
                 "id": 52,
                 "entity": "user",
-                "firstName": "Jane",
-                "lastName": "Doe",
-                "username": "janedoe@mymail.com",
-                "role": "basic"
+                "name": "Jane Doe",
+                "username": "jane.doe",
+                "role": {
+                    "id": 2,
+                    "entity": "role",
+                    "roleId": "editor"
+                }
             },
             {
                 "id": 42,
                 "entity": "user",
-                "firstName": "Jane",
-                "lastName": "Doe",
-                "username": "janedoe@mymail.com",
-                "role": "basic"
+                "name": "Jane Doe",
+                "username": "jane.doe",
+                "role": {
+                    "id": 2,
+                    "entity": "role",
+                    "roleId": "editor"
+                }
             },
             {
                 "id": 32,
                 "entity": "user",
-                "firstName": "Jane",
-                "lastName": "Doe",
-                "username": "janedoe@mymail.com",
-                "role": "basic"
+                "name": "Jane Doe",
+                "username": "jane.doe",
+                "role": {
+                    "id": 2,
+                    "entity": "role",
+                    "roleId": "editor"
+                }
             },
             {
                 "id": 22,
                 "entity": "user",
-                "firstName": "Jane",
-                "lastName": "Doe",
-                "username": "janedoe@mymail.com",
-                "role": "basic"
+                "name": "Jane Doe",
+                "username": "jane.doe",
+                "role": {
+                    "id": 2,
+                    "entity": "role",
+                    "roleId": "editor"
+                }
             },
             {
                 "id": 12,
                 "entity": "user",
-                "firstName": "Jane",
-                "lastName": "Doe",
-                "username": "janedoe@mymail.com",
-                "role": "basic"
+                "name": "Jane Doe",
+                "username": "jane.doe",
+                "role": {
+                    "id": 2,
+                    "entity": "role",
+                    "roleId": "editor"
+                }
             }
         ]
     }
@@ -12614,13 +12642,16 @@ Creates a new User in the CMS.
     ```js
     {
         "data": {
-            "firstName": "John",
-            "lastName": "Doe",
-            "username": "johndoe@mymail.com",
-            "role": "admin"
+            "name": "John Doe",
+            "username": "johndoe",
+            "email": "johndoe@mymail.com",
+            "role": {
+                "id": 1
+            }
         }
     }
     ```
+
     + Headers
 
             Authorization: X-Auth-Token qwerty12345
@@ -12628,19 +12659,7 @@ Creates a new User in the CMS.
 
 + Response 201
 
-    ```js
-    {
-        "headers": {},
-        "data": {
-            "id": 1,
-            "entity": "user",
-            "firstName": "John",
-            "lastName": "Doe",
-            "username": "johndoe@mymail.com",
-            "role": "admin"
-        }
-    }
-    ```
+    [User][]
 
 # Group System - Search
 Represents the search engine
