@@ -12736,7 +12736,7 @@ Creates a new User in the CMS.
 # Group System - Search
 Represents the search engine
 
-## Search Assets [/system/search{?q}{?sort}{?sortdir}{?groupBy}{?offset}{?limit}]
+## Search Assets [/system/search{?q}{?sort}{?sortdir}{?groupBy}{?page}{?limit}]
 Search result for assets search
 
 + Model (application/json)
@@ -13071,33 +13071,34 @@ Search result for assets search
 
 ### Search Assets [GET]
 + Parameters
-    + q (required, string, `Galilea+Montijo+AND+entity:(asset)+AND+category:(movie+OR+series)`) ... The search query and filters
+    + q (required, string, `super+8+AND+entity:(asset)+AND+category:(movie+OR+series)`) ... The search query and filters
         + Values
-            + `Galilea+Montijo`                                                   ... Full text search for `Galilea Montijo`
+            + `super+8`                                                           ... Full text search for `Galilea Montijo`
             + `genre:(Drama+OR+Suspenso)`                                         ... Filter Assets by Genre
             + `category:(movie)`                                                  ... Filter by category (movie, series, telenovela, episode)
             + `entity:(asset)`                                                    ... For Assets
-            + `entity:(program)`                                                  ... For Programs
             + `parentalRating:(PG)`                                               ... Filter Assets by Parental Rating
-            + `Galilea+Montijo+AND+entity:(asset)+AND+category:(movie+OR+series)` ... Full search query example
-    + sort = `relevance` (optional, string, `relevance`)       ... Results sorting
+            + `super+8+AND+entity:(asset)+AND+category:(movie+OR+series)`         ... Full search query example
+    + sort (optional, string, `title`)       ... Results sorting. By default will be sorted by relevance.
         + Values
-            + `popularity` ... Sorts by view_count.
-            + `airDate`    ... Sorts airDate.
-            + `rating`     ... Sorts by average_rating.
-            + `title`      ... Sorts by sort_title.
-            + `relevance`  ... Sorts by relevance.
+            + `title`              ... Sorts by title.
+            + `parentalRating`     ... Sorts by parentalRating.
+            + `genre`              ... Sorts by all genre.
+            + `mainGenre`          ... Sorts by mainGenre.
+            + `startDate`          ... Sorts by startDate.
+            + `endDate`            ... Sorts by endDate.
+            + `airDate`            ... Sorts airDate.
     + sortdir = `asc` (optional, string, `asc`) ... Sort direction.
         + Values
             + `asc`    ... Ascending order.
             + `desc`   ... Descending order.
-    + groupBy (optional, string, `genre`) ... Group by.
+    + groupBy (optional, string, `mainGenre`) ... Group by.
         + Values
-            + `genre`    ... Group by genre.
-            + `category` ... Group by category.
-            + `entity`   ... Group by entity.
-    + offset = `0` (optional, number, `0`) ... Search results offset.
-    + limit (optional, number, `120`) ... Search results limit.
+            + `mainGenre`      ... Group by mainGenre.
+            + `category`       ... Group by category.
+            + `parentalRating` ... Group by parentalRating.
+    + page = `1` (optional, number, `1`) ... Search results page.
+    + limit = `25` (optional, number, `120`) ... Search results limit.
 
 + Response 200
 
