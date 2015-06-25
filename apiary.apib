@@ -12129,74 +12129,15 @@ Retrieves navigation menu for the CMS. This is simply an enumeration of the Enti
 # Group System - Publication
 Represents the publication workflow of the CMS
 
-## Status [/system/publication/status]
-Returns all available publication statuses
-
-+ Model (application/json)
-
-    ```js
-    {
-        "headers": {"total": 5},
-        "data": [
-            {
-                "id": 1,
-                "entity": "publicationStatus",
-                "friendlyKey": "draft",
-                "title": "Draft"
-            },
-            {
-                "id": 2,
-                "entity": "publicationStatus",
-                "friendlyKey": "scheduled",
-                "title": "Scheduled"
-            },
-            {
-                "id": 3,
-                "entity": "publicationStatus",
-                "friendlyKey": "published",
-                "title": "Published"
-            },
-            {
-                "id": 4,
-                "entity": "publicationStatus",
-                "friendlyKey": "unpublished",
-                "title": "Unpublished"
-            },
-            {
-                "id": 5,
-                "entity": "publicationStatus",
-                "friendlyKey": "expired",
-                "title": "Expired"
-            }
-
-        ]
-    }
-    ```
-
-### Retrieve all statuses [GET]
-Retrieves all available publication statuses
-
-+ Request
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-+ Response 200
-
-    [Status][]
-
 ## Transition [/system/publication/transition/{transition}/{entityName}/{entityId}]
 Requests involving the transitions of the publication workflow
 
 + Parameters
     + transition (string, `publish`) ... The transition to execute.
         + Values
-            + `save`
-            + `preview`
             + `publish`
-            + `purge`
             + `unpublish`
+            + `refresh`
     + entityName (string, `asset`) ... The name of the entity.
     + entityId (int, `5000`) ... The id of the entity.
 
@@ -12212,7 +12153,7 @@ Executes a transition for a given entity
 
 + Response 200 (application/json)
 
-+ Response 500 (application/json)
++ Response 400 (application/json)
 
     ```js
     {
@@ -12220,11 +12161,12 @@ Executes a transition for a given entity
         "data": [],
         "messages": [
             {
-                "error": "More information about error"
+                "value": "Invalid transition supplied",
+                "context": null
             }
         ]
     }
-
+    ```
 
 # Group System - User History
 Retrieves the users' history of actions
