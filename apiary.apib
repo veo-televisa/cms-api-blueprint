@@ -3996,6 +3996,283 @@ Returns a specific EPG given relevant start and end times, filtered by a Channel
     }
     ```
 
+
+# Group Business - Language
+Represents actions against Language objects
+
+## Language [/business/language/{id}]
+Represents a Language
+
++ Parameters
+    + id (string, `1`) ... The id of the Language.
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "id": 28,
+            "title": "Lenguas Eslavas",
+            "entity": "language",
+            "createdAt": "2013-08-23T19:07:49Z",
+            "modifiedAt": "2014-08-07T02:50:31Z",
+            "createdBy": 3,
+            "modifiedBy": 4,
+            "items": [
+                {
+                    "id": 515,
+                    "title": "Ucraniano",
+                    "entity": "language"
+                },
+                {
+                    "id": 518,
+                    "title": "Eslavo",
+                    "entity": "language"
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+
+### Deletes a Language [DELETE]
+Deletes a Language. This endpoint should be called whenever a new Language is removed in the CMS UI.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 204
+
+
+## List Languages [/business/language]
+Returns all Languages. This endpoint should be called to populate or refresh the Languages in the CMS UI.
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {
+            "total": 128
+        },
+        "data": [
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "language",
+                "id": 24,
+                "items": [],
+                "modifiedAt": "2015-01-19T18:25:38Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "English"
+            },
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "language",
+                "id": 25,
+                "items": [],
+                "modifiedAt": "2015-01-19T18:25:38Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "Spanish"
+            },
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "language",
+                "id": 26,
+                "items": [],
+                "modifiedAt": "2015-01-19T18:25:38Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "French"
+            },
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "language",
+                "id": 28,
+                "items": [
+                    {
+                        "createdAt": "2013-03-21T17:22:12Z",
+                        "createdBy": 1,
+                        "entity": "language",
+                        "id": 500,
+                        "items": [],
+                        "modifiedAt": "2015-01-19T18:25:38Z",
+                        "modifiedBy": null,
+                        "status": "published",
+                        "title": "Italiano"
+                    },
+                    {
+                        "createdAt": "2013-03-21T17:22:12Z",
+                        "createdBy": 1,
+                        "entity": "language",
+                        "id": 510,
+                        "items": [],
+                        "modifiedAt": "2015-01-19T18:25:38Z",
+                        "modifiedBy": null,
+                        "status": "published",
+                        "title": "Portugues"
+                    },
+                    {
+                        "createdAt": "2013-03-21T17:22:12Z",
+                        "createdBy": 1,
+                        "entity": "language",
+                        "id": 509,
+                        "items": [],
+                        "modifiedAt": "2015-01-19T18:25:38Z",
+                        "modifiedBy": null,
+                        "status": "published",
+                        "title": "Frances"
+                    },
+                    {
+                        "createdAt": "2013-03-21T17:22:12Z",
+                        "createdBy": 1,
+                        "entity": "language",
+                        "id": 511,
+                        "items": [],
+                        "modifiedAt": "2015-01-19T18:25:38Z",
+                        "modifiedBy": null,
+                        "status": "published",
+                        "title": "Rumano"
+                    }
+                ],
+                "modifiedAt": "2015-01-19T18:25:38Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "Lenguas Romances"
+            },
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "language",
+                "id": 646,
+                "items": [],
+                "modifiedAt": "2015-01-20T21:50:46Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "Ruso"
+            },
+            {
+                "createdAt": "2013-03-21T17:22:12Z",
+                "createdBy": 1,
+                "entity": "language",
+                "id": 664,
+                "items": [],
+                "modifiedAt": "2015-01-20T21:50:46Z",
+                "modifiedBy": null,
+                "status": "published",
+                "title": "Aleman"
+            }
+        ],
+        "messages": []
+    }
+    ```
+
+### Retrieve all Languages [GET]
+Retrieves all languages.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [List Languages][]
+
+### Creates a Language [POST]
+Creates a new Language. This endpoint should be called whenever a new Language is added in the CMS UI.
+
+The client must enter the rank of the Language.
+
+If the Language is to be placed under a new parent, the parent field should be populated with the parent's identifier.
+If the Language is to be made top-level, the parent field can be populated with null
+
++ Request
+
+    ```js
+    {
+        "title": "Swahili",
+        "entity": "language",
+        "parent": 12,
+        "rank": 0
+    }
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 201
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "createdAt": "2015-05-18T11:15:45Z",
+            "createdBy": 1,
+            "entity": "language",
+            "id": 808,
+            "items": [],
+            "modifiedAt": "2015-05-18T11:15:45Z",
+            "modifiedBy": 1,
+            "rank": 0,
+            "status": "draft",
+            "title": "Esperanto"
+        },
+        "messages": []
+    }
+    ```
+
+### Updates a list of languages [PATCH]
+Updates a list of Languages, including their metadata, order, and parent assocation. This API should be called whenever clicking the save button in the Language UI, which will save, re-ordering, parent linking, and metadata changes.
+
+If a Language's rank is changed, then the client should also submit *all of the siblings* of that language with their respective new ranks. *It is solely up to the client to preserve ordering*.
+
+If successful, the API will return the full list of Languages, reflecting all the changes - which can be used to reload the DOM.
+
++ Request
+
+    ```js
+
+    [
+        {
+            "id": 24,
+            "rank": 0
+        },
+        {
+            "id": 25,
+            "title": "Catalan",
+            "rank": 1
+        },
+        {
+            "id": 500,
+            "parent": null
+        }
+    ]
+
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 201
+
+    [List Languages][]
+
 # Group Business - Genre
 Represents actions against Genre objects
 
