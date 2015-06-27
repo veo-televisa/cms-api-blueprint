@@ -4000,6 +4000,8 @@ Returns a specific EPG given relevant start and end times, filtered by a Channel
 # Group Business - Language
 Represents actions against Language objects
 
+For descriptions on every action over this taxonomy, please see [here](https://televisa.atlassian.net/wiki/display/SB/Taxonomy+Integration).
+
 ## Language [/business/language/{id}]
 Represents a Language
 
@@ -4213,6 +4215,8 @@ Retrieves all languages.
 # Group Business - Genre
 Represents actions against Genre objects
 
+For descriptions on every action over this taxonomy, please see [here](https://televisa.atlassian.net/wiki/display/SB/Taxonomy+Integration).
+
 ## Genre [/business/genre/{id}]
 Represents a genre
 
@@ -4250,7 +4254,6 @@ Represents a genre
     ```
 
 ### Deletes a Genre [DELETE]
-Deletes a Genre. This endpoint should be called whenever a new Genre is removed in the CMS UI.
 
 + Request
 
@@ -4263,130 +4266,95 @@ Deletes a Genre. This endpoint should be called whenever a new Genre is removed 
 
 
 ## List Genres [/business/genre]
-Returns all Genres. This endpoint should be called to populate or refresh the Genres in the CMS UI.
 
 + Model (application/json)
 
     ```js
     {
-        "headers": {
-            "total": 128
+    "headers": {
+        "total": 4
+    },
+    "data": [
+        {
+            "createdAt": "2013-03-21T17:22:12Z",
+            "createdBy": 0,
+            "entity": "genre",
+            "id": 9,
+            "items": [
+                {
+                    "createdAt": "2015-06-01T09:50:25Z",
+                    "createdBy": 10000,
+                    "entity": "genre",
+                    "id": 832,
+                    "items": [],
+                    "modifiedAt": "2015-06-16T14:38:57Z",
+                    "modifiedBy": 10000,
+                    "parent": {
+                        "id": 9
+                    },
+                    "status": "draft",
+                    "title": "Drama 1"
+                },
+                {
+                    "createdAt": "2015-06-16T14:38:10Z",
+                    "createdBy": 10000,
+                    "entity": "genre",
+                    "id": 841,
+                    "items": [],
+                    "modifiedAt": "2015-06-16T14:38:32Z",
+                    "modifiedBy": 10000,
+                    "parent": {
+                        "id": 9
+                    },
+                    "status": "draft",
+                    "title": "Drama 3"
+                }
+            ],
+            "modifiedAt": "2015-06-16T09:41:51Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "Drama"
         },
-        "data": [
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 24,
-                "items": [],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Futbol"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 25,
-                "items": [],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Entretenimiento"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 26,
-                "items": [],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Noticias"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 28,
-                "items": [
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "genre",
-                        "id": 500,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Concierto"
-                    },
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "genre",
-                        "id": 510,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Futbol Soccer"
-                    },
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "genre",
-                        "id": 509,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Hockey"
-                    },
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "genre",
-                        "id": 511,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Tenis"
-                    }
-                ],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Deportes"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 646,
-                "items": [],
-                "modifiedAt": "2015-01-20T21:50:46Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Olympics"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 664,
-                "items": [],
-                "modifiedAt": "2015-01-20T21:50:46Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Water skiing"
-            }
-        ],
-        "messages": []
-    }
+        {
+            "createdAt": "2013-03-21T17:22:12Z",
+            "createdBy": 0,
+            "entity": "genre",
+            "id": 5,
+            "items": [],
+            "modifiedAt": "2015-06-16T14:38:32Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "Horror"
+        },
+        {
+            "createdAt": "2013-03-21T17:22:12Z",
+            "createdBy": 0,
+            "entity": "genre",
+            "id": 11,
+            "items": [],
+            "modifiedAt": "2015-06-16T14:38:32Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "Romance-comedy"
+        },
+        {
+            "createdAt": "2013-03-21T17:22:12Z",
+            "createdBy": 0,
+            "entity": "genre",
+            "id": 12,
+            "items": [],
+            "modifiedAt": "2015-06-16T14:38:32Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "Science fiction"
+        }
+    ],
+    "messages": []
+}
     ```
 
 ### Retrieve all Genres [GET]
@@ -4404,18 +4372,12 @@ Retrieves all genres.
     [List Genres][]
 
 ### Creates a Genre [POST]
-Creates a new Genre. This endpoint should be called whenever a new Genre is added in the CMS UI.
-
-The client must enter the rank of the Genre.
-
-If the Genre is to be placed under a new parent, the parent field should be populated with the parent's identifier.
-If the Genre is to be made top-level, the parent field can be populated with null
 
 + Request
 
     ```js
     {
-        "title": "testSport",
+        "title": "Science fiction",
         "entity": "genre",
         "parent": 28,
         "rank": 0
@@ -4431,29 +4393,29 @@ If the Genre is to be made top-level, the parent field can be populated with nul
 
     ```js
     {
-        "headers": {},
-        "data": {
-            "createdAt": "2015-05-18T11:15:45Z",
-            "createdBy": 1,
-            "entity": "genre",
-            "id": 808,
-            "items": [],
-            "modifiedAt": "2015-05-18T11:15:45Z",
-            "modifiedBy": 1,
-            "rank": 0,
-            "status": "draft",
-            "title": "testSport"
+    "headers": {},
+    "data": {
+        "createdAt": "2015-06-27T15:00:52Z",
+        "createdBy": 10000,
+        "entity": "genre",
+        "id": 755,
+        "items": [],
+        "lockedAt": null,
+        "lockedBy": null,
+        "modifiedAt": "2015-06-27T15:00:52Z",
+        "modifiedBy": 10000,
+        "parent": {
+            "id": 28
         },
-        "messages": []
-    }
+        "rank": 0,
+        "status": "draft",
+        "title": "Science fiction"
+    },
+    "messages": []
+}
     ```
 
 ### Updates a list of genres [PATCH]
-Updates a list of Genres, including their metadata, order, and parent assocation. This API should be called whenever clicking the save button in the Genre UI, which will save, re-ordering, parent linking, and metadata changes.
-
-If a Genre's rank is changed, then the client should also submit *all of the siblings* of that genre with their respective new ranks. *It is solely up to the client to preserve ordering*.
-
-If successful, the API will return the full list of Genres, reflecting all the changes - which can be used to reload the DOM.
 
 + Request
 
