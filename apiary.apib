@@ -4451,6 +4451,8 @@ Retrieves all genres.
 # Group Business - Geoblocking
 Represents actions against Geoblocking objects
 
+For descriptions on every action over this taxonomy, please see [here](https://televisa.atlassian.net/wiki/display/SB/Taxonomy+Integration).
+
 ## Geoblocking [/business/geoblocking/{id}]
 Represents a Geoblocking
 
@@ -4461,14 +4463,24 @@ Represents a Geoblocking
 
     ```js
     {
-        "headers": {},
-        "data": {
-            "id": 1,
-            "title": "Guatemala",
-            "entity": "geoblocking"
-        },
-        "messages": []
-    }
+    "headers": {},
+    "data": {
+        "createdAt": "2015-06-03T08:07:21Z",
+        "createdBy": 10000,
+        "entity": "geoblocking",
+        "id": 1,
+        "items": [],
+        "lockedAt": null,
+        "lockedBy": null,
+        "modifiedAt": "2015-06-03T08:18:42Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "rank": 0,
+        "status": "draft",
+        "title": "Guatemala"
+    },
+    "messages": []
+}
     ```
 
 ### Retrieve a Geoblocking [GET]
@@ -4524,66 +4536,50 @@ Returns all Geoblocking.
 + Model (application/json)
 
     ```js
-        {
-            "headers": {"total": 10},
-            "data": [
-                {
-                    "id": 1,
-                    "title": "Guatemala",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 2,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 3,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 4,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 5,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 6,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 7,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 8,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 9,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 10,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                }
-            ],
-            "messages": [
-                {
-                    "success": "Data successfully retrieved"
-                }
-            ]
-        }
+    {
+"headers": {
+    "total": 3
+},
+"data": [
+    {
+        "createdAt": "2015-06-03T08:07:21Z",
+        "createdBy": 10000,
+        "entity": "geoblocking",
+        "id": 1,
+        "items": [],
+        "modifiedAt": "2015-06-03T08:18:42Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "Guatemala"
+    },
+    {
+        "createdAt": "2015-06-26T11:31:13Z",
+        "createdBy": 10000,
+        "entity": "geoblocking",
+        "id": 4,
+        "items": [],
+        "modifiedAt": "2015-06-26T11:31:13Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "Spain"
+    },
+    {
+        "createdAt": "2015-06-03T08:07:27Z",
+        "createdBy": 10000,
+        "entity": "geoblocking",
+        "id": 2,
+        "items": [],
+        "modifiedAt": "2015-06-19T11:55:28Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "Italy"
+    }
+],
+"messages": []
+}
     ```
 
 ### Retrieve all Geoblockings [GET]
