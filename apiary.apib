@@ -2222,6 +2222,8 @@ Retrieves all Channels.
 # Group Business - Country
 Represents actions against Country objects
 
+For descriptions on every action over this taxonomy, please see [here](https://televisa.atlassian.net/wiki/display/SB/Taxonomy+Integration).
+
 ## Country [/business/country/{id}]
 Represents a country
 
@@ -2232,14 +2234,24 @@ Represents a country
 
     ```js
     {
-        "headers": {},
-        "data": {
-            "id": 1,
-            "title": "United States",
-            "entity": "country"
-        },
-        "messages": []
-    }
+    "headers": {},
+    "data": {
+        "createdAt": "2013-03-21T22:46:39Z",
+        "createdBy": 0,
+        "entity": "country",
+        "id": 1,
+        "items": [],
+        "lockedAt": null,
+        "lockedBy": null,
+        "modifiedAt": "2015-06-26T13:02:08Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "rank": 0,
+        "status": "draft",
+        "title": "Mexico"
+    },
+    "messages": []
+}
     ```
 
 ### Retrieve a Country [GET]
@@ -2295,66 +2307,74 @@ Returns all Countries.
 + Model (application/json)
 
     ```js
-        {
-            "headers": {"total": 10},
-            "data": [
-                {
-                    "id": 1,
-                    "title": "United States",
-                    "entity": "country"
-                },
-                {
-                    "id": 2,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 3,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 4,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 5,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 6,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 7,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 8,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 9,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 10,
-                    "title": "México",
-                    "entity": "country"
-                }
-            ],
-            "messages": [
-                {
-                    "success": "Data successfully retrieved"
-                }
-            ]
-        }
+    {
+  "headers": {
+      "total": 5
+  },
+  "data": [
+      {
+          "createdAt": "2015-06-26T13:04:43Z",
+          "createdBy": 10000,
+          "entity": "country",
+          "id": 260,
+          "items": [],
+          "modifiedAt": "2015-06-26T13:04:43Z",
+          "modifiedBy": 10000,
+          "parent": null,
+          "status": "draft",
+          "title": "Mexico"
+      },
+      {
+          "createdAt": "2013-03-21T22:46:39Z",
+          "createdBy": 0,
+          "entity": "country",
+          "id": 5,
+          "items": [],
+          "modifiedAt": "2015-06-26T13:02:08Z",
+          "modifiedBy": 10000,
+          "parent": null,
+          "status": "draft",
+          "title": "Mexico"
+      },
+      {
+          "createdAt": "2013-03-21T22:46:39Z",
+          "createdBy": 0,
+          "entity": "country",
+          "id": 7,
+          "items": [],
+          "modifiedAt": "2015-06-26T13:02:08Z",
+          "modifiedBy": 10000,
+          "parent": null,
+          "status": "draft",
+          "title": "Albania"
+      },
+      {
+          "createdAt": "2013-03-21T22:46:39Z",
+          "createdBy": 0,
+          "entity": "country",
+          "id": 6,
+          "items": [],
+          "modifiedAt": "2015-06-26T13:02:08Z",
+          "modifiedBy": 10000,
+          "parent": null,
+          "status": "draft",
+          "title": "Afganistan"
+      },
+      {
+          "createdAt": "2013-03-21T22:46:39Z",
+          "createdBy": 0,
+          "entity": "country",
+          "id": 9,
+          "items": [],
+          "modifiedAt": "2015-06-26T13:02:08Z",
+          "modifiedBy": 10000,
+          "parent": null,
+          "status": "draft",
+          "title": "Andorra"
+      }
+  ],
+  "messages": []
+  }
     ```
 
 ### Retrieve all Countries [GET]
@@ -2378,7 +2398,7 @@ Creates a new Country.
 
     ```js
     {
-            "title": "United States"
+            "title": "Mexico"
     }
     ```
     + Headers
