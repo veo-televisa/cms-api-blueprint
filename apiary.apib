@@ -7067,6 +7067,8 @@ Creates a new Page.
 # Group Business - Parental Rating
 Represents actions against Parental Rating objects
 
+For descriptions on every action over this taxonomy, please see [here](https://televisa.atlassian.net/wiki/display/SB/Taxonomy+Integration).
+
 ## Parental Rating [/business/parental-rating/{id}]
 Represents a Parental Rating
 
@@ -7077,15 +7079,24 @@ Represents a Parental Rating
 
     ```js
     {
-        "headers": {},
-        "data": {
-            "id": 1,
-            "title": "G",
-            "code": "G",
-            "entity": "parentalRating"
-        },
-        "messages": []
-    }
+    "headers": {},
+    "data": {
+        "createdAt": "2012-10-04T13:48:00Z",
+        "createdBy": 0,
+        "entity": "parentalRating",
+        "id": 3,
+        "items": [],
+        "lockedAt": null,
+        "lockedBy": null,
+        "modifiedAt": "2015-06-26T12:42:20Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "rank": 1,
+        "status": "draft",
+        "title": "PG-13"
+    },
+    "messages": []
+}
     ```
 
 ### Retrieve a Parental Rating [GET]
@@ -7109,8 +7120,7 @@ Updates a specific Parental Rating
 
     ```js
     {
-            "title": "G",
-            "code": "G",
+            "title": "PG-13"
     }
     ```
 
@@ -7142,76 +7152,62 @@ Returns all Parental Rating.
 + Model (application/json)
 
     ```js
-        {
-            "headers": {"total": 10},
-            "data": [
-                {
-                    "id": 1,
-                    "title": "G",
-                    "code": "G",
-                    "entity": "parentalRating"
-                },
-                {
-                  "id": 2,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 3,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 4,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 5,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 6,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 7,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 8,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 9,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 10,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                }
-            ],
-            "messages": [
-                {
-                    "success": "Data successfully retrieved"
-                }
-            ]
-        }
+    {
+"headers": {
+    "total": 4
+},
+"data": [
+    {
+        "createdAt": "2015-06-26T13:07:06Z",
+        "createdBy": 10000,
+        "entity": "parentalRating",
+        "id": 30,
+        "items": [],
+        "modifiedAt": "2015-06-26T13:07:06Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "NC-17"
+    },
+    {
+        "createdAt": "2012-10-04T13:48:00Z",
+        "createdBy": 0,
+        "entity": "parentalRating",
+        "id": 3,
+        "items": [],
+        "modifiedAt": "2015-06-26T12:42:20Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "PG-13"
+    },
+    {
+        "createdAt": "2012-10-04T13:48:00Z",
+        "createdBy": 0,
+        "entity": "parentalRating",
+        "id": 6,
+        "items": [],
+        "modifiedAt": "2015-06-26T12:42:20Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "NR"
+    },
+    {
+        "createdAt": "2012-10-04T13:48:00Z",
+        "createdBy": 0,
+        "entity": "parentalRating",
+        "id": 9,
+        "items": [],
+        "modifiedAt": "2015-06-26T12:30:47Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "R"
+    }
+],
+"messages": []
+}
     ```
 
 ### Retrieve all Parental Ratings [GET]
@@ -7235,8 +7231,7 @@ Creates a new Parental Rating.
 
     ```js
     {
-            "title": "G",
-            "code": "G",
+            "title": "PG-13"
     }
     ```
     + Headers
