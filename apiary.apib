@@ -2865,6 +2865,62 @@ Returns a specific collection.
     }
     ```
 
+### Updates a Collection [PATCH]
+Updates a specific collection
+
++ Request
+
+    ```js
+    {
+        "title": "test dynamic collection",
+    }
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "createdAt": "2015-06-29T00:00:00Z",
+            "createdBy": 1,
+            "entity": "collection",
+            "id": 2,
+            "lockedAt": null,
+            "lockedBy": null,
+            "modifiedAt": "2015-06-29T00:00:00Z",
+            "modifiedBy": 1,
+            "publicationTransitions": [
+                "unpublish",
+                "refresh"
+            ],
+            "searchQuery": "entity:(asset)",
+            "staticItems": [],
+            "status": "published",
+            "title": "test dynamic collection",
+            "type": "dynamic"
+        },
+        "messages": []
+    }
+    ```
+
+### Deletes a Collection [DELETE]
+Deletes a Collection
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 204
+
 ## List Collections [/business/collection]
 Returns all Collections.
 
@@ -2914,6 +2970,987 @@ Retrieves all collections.
 + Response 200
 
     [List Collections][]
+
+## Static Item [/business/collection/{id}/static-item/{staticItemId}]
+Represents an item of a Collection with type "static"
+
++ Parameters
+    + id (string, `14`) ... The id of the Collection.
+    + staticItemId (string, `14`) ... The id of the Static Item of the Collection.
+
+### Deletes a Static Item [DELETE]
+Deletes a Static Item from a Collection
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 204
+
+
+## List Static Items [/business/collection/{id}/static-item]
+Represents the items of a Collection with type "static"
+
++ Parameters
+    + id (string, `14`) ... The id of the Collection.
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": [
+            {
+                "asset": {
+                    "createdAt": "2013-04-18T23:13:33Z",
+                    "createdBy": 0,
+                    "duration": 4860,
+                    "entity": "asset",
+                    "genre": {
+                        "createdAt": "2013-03-21T17:22:12Z",
+                        "createdBy": 0,
+                        "entity": "genre",
+                        "id": 111,
+                        "items": [],
+                        "modifiedAt": "2015-06-16T14:38:33Z",
+                        "modifiedBy": null,
+                        "parent": null,
+                        "status": "published",
+                        "title": "Acción y Aventura"
+                    },
+                    "id": 1974,
+                    "modifiedAt": "2015-01-13T00:10:13Z",
+                    "modifiedBy": null,
+                    "parentalRating": {
+                        "createdAt": "2012-10-04T13:48:00Z",
+                        "createdBy": 0,
+                        "entity": "parentalRating",
+                        "id": 3,
+                        "items": [],
+                        "modifiedAt": "2015-06-26T12:42:20Z",
+                        "modifiedBy": 10000,
+                        "parent": null,
+                        "status": "draft",
+                        "title": "PG-13"
+                    },
+                    "pictures": [
+                        {
+                            "createdAt": "2013-04-18T23:13:50Z",
+                            "createdBy": 0,
+                            "entity": "picture",
+                            "id": 1150,
+                            "modifiedAt": "2014-11-04T12:27:08Z",
+                            "modifiedBy": null,
+                            "pictureType": "frame",
+                            "status": "published",
+                            "title": "ASST0000000000909263_Dark_warrior.png",
+                            "versions": [
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 576,
+                                    "id": 316161,
+                                    "width": 1024,
+                                    "link": "/Picture/C_1_Picture_1150_image.png",
+                                    "profile": "main"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 316162,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "webPortraitSmall"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 316163,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "webPortraitMedium"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 316164,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "webPortraitLarge"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 316168,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPhonePortrait"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 316169,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPhoneRetinaPortrait"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 316176,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPadPortraitSmall"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 316177,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPadPortraitLarge"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 108,
+                                    "id": 649875,
+                                    "width": 192,
+                                    "link": "/Picture/C_1_Picture_1150_profile150Image.png",
+                                    "profile": "webLandscapeSmall"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 126,
+                                    "id": 649876,
+                                    "width": 224,
+                                    "link": "/Picture/C_1_Picture_1150_profile151Image.png",
+                                    "profile": "webLandscapeMedium"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 216,
+                                    "id": 649877,
+                                    "width": 384,
+                                    "link": "/Picture/C_1_Picture_1150_profile152Image.png",
+                                    "profile": "webLandscapeLarge"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 54,
+                                    "id": 649880,
+                                    "width": 96,
+                                    "link": "/Picture/C_1_Picture_1150_profile250Image.png",
+                                    "profile": "iPhoneLandscapeSmall"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 90,
+                                    "id": 649881,
+                                    "width": 160,
+                                    "link": "/Picture/C_1_Picture_1150_profile251Image.png",
+                                    "profile": "iPhoneLandscapeMedium"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 180,
+                                    "id": 649882,
+                                    "width": 320,
+                                    "link": "/Picture/C_1_Picture_1150_profile252Image.png",
+                                    "profile": "iPhoneLandscapeLarge"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 108,
+                                    "id": 649883,
+                                    "width": 192,
+                                    "link": "/Picture/C_1_Picture_1150_profile270Image.png",
+                                    "profile": "iPhoneRetinaLandscapeSmall"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 180,
+                                    "id": 649884,
+                                    "width": 320,
+                                    "link": "/Picture/C_1_Picture_1150_profile271Image.png",
+                                    "profile": "iPhoneRetinaLandscapeMedium"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 360,
+                                    "id": 649885,
+                                    "width": 640,
+                                    "link": "/Picture/C_1_Picture_1150_profile272Image.png",
+                                    "profile": "iPhoneRetinaLandscapeLarge"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 270,
+                                    "id": 649888,
+                                    "width": 480,
+                                    "link": "/Picture/C_1_Picture_1150_profile350Image.png",
+                                    "profile": "iPadLandscape1"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 243,
+                                    "id": 649889,
+                                    "width": 432,
+                                    "link": "/Picture/C_1_Picture_1150_profile351Image.png",
+                                    "profile": "iPadLandscape2"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 207,
+                                    "id": 649890,
+                                    "width": 368,
+                                    "link": "/Picture/C_1_Picture_1150_profile352Image.png",
+                                    "profile": "iPadLandscape3"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 162,
+                                    "id": 649891,
+                                    "width": 288,
+                                    "link": "/Picture/C_1_Picture_1150_profile353Image.png",
+                                    "profile": "iPadLandscape4"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 144,
+                                    "id": 649892,
+                                    "width": 256,
+                                    "link": "/Picture/C_1_Picture_1150_profile354Image.png",
+                                    "profile": "iPadLandscape5"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 126,
+                                    "id": 649893,
+                                    "width": 224,
+                                    "link": "/Picture/C_1_Picture_1150_profile355Image.png",
+                                    "profile": "iPadLandscape6"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 117,
+                                    "id": 649894,
+                                    "width": 208,
+                                    "link": "/Picture/C_1_Picture_1150_profile356Image.png",
+                                    "profile": "iPadLandscape7"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 90,
+                                    "id": 649895,
+                                    "width": 160,
+                                    "link": "/Picture/C_1_Picture_1150_profile357Image.png",
+                                    "profile": "iPadLandscape8"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 81,
+                                    "id": 649896,
+                                    "width": 144,
+                                    "link": "/Picture/C_1_Picture_1150_profile358Image.png",
+                                    "profile": "iPadLandscape9"
+                                }
+                            ]
+                        }
+                    ],
+                    "publicationEvent": {
+                        "billingType": "subscription",
+                        "createdAt": "2013-04-18T23:13:54Z",
+                        "createdBy": 0,
+                        "endDate": "2015-07-26T05:59:00Z",
+                        "entity": "publicationEvent",
+                        "id": 7893,
+                        "modifiedAt": "2015-01-05T14:48:01Z",
+                        "modifiedBy": null,
+                        "price": "0.00",
+                        "startDate": "2015-01-05T06:00:00Z",
+                        "status": "published"
+                    },
+                    "status": "published",
+                    "synopsisShort": "Derek Woo, principal sospechoso de una serie de asesinatos en Los Ángeles, tiene una misión: demostrar su inocencia.",
+                    "title": "Dark Warrior",
+                    "titleShort": "Dragón Rojo",
+                    "category": "movie"
+                },
+                "createdAt": "2015-05-26T00:00:00Z",
+                "createdBy": 1,
+                "entity": "collectionStaticItem",
+                "id": 2,
+                "modifiedAt": "2015-05-26T00:00:00Z",
+                "modifiedBy": 1,
+                "status": "published"
+            },
+            {
+                "asset": {
+                    "createdAt": "2013-03-27T14:07:02Z",
+                    "createdBy": 0,
+                    "duration": 8940,
+                    "entity": "asset",
+                    "genre": {
+                        "createdAt": "2013-03-21T17:22:12Z",
+                        "createdBy": 0,
+                        "entity": "genre",
+                        "id": 111,
+                        "items": [],
+                        "modifiedAt": "2015-06-16T14:38:33Z",
+                        "modifiedBy": null,
+                        "parent": null,
+                        "status": "published",
+                        "title": "Acción y Aventura"
+                    },
+                    "id": 166,
+                    "modifiedAt": "2014-08-04T09:12:21Z",
+                    "modifiedBy": null,
+                    "parentalRating": {
+                        "createdAt": "2012-10-04T13:48:00Z",
+                        "createdBy": 0,
+                        "entity": "parentalRating",
+                        "id": 3,
+                        "items": [],
+                        "modifiedAt": "2015-06-26T12:42:20Z",
+                        "modifiedBy": 10000,
+                        "parent": null,
+                        "status": "draft",
+                        "title": "PG-13"
+                    },
+                    "pictures": [
+                        {
+                            "createdAt": "2013-03-27T14:07:03Z",
+                            "createdBy": 0,
+                            "entity": "picture",
+                            "id": 61,
+                            "modifiedAt": "2013-03-27T14:07:04Z",
+                            "modifiedBy": null,
+                            "pictureType": "poster",
+                            "status": "published",
+                            "title": "ASST0000000000880845_Transformers__Revenge_of_the_Fallen.png",
+                            "versions": [
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 330,
+                                    "id": 39625,
+                                    "width": 220,
+                                    "link": "/Picture/C_1_Picture_61_image.png",
+                                    "profile": "main"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39629,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "webLandscapeSmall"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39630,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "webLandscapeMedium"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39631,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "webLandscapeLarge"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39634,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPhoneLandscapeSmall"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39635,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPhoneLandscapeMedium"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39636,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPhoneLandscapeLarge"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39637,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPhoneRetinaLandscapeSmall"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39638,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPhoneRetinaLandscapeMedium"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39639,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPhoneRetinaLandscapeLarge"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39642,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPadLandscape1"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39643,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPadLandscape2"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39644,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPadLandscape3"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39645,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPadLandscape4"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39646,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPadLandscape5"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39647,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPadLandscape6"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39648,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPadLandscape7"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39649,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPadLandscape8"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": null,
+                                    "id": 39650,
+                                    "width": null,
+                                    "link": null,
+                                    "profile": "iPadLandscape9"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 99,
+                                    "id": 378978,
+                                    "width": 66,
+                                    "link": "/Picture/C_1_Picture_61_profile100Image.png",
+                                    "profile": "webPortraitSmall"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 204,
+                                    "id": 378979,
+                                    "width": 136,
+                                    "link": "/Picture/C_1_Picture_61_profile101Image.png",
+                                    "profile": "webPortraitMedium"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 330,
+                                    "id": 378980,
+                                    "width": 220,
+                                    "link": "/Picture/C_1_Picture_61_profile102Image.png",
+                                    "profile": "webPortraitLarge"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 90,
+                                    "id": 378984,
+                                    "width": 60,
+                                    "link": "/Picture/C_1_Picture_61_profile200Image.png",
+                                    "profile": "iPhonePortrait"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 180,
+                                    "id": 378985,
+                                    "width": 120,
+                                    "link": "/Picture/C_1_Picture_61_profile220Image.png",
+                                    "profile": "iPhoneRetinaPortrait"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 192,
+                                    "id": 378992,
+                                    "width": 128,
+                                    "link": "/Picture/C_1_Picture_61_profile300Image.png",
+                                    "profile": "iPadPortraitSmall"
+                                },
+                                {
+                                    "entity": "pictureImage",
+                                    "height": 309,
+                                    "id": 378993,
+                                    "width": 206,
+                                    "link": "/Picture/C_1_Picture_61_profile301Image.png",
+                                    "profile": "iPadPortraitLarge"
+                                }
+                            ]
+                        }
+                    ],
+                    "publicationEvent": {
+                        "billingType": "rental",
+                        "createdAt": "2013-03-27T14:07:04Z",
+                        "createdBy": 0,
+                        "endDate": "2015-08-02T05:59:00Z",
+                        "entity": "publicationEvent",
+                        "id": 666,
+                        "modifiedAt": "2014-08-04T06:00:16Z",
+                        "modifiedBy": null,
+                        "price": "25.00",
+                        "startDate": "2014-08-04T06:00:00Z",
+                        "status": "published"
+                    },
+                    "status": "published",
+                    "synopsisShort": "San Witwicky deja a los Autobots atrás para llevar una vida normal. Pero cuando su mente es llenada con símbolos crípticos, los Decépticos se les acercan y él es llevado a una nueva guerra de los Transformers.",
+                    "title": "Transformers: La Venganza de los Caídos",
+                    "titleShort": "Transformers: Revenge of the Fallen",
+                    "category": "movie"
+                },
+                "createdAt": "2015-05-26T00:00:00Z",
+                "createdBy": 1,
+                "entity": "collectionStaticItem",
+                "id": 1,
+                "modifiedAt": "2015-05-26T00:00:00Z",
+                "modifiedBy": 1,
+                "status": "published"
+            }
+        ],
+        "messages": []
+    }
+    ```
+
+### Retrieve all Static Items [GET]
+Retrieves all static items of a collection
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [List Static Items][]
+
+### Creates a Static Item [POST]
+Creates a new Static Item in the Collection. The static item simply associates its Asset to a rank.
+
++ Request
+
+    ```js
+    {
+      "asset": 4754,
+      "rank": 0
+    }
+    ```
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
++ Response 201
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "asset": {
+                "createdAt": "2013-08-23T19:07:43Z",
+                "createdBy": 0,
+                "duration": 6120,
+                "entity": "asset",
+                "genre": {
+                    "createdAt": "2013-03-21T17:22:12Z",
+                    "createdBy": 0,
+                    "entity": "genre",
+                    "id": 111,
+                    "items": [],
+                    "modifiedAt": "2015-01-20T21:50:46Z",
+                    "modifiedBy": null,
+                    "parent": null,
+                    "status": "published",
+                    "title": "Acción y Aventura"
+                },
+                "id": 4754,
+                "modifiedAt": "2015-06-26T11:01:51Z",
+                "modifiedBy": null,
+                "parentalRating": {
+                    "createdAt": "2012-10-04T13:48:00Z",
+                    "createdBy": 0,
+                    "entity": "parentalRating",
+                    "id": 9,
+                    "items": [],
+                    "modifiedAt": "2013-04-29T00:29:00Z",
+                    "modifiedBy": null,
+                    "parent": null,
+                    "status": "published",
+                    "title": "R"
+                },
+                "pictures": [
+                    {
+                        "createdAt": "2013-08-23T19:08:01Z",
+                        "createdBy": 0,
+                        "entity": "picture",
+                        "id": 2853,
+                        "modifiedAt": "2013-09-02T20:27:09Z",
+                        "modifiedBy": null,
+                        "pictureType": "poster",
+                        "status": "published",
+                        "title": "ASST0000000001033138_Enter_The_Dragon.png",
+                        "versions": [
+                            {
+                                "entity": "pictureImage",
+                                "height": 330,
+                                "id": 95681,
+                                "width": 220,
+                                "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2853_image.png",
+                                "profile": "main"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95685,
+                                "width": null,
+                                "link": null,
+                                "profile": "webLandscapeSmall"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95686,
+                                "width": null,
+                                "link": null,
+                                "profile": "webLandscapeMedium"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95687,
+                                "width": null,
+                                "link": null,
+                                "profile": "webLandscapeLarge"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95690,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPhoneLandscapeSmall"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95691,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPhoneLandscapeMedium"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95692,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPhoneLandscapeLarge"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95693,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPhoneRetinaLandscapeSmall"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95694,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPhoneRetinaLandscapeMedium"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95695,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPhoneRetinaLandscapeLarge"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95698,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPadLandscape1"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95699,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPadLandscape2"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95700,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPadLandscape3"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95701,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPadLandscape4"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95702,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPadLandscape5"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95703,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPadLandscape6"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95704,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPadLandscape7"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95705,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPadLandscape8"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 95706,
+                                "width": null,
+                                "link": null,
+                                "profile": "iPadLandscape9"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": 99,
+                                "id": 433110,
+                                "width": 66,
+                                "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2853_profile100Image.png",
+                                "profile": "webPortraitSmall"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": 204,
+                                "id": 433111,
+                                "width": 136,
+                                "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2853_profile101Image.png",
+                                "profile": "webPortraitMedium"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": 330,
+                                "id": 433112,
+                                "width": 220,
+                                "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2853_profile102Image.png",
+                                "profile": "webPortraitLarge"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": 90,
+                                "id": 433116,
+                                "width": 60,
+                                "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2853_profile200Image.png",
+                                "profile": "iPhonePortrait"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": 180,
+                                "id": 433117,
+                                "width": 120,
+                                "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2853_profile220Image.png",
+                                "profile": "iPhoneRetinaPortrait"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": 192,
+                                "id": 433124,
+                                "width": 128,
+                                "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2853_profile300Image.png",
+                                "profile": "iPadPortraitSmall"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": 309,
+                                "id": 433125,
+                                "width": 206,
+                                "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2853_profile301Image.png",
+                                "profile": "iPadPortraitLarge"
+                            }
+                        ]
+                    }
+                ],
+                "publicationEvent": {
+                    "billingType": "rental",
+                    "createdAt": "2013-08-23T19:08:08Z",
+                    "createdBy": 0,
+                    "endDate": "2015-03-31T05:59:00Z",
+                    "entity": "publicationEvent",
+                    "id": 18563,
+                    "modifiedAt": "2014-08-06T21:57:04Z",
+                    "modifiedBy": null,
+                    "price": "25.00",
+                    "startDate": "2014-04-09T06:00:00Z",
+                    "status": "published"
+                },
+                "status": "published",
+                "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo. Es la película que tras estrenarse en Hong Kong, dio a conocer a Bruce Lee en Estados Unidos.",
+                "title": "Operación Dragón",
+                "titleShort": "Enter The Dragon",
+                "category": "movie"
+            },
+            "collection": {},
+            "createdAt": "2015-06-30T16:03:50Z",
+            "createdBy": 1,
+            "entity": "collectionStaticItem",
+            "id": 13,
+            "lockedAt": null,
+            "lockedBy": null,
+            "modifiedAt": "2015-06-30T16:03:50Z",
+            "modifiedBy": 1,
+            "publicationTransitions": [
+                "publish"
+            ],
+            "rank": 0,
+            "status": "draft"
+        },
+        "messages": []
+    }
+    ```
+
+### Updates a list of Static Items [PATCH]
+Updates a list of static items
+
++ Request
+
+    ```js
+    [
+      {
+        "id": 9,
+        "rank": 1
+      },
+      {
+        "id": 1,
+        "rank": 0
+      },
+      {
+        "id": 3,
+        "rank": 2
+      },
+      {
+        "id": 4,
+        "rank": 3
+      },
+      {
+        "id": 5,
+        "rank": 4
+      },
+      {
+        "id": 6,
+        "rank": 5
+      },
+      {
+        "id": 7,
+        "rank": 6
+      },
+      {
+        "id": 8,
+        "rank": 7
+      }
+    ]
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
++ Response 200
+
+    [List Static Items][]
 
 
 # Group Business - Country
