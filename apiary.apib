@@ -2919,6 +2919,8 @@ Retrieves all collections.
 # Group Business - Country
 Represents actions against Country objects
 
+For descriptions on every action over this taxonomy, please see [here](https://televisa.atlassian.net/wiki/display/SB/Taxonomy+Integration).
+
 ## Country [/business/country/{id}]
 Represents a country
 
@@ -2929,14 +2931,24 @@ Represents a country
 
     ```js
     {
-        "headers": {},
-        "data": {
-            "id": 1,
-            "title": "United States",
-            "entity": "country"
-        },
-        "messages": []
-    }
+    "headers": {},
+    "data": {
+        "createdAt": "2013-03-21T22:46:39Z",
+        "createdBy": 0,
+        "entity": "country",
+        "id": 1,
+        "items": [],
+        "lockedAt": null,
+        "lockedBy": null,
+        "modifiedAt": "2015-06-26T13:02:08Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "rank": 0,
+        "status": "draft",
+        "title": "Mexico"
+    },
+    "messages": []
+}
     ```
 
 ### Retrieve a Country [GET]
@@ -2992,66 +3004,74 @@ Returns all Countries.
 + Model (application/json)
 
     ```js
-        {
-            "headers": {"total": 10},
-            "data": [
-                {
-                    "id": 1,
-                    "title": "United States",
-                    "entity": "country"
-                },
-                {
-                    "id": 2,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 3,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 4,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 5,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 6,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 7,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 8,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 9,
-                    "title": "México",
-                    "entity": "country"
-                },
-                {
-                    "id": 10,
-                    "title": "México",
-                    "entity": "country"
-                }
-            ],
-            "messages": [
-                {
-                    "success": "Data successfully retrieved"
-                }
-            ]
-        }
+    {
+  "headers": {
+      "total": 5
+  },
+  "data": [
+      {
+          "createdAt": "2015-06-26T13:04:43Z",
+          "createdBy": 10000,
+          "entity": "country",
+          "id": 260,
+          "items": [],
+          "modifiedAt": "2015-06-26T13:04:43Z",
+          "modifiedBy": 10000,
+          "parent": null,
+          "status": "draft",
+          "title": "Mexico"
+      },
+      {
+          "createdAt": "2013-03-21T22:46:39Z",
+          "createdBy": 0,
+          "entity": "country",
+          "id": 5,
+          "items": [],
+          "modifiedAt": "2015-06-26T13:02:08Z",
+          "modifiedBy": 10000,
+          "parent": null,
+          "status": "draft",
+          "title": "Mexico"
+      },
+      {
+          "createdAt": "2013-03-21T22:46:39Z",
+          "createdBy": 0,
+          "entity": "country",
+          "id": 7,
+          "items": [],
+          "modifiedAt": "2015-06-26T13:02:08Z",
+          "modifiedBy": 10000,
+          "parent": null,
+          "status": "draft",
+          "title": "Albania"
+      },
+      {
+          "createdAt": "2013-03-21T22:46:39Z",
+          "createdBy": 0,
+          "entity": "country",
+          "id": 6,
+          "items": [],
+          "modifiedAt": "2015-06-26T13:02:08Z",
+          "modifiedBy": 10000,
+          "parent": null,
+          "status": "draft",
+          "title": "Afganistan"
+      },
+      {
+          "createdAt": "2013-03-21T22:46:39Z",
+          "createdBy": 0,
+          "entity": "country",
+          "id": 9,
+          "items": [],
+          "modifiedAt": "2015-06-26T13:02:08Z",
+          "modifiedBy": 10000,
+          "parent": null,
+          "status": "draft",
+          "title": "Andorra"
+      }
+  ],
+  "messages": []
+  }
     ```
 
 ### Retrieve all Countries [GET]
@@ -3075,7 +3095,7 @@ Creates a new Country.
 
     ```js
     {
-            "title": "United States"
+            "title": "Mexico"
     }
     ```
     + Headers
@@ -4697,6 +4717,8 @@ Returns a specific EPG given relevant start and end times, filtered by a Channel
 # Group Business - Language
 Represents actions against Language objects
 
+For descriptions on every action over this taxonomy, please see [here](https://televisa.atlassian.net/wiki/display/SB/Taxonomy+Integration).
+
 ## Language [/business/language/{id}]
 Represents a Language
 
@@ -4734,7 +4756,6 @@ Represents a Language
     ```
 
 ### Deletes a Language [DELETE]
-Deletes a Language. This endpoint should be called whenever a new Language is removed in the CMS UI.
 
 + Request
 
@@ -4747,130 +4768,78 @@ Deletes a Language. This endpoint should be called whenever a new Language is re
 
 
 ## List Languages [/business/language]
-Returns all Languages. This endpoint should be called to populate or refresh the Languages in the CMS UI.
 
 + Model (application/json)
 
     ```js
     {
-        "headers": {
-            "total": 128
+    "headers": {
+        "total": 5
+    },
+    "data": [
+        {
+            "createdAt": "2013-03-21T17:21:04Z",
+            "createdBy": 0,
+            "entity": "language",
+            "id": 3,
+            "items": [],
+            "modifiedAt": "2013-04-29T00:28:42Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "English"
         },
-        "data": [
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "language",
-                "id": 24,
-                "items": [],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "English"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "language",
-                "id": 25,
-                "items": [],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Spanish"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "language",
-                "id": 26,
-                "items": [],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "French"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "language",
-                "id": 28,
-                "items": [
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "language",
-                        "id": 500,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Italiano"
-                    },
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "language",
-                        "id": 510,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Portugues"
-                    },
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "language",
-                        "id": 509,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Frances"
-                    },
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "language",
-                        "id": 511,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Rumano"
-                    }
-                ],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Lenguas Romances"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "language",
-                "id": 646,
-                "items": [],
-                "modifiedAt": "2015-01-20T21:50:46Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Ruso"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "language",
-                "id": 664,
-                "items": [],
-                "modifiedAt": "2015-01-20T21:50:46Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Aleman"
-            }
-        ],
-        "messages": []
-    }
+        {
+            "createdAt": "2013-03-21T17:21:04Z",
+            "createdBy": 0,
+            "entity": "language",
+            "id": 4,
+            "items": [],
+            "modifiedAt": "2013-04-29T00:28:42Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "Spanish"
+        },
+        {
+            "createdAt": "2013-03-21T17:21:04Z",
+            "createdBy": 0,
+            "entity": "language",
+            "id": 6,
+            "items": [],
+            "modifiedAt": "2013-04-29T00:28:42Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "French"
+        },
+        {
+            "createdAt": "2013-03-21T17:21:04Z",
+            "createdBy": 0,
+            "entity": "language",
+            "id": 7,
+            "items": [],
+            "modifiedAt": "2013-04-29T00:28:42Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "Italian"
+        },
+        {
+            "createdAt": "2013-03-21T17:21:04Z",
+            "createdBy": 0,
+            "entity": "language",
+            "id": 9,
+            "items": [],
+            "modifiedAt": "2013-04-29T00:28:42Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "Greek"
+        }
+    ],
+    "messages": []
+}
     ```
 
 ### Retrieve all Languages [GET]
@@ -4888,12 +4857,6 @@ Retrieves all languages.
     [List Languages][]
 
 ### Creates a Language [POST]
-Creates a new Language. This endpoint should be called whenever a new Language is added in the CMS UI.
-
-The client must enter the rank of the Language.
-
-If the Language is to be placed under a new parent, the parent field should be populated with the parent's identifier.
-If the Language is to be made top-level, the parent field can be populated with null
 
 + Request
 
@@ -4933,11 +4896,7 @@ If the Language is to be made top-level, the parent field can be populated with 
     ```
 
 ### Updates a list of languages [PATCH]
-Updates a list of Languages, including their metadata, order, and parent assocation. This API should be called whenever clicking the save button in the Language UI, which will save, re-ordering, parent linking, and metadata changes.
 
-If a Language's rank is changed, then the client should also submit *all of the siblings* of that language with their respective new ranks. *It is solely up to the client to preserve ordering*.
-
-If successful, the API will return the full list of Languages, reflecting all the changes - which can be used to reload the DOM.
 
 + Request
 
@@ -4972,6 +4931,8 @@ If successful, the API will return the full list of Languages, reflecting all th
 
 # Group Business - Genre
 Represents actions against Genre objects
+
+For descriptions on every action over this taxonomy, please see [here](https://televisa.atlassian.net/wiki/display/SB/Taxonomy+Integration).
 
 ## Genre [/business/genre/{id}]
 Represents a genre
@@ -5010,7 +4971,6 @@ Represents a genre
     ```
 
 ### Deletes a Genre [DELETE]
-Deletes a Genre. This endpoint should be called whenever a new Genre is removed in the CMS UI.
 
 + Request
 
@@ -5023,130 +4983,95 @@ Deletes a Genre. This endpoint should be called whenever a new Genre is removed 
 
 
 ## List Genres [/business/genre]
-Returns all Genres. This endpoint should be called to populate or refresh the Genres in the CMS UI.
 
 + Model (application/json)
 
     ```js
     {
-        "headers": {
-            "total": 128
+    "headers": {
+        "total": 4
+    },
+    "data": [
+        {
+            "createdAt": "2013-03-21T17:22:12Z",
+            "createdBy": 0,
+            "entity": "genre",
+            "id": 9,
+            "items": [
+                {
+                    "createdAt": "2015-06-01T09:50:25Z",
+                    "createdBy": 10000,
+                    "entity": "genre",
+                    "id": 832,
+                    "items": [],
+                    "modifiedAt": "2015-06-16T14:38:57Z",
+                    "modifiedBy": 10000,
+                    "parent": {
+                        "id": 9
+                    },
+                    "status": "draft",
+                    "title": "Drama 1"
+                },
+                {
+                    "createdAt": "2015-06-16T14:38:10Z",
+                    "createdBy": 10000,
+                    "entity": "genre",
+                    "id": 841,
+                    "items": [],
+                    "modifiedAt": "2015-06-16T14:38:32Z",
+                    "modifiedBy": 10000,
+                    "parent": {
+                        "id": 9
+                    },
+                    "status": "draft",
+                    "title": "Drama 3"
+                }
+            ],
+            "modifiedAt": "2015-06-16T09:41:51Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "Drama"
         },
-        "data": [
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 24,
-                "items": [],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Futbol"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 25,
-                "items": [],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Entretenimiento"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 26,
-                "items": [],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Noticias"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 28,
-                "items": [
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "genre",
-                        "id": 500,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Concierto"
-                    },
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "genre",
-                        "id": 510,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Futbol Soccer"
-                    },
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "genre",
-                        "id": 509,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Hockey"
-                    },
-                    {
-                        "createdAt": "2013-03-21T17:22:12Z",
-                        "createdBy": 1,
-                        "entity": "genre",
-                        "id": 511,
-                        "items": [],
-                        "modifiedAt": "2015-01-19T18:25:38Z",
-                        "modifiedBy": null,
-                        "status": "published",
-                        "title": "Tenis"
-                    }
-                ],
-                "modifiedAt": "2015-01-19T18:25:38Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Deportes"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 646,
-                "items": [],
-                "modifiedAt": "2015-01-20T21:50:46Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Olympics"
-            },
-            {
-                "createdAt": "2013-03-21T17:22:12Z",
-                "createdBy": 1,
-                "entity": "genre",
-                "id": 664,
-                "items": [],
-                "modifiedAt": "2015-01-20T21:50:46Z",
-                "modifiedBy": null,
-                "status": "published",
-                "title": "Water skiing"
-            }
-        ],
-        "messages": []
-    }
+        {
+            "createdAt": "2013-03-21T17:22:12Z",
+            "createdBy": 0,
+            "entity": "genre",
+            "id": 5,
+            "items": [],
+            "modifiedAt": "2015-06-16T14:38:32Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "Horror"
+        },
+        {
+            "createdAt": "2013-03-21T17:22:12Z",
+            "createdBy": 0,
+            "entity": "genre",
+            "id": 11,
+            "items": [],
+            "modifiedAt": "2015-06-16T14:38:32Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "Romance-comedy"
+        },
+        {
+            "createdAt": "2013-03-21T17:22:12Z",
+            "createdBy": 0,
+            "entity": "genre",
+            "id": 12,
+            "items": [],
+            "modifiedAt": "2015-06-16T14:38:32Z",
+            "modifiedBy": null,
+            "parent": null,
+            "status": "published",
+            "title": "Science fiction"
+        }
+    ],
+    "messages": []
+}
     ```
 
 ### Retrieve all Genres [GET]
@@ -5164,18 +5089,12 @@ Retrieves all genres.
     [List Genres][]
 
 ### Creates a Genre [POST]
-Creates a new Genre. This endpoint should be called whenever a new Genre is added in the CMS UI.
-
-The client must enter the rank of the Genre.
-
-If the Genre is to be placed under a new parent, the parent field should be populated with the parent's identifier.
-If the Genre is to be made top-level, the parent field can be populated with null
 
 + Request
 
     ```js
     {
-        "title": "testSport",
+        "title": "Science fiction",
         "entity": "genre",
         "parent": 28,
         "rank": 0
@@ -5191,29 +5110,29 @@ If the Genre is to be made top-level, the parent field can be populated with nul
 
     ```js
     {
-        "headers": {},
-        "data": {
-            "createdAt": "2015-05-18T11:15:45Z",
-            "createdBy": 1,
-            "entity": "genre",
-            "id": 808,
-            "items": [],
-            "modifiedAt": "2015-05-18T11:15:45Z",
-            "modifiedBy": 1,
-            "rank": 0,
-            "status": "draft",
-            "title": "testSport"
+    "headers": {},
+    "data": {
+        "createdAt": "2015-06-27T15:00:52Z",
+        "createdBy": 10000,
+        "entity": "genre",
+        "id": 755,
+        "items": [],
+        "lockedAt": null,
+        "lockedBy": null,
+        "modifiedAt": "2015-06-27T15:00:52Z",
+        "modifiedBy": 10000,
+        "parent": {
+            "id": 28
         },
-        "messages": []
-    }
+        "rank": 0,
+        "status": "draft",
+        "title": "Science fiction"
+    },
+    "messages": []
+}
     ```
 
 ### Updates a list of genres [PATCH]
-Updates a list of Genres, including their metadata, order, and parent assocation. This API should be called whenever clicking the save button in the Genre UI, which will save, re-ordering, parent linking, and metadata changes.
-
-If a Genre's rank is changed, then the client should also submit *all of the siblings* of that genre with their respective new ranks. *It is solely up to the client to preserve ordering*.
-
-If successful, the API will return the full list of Genres, reflecting all the changes - which can be used to reload the DOM.
 
 + Request
 
@@ -5249,6 +5168,8 @@ If successful, the API will return the full list of Genres, reflecting all the c
 # Group Business - Geoblocking
 Represents actions against Geoblocking objects
 
+For descriptions on every action over this taxonomy, please see [here](https://televisa.atlassian.net/wiki/display/SB/Taxonomy+Integration).
+
 ## Geoblocking [/business/geoblocking/{id}]
 Represents a Geoblocking
 
@@ -5259,14 +5180,24 @@ Represents a Geoblocking
 
     ```js
     {
-        "headers": {},
-        "data": {
-            "id": 1,
-            "title": "Guatemala",
-            "entity": "geoblocking"
-        },
-        "messages": []
-    }
+    "headers": {},
+    "data": {
+        "createdAt": "2015-06-03T08:07:21Z",
+        "createdBy": 10000,
+        "entity": "geoblocking",
+        "id": 1,
+        "items": [],
+        "lockedAt": null,
+        "lockedBy": null,
+        "modifiedAt": "2015-06-03T08:18:42Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "rank": 0,
+        "status": "draft",
+        "title": "Guatemala"
+    },
+    "messages": []
+}
     ```
 
 ### Retrieve a Geoblocking [GET]
@@ -5322,66 +5253,50 @@ Returns all Geoblocking.
 + Model (application/json)
 
     ```js
-        {
-            "headers": {"total": 10},
-            "data": [
-                {
-                    "id": 1,
-                    "title": "Guatemala",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 2,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 3,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 4,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 5,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 6,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 7,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 8,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 9,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                },
-                {
-                    "id": 10,
-                    "title": "Italy",
-                    "entity": "geoblocking"
-                }
-            ],
-            "messages": [
-                {
-                    "success": "Data successfully retrieved"
-                }
-            ]
-        }
+    {
+"headers": {
+    "total": 3
+},
+"data": [
+    {
+        "createdAt": "2015-06-03T08:07:21Z",
+        "createdBy": 10000,
+        "entity": "geoblocking",
+        "id": 1,
+        "items": [],
+        "modifiedAt": "2015-06-03T08:18:42Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "Guatemala"
+    },
+    {
+        "createdAt": "2015-06-26T11:31:13Z",
+        "createdBy": 10000,
+        "entity": "geoblocking",
+        "id": 4,
+        "items": [],
+        "modifiedAt": "2015-06-26T11:31:13Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "Spain"
+    },
+    {
+        "createdAt": "2015-06-03T08:07:27Z",
+        "createdBy": 10000,
+        "entity": "geoblocking",
+        "id": 2,
+        "items": [],
+        "modifiedAt": "2015-06-19T11:55:28Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "Italy"
+    }
+],
+"messages": []
+}
     ```
 
 ### Retrieve all Geoblockings [GET]
@@ -7865,6 +7780,8 @@ Creates a new Page.
 # Group Business - Parental Rating
 Represents actions against Parental Rating objects
 
+For descriptions on every action over this taxonomy, please see [here](https://televisa.atlassian.net/wiki/display/SB/Taxonomy+Integration).
+
 ## Parental Rating [/business/parental-rating/{id}]
 Represents a Parental Rating
 
@@ -7875,15 +7792,24 @@ Represents a Parental Rating
 
     ```js
     {
-        "headers": {},
-        "data": {
-            "id": 1,
-            "title": "G",
-            "code": "G",
-            "entity": "parentalRating"
-        },
-        "messages": []
-    }
+    "headers": {},
+    "data": {
+        "createdAt": "2012-10-04T13:48:00Z",
+        "createdBy": 0,
+        "entity": "parentalRating",
+        "id": 3,
+        "items": [],
+        "lockedAt": null,
+        "lockedBy": null,
+        "modifiedAt": "2015-06-26T12:42:20Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "rank": 1,
+        "status": "draft",
+        "title": "PG-13"
+    },
+    "messages": []
+}
     ```
 
 ### Retrieve a Parental Rating [GET]
@@ -7907,8 +7833,7 @@ Updates a specific Parental Rating
 
     ```js
     {
-            "title": "G",
-            "code": "G",
+            "title": "PG-13"
     }
     ```
 
@@ -7940,76 +7865,62 @@ Returns all Parental Rating.
 + Model (application/json)
 
     ```js
-        {
-            "headers": {"total": 10},
-            "data": [
-                {
-                    "id": 1,
-                    "title": "G",
-                    "code": "G",
-                    "entity": "parentalRating"
-                },
-                {
-                  "id": 2,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 3,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 4,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 5,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 6,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 7,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 8,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 9,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                },
-                {
-                  "id": 10,
-                  "title": "PG",
-                  "code": "PG",
-                  "entity": "parentalRating"
-                }
-            ],
-            "messages": [
-                {
-                    "success": "Data successfully retrieved"
-                }
-            ]
-        }
+    {
+"headers": {
+    "total": 4
+},
+"data": [
+    {
+        "createdAt": "2015-06-26T13:07:06Z",
+        "createdBy": 10000,
+        "entity": "parentalRating",
+        "id": 30,
+        "items": [],
+        "modifiedAt": "2015-06-26T13:07:06Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "NC-17"
+    },
+    {
+        "createdAt": "2012-10-04T13:48:00Z",
+        "createdBy": 0,
+        "entity": "parentalRating",
+        "id": 3,
+        "items": [],
+        "modifiedAt": "2015-06-26T12:42:20Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "PG-13"
+    },
+    {
+        "createdAt": "2012-10-04T13:48:00Z",
+        "createdBy": 0,
+        "entity": "parentalRating",
+        "id": 6,
+        "items": [],
+        "modifiedAt": "2015-06-26T12:42:20Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "NR"
+    },
+    {
+        "createdAt": "2012-10-04T13:48:00Z",
+        "createdBy": 0,
+        "entity": "parentalRating",
+        "id": 9,
+        "items": [],
+        "modifiedAt": "2015-06-26T12:30:47Z",
+        "modifiedBy": 10000,
+        "parent": null,
+        "status": "draft",
+        "title": "R"
+    }
+],
+"messages": []
+}
     ```
 
 ### Retrieve all Parental Ratings [GET]
@@ -8033,8 +7944,7 @@ Creates a new Parental Rating.
 
     ```js
     {
-            "title": "G",
-            "code": "G",
+            "title": "PG-13"
     }
     ```
     + Headers
