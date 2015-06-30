@@ -7225,6 +7225,36 @@ Creates a new Parental Rating.
 
     [Parental Rating][]
 
+### Updates a list of Parental Ratings [PATCH]
+
+Updates a list of Parental Ratings
+
++ Request
+
+    ```js
+
+    [
+        {
+            "id": 30,
+            "title": "NC-17"
+        },
+        {
+            "id": 3,
+            "title": "PG-13"
+        }
+    ]
+
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 201
+
+    [List Parental Ratings][]
+
 # Group Business - Person
 Represents actions against Person objects
 
