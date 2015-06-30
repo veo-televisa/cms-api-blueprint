@@ -2971,8 +2971,52 @@ Retrieves all collections.
 
     [List Collections][]
 
+### Create a Collection [POST]
+Creates a new Collection.
+
++ Request
+
+    ```js
+    {
+      "title": "test dynamic collection",
+      "type": "dynamic",
+      "searchQuery": "entity:(asset) AND title:forrest"
+    }
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
++ Response 201
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "createdAt": "2015-06-30T16:52:46Z",
+            "createdBy": 1,
+            "entity": "collection",
+            "id": 7,
+            "lockedAt": null,
+            "lockedBy": null,
+            "modifiedAt": "2015-06-30T16:52:46Z",
+            "modifiedBy": 1,
+            "publicationTransitions": [
+                "publish"
+            ],
+            "searchQuery": "entity:(asset) AND title:forrest",
+            "staticItems": [],
+            "status": "draft",
+            "title": "test dynamic collection",
+            "type": "dynamic"
+        },
+        "messages": []
+    }
+    ```
+
 ## Static Item [/business/collection/{id}/static-item/{staticItemId}]
-Represents an item of a Collection with type "static"
+Represents an item of a Collection with type "static".
 
 + Parameters
     + id (string, `14`) ... The id of the Collection.
@@ -2993,6 +3037,9 @@ Deletes a Static Item from a Collection
 
 ## List Static Items [/business/collection/{id}/static-item]
 Represents the items of a Collection with type "static"
+
+Note: A Static Item list is a representation of a VEO Ordered List. For more information on VEO Ordered Lists and their integration, see: https://televisa.atlassian.net/wiki/display/SB/Ordered+List+Integration
+
 
 + Parameters
     + id (string, `14`) ... The id of the Collection.
