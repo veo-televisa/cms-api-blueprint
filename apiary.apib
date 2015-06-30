@@ -2376,6 +2376,36 @@ Creates a new Country.
 
     [Country][]
 
+### Updates a list of countries [PATCH]
+
+Updates a list of Countries
+
++ Request
+
+    ```js
+
+    [
+        {
+            "id": 260,
+            "title": "Mexico"
+        },
+        {
+            "id": 7,
+            "title": "Albania"
+        }
+    ]
+
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 201
+
+    [List Countries][]
+
 # Group Business - Device Configuration
 Represents actions against Device Configuration
 
