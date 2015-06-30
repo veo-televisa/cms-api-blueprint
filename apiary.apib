@@ -4601,6 +4601,40 @@ Creates a new Geoblocking.
 
     [Geoblocking][]
 
+### Updates a list of Geoblockings [PATCH]
+
+Updates a list of Geoblockings
+
++ Request
+
+    ```js
+
+    [
+        {
+            "id": 1,
+            "title": "Guatemala"
+        },
+        {
+            "id": 4,
+            "title": "Spain"
+        },
+        {
+            "id": 2,
+            "parent": null
+        }
+    ]
+
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 201
+
+    [List Geoblockings][]
+
 # Group Business - Navigation
 Represents actions against Navigation objects
 
