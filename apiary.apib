@@ -4035,40 +4035,6 @@ Represents a country
 }
     ```
 
-### Retrieve a Country [GET]
-Returns a specific Country.
-
-+ Request
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Country][]
-
-### Updates a Country [PATCH]
-Updates a specific Country
-
-+ Request
-
-    ```js
-    {
-            "title": "United States"
-    }
-    ```
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Country][]
-
 ### Deletes a Country [DELETE]
 Deletes a country
 
@@ -4190,6 +4156,36 @@ Creates a new Country.
 + Response 201
 
     [Country][]
+
+### Updates a list of countries [PATCH]
+
+Updates a list of Countries
+
++ Request
+
+    ```js
+
+    [
+        {
+            "id": 260,
+            "title": "Mexico"
+        },
+        {
+            "id": 7,
+            "title": "Albania"
+        }
+    ]
+
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 201
+
+    [List Countries][]
 
 # Group Business - Device Configuration
 Represents actions against Device Configuration
@@ -6174,6 +6170,8 @@ Retrieves all genres.
 
 ### Creates a Genre [POST]
 
+Creates a Genre
+
 + Request
 
     ```js
@@ -6217,6 +6215,8 @@ Retrieves all genres.
     ```
 
 ### Updates a list of genres [PATCH]
+
+Updates a list of Genres
 
 + Request
 
@@ -6283,40 +6283,6 @@ Represents a Geoblocking
     "messages": []
 }
     ```
-
-### Retrieve a Geoblocking [GET]
-Returns a specific Geoblocking.
-
-+ Request
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Geoblocking][]
-
-### Updates a Geoblocking [PATCH]
-Updates a specific Geoblocking
-
-+ Request
-
-    ```js
-    {
-            "title": "Guatemala"
-    }
-    ```
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Geoblocking][]
 
 ### Deletes a Geoblocking [DELETE]
 Deletes a Geoblocking
@@ -6415,6 +6381,40 @@ Creates a new Geoblocking.
 + Response 201
 
     [Geoblocking][]
+
+### Updates a list of Geoblockings [PATCH]
+
+Updates a list of Geoblockings
+
++ Request
+
+    ```js
+
+    [
+        {
+            "id": 1,
+            "title": "Guatemala"
+        },
+        {
+            "id": 4,
+            "title": "Spain"
+        },
+        {
+            "id": 2,
+            "parent": null
+        }
+    ]
+
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 201
+
+    [List Geoblockings][]
 
 # Group Business - Navigation
 Represents actions against Navigation objects
@@ -8896,40 +8896,6 @@ Represents a Parental Rating
 }
     ```
 
-### Retrieve a Parental Rating [GET]
-Returns a specific Parental Rating.
-
-+ Request
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Parental Rating][]
-
-### Updates a Parental Rating [PATCH]
-Updates a specific Parental Rating
-
-+ Request
-
-    ```js
-    {
-            "title": "PG-13"
-    }
-    ```
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Parental Rating][]
-
 ### Deletes a Parental Rating [DELETE]
 Deletes a Parental Rating
 
@@ -9039,6 +9005,36 @@ Creates a new Parental Rating.
 + Response 201
 
     [Parental Rating][]
+
+### Updates a list of Parental Ratings [PATCH]
+
+Updates a list of Parental Ratings
+
++ Request
+
+    ```js
+
+    [
+        {
+            "id": 30,
+            "title": "NC-17"
+        },
+        {
+            "id": 3,
+            "title": "PG-13"
+        }
+    ]
+
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 201
+
+    [List Parental Ratings][]
 
 # Group Business - Person
 Represents actions against Person objects
