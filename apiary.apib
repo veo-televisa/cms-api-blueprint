@@ -14567,3 +14567,159 @@ Search result for assets search
         "messages": []
     }
     ```
+# Group Business - ResumePlayWidget
+Represents actions against ResumePlayWidget objects
+
+## ResumePlayWidget [/business/page/{pageId}/zone/{zoneId}/resume-play-widget{id}]
+Represents a ResumePlayWidget
+
++ Parameters
+    + pageId (string, `1`) ... The id of the Page.
+    + zoneId (string, `1`) ... The id of the Zone.
+    + id (string, `17`) ... The id of the ResumePlayWidget.
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "createdAt": "2015-07-14T10:31:29Z",
+            "createdBy": 10001,
+            "entity": "resumePlayWidget",
+            "flavor": "default",
+            "id": 17,
+            "limit": 5,
+            "lockedAt": null,
+            "lockedBy": null,
+            "modifiedAt": "2015-07-14T12:38:50Z",
+            "modifiedBy": 10001,
+            "rank": 5,
+            "title": "resume play 7"
+        },
+        "messages": []
+    }
+    ```
+### Retrieve a ResumePlayWidget [GET]
+Returns a specific ResumePlayWidget.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [ResumePlayWidget][]
+
+### Updates a ResumePlayWidget [PATCH]
+Updates a specific ResumePlayWidget
+
++ Request
+
+    ```js
+    {
+        "title": "resume play 1",
+        "rank": 2,
+        "limit": 5,
+        "flavor": "default"
+    }
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [ResumePlayWidget][]
+
+### Deletes a ResumePlayWidget [DELETE]
+Deletes a ResumePlayWidget
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 204
+
+## List ResumePlayWidget [/business/page/{pageId}/zone/{zoneId}/resume-play-widget]
+Returns all ResumePlayWidgets.
+
++ Parameters
+    + pageId (string, `1`) ... The id of the Page.
+    + zoneId (string, `1`) ... The id of the Zone.
+    
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {"total": 2},
+        "data": [
+            {
+              "createdAt": "2015-07-14T10:31:29Z",
+              "createdBy": 10001,
+              "entity": "resumePlayWidget",
+              "id": 17,
+              "limit": 5,
+              "modifiedAt": "2015-07-14T12:38:50Z",
+              "modifiedBy": 10001
+            },
+            {
+              "createdAt": "2015-07-14T10:25:43Z",
+              "createdBy": 10001,
+              "entity": "resumePlayWidget",
+              "id": 16,
+              "limit": 5,
+              "modifiedAt": "2015-07-14T10:25:43Z",
+              "modifiedBy": 10001
+            }
+        ],
+        "messages": []
+    }
+    ```
+
+### Retrieve all ResumePlayWidgets [GET]
+Retrieves all ResumePlayWidgets.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [List ResumePlayWidget][]
+
+### Creates a ResumePlayWidget [POST]
+Creates a new ResumePlayWidget.
+
++ Request
+
+    ```js
+    {
+        {
+            "title": "resume play 1",
+            "rank": 2,
+            "limit": 5,
+            "flavor": "default"
+        }
+    }
+    ```
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+            Content-Type: application/json
+
+
++ Response 201
+
+    [ResumePlayWidget][]
