@@ -14275,3 +14275,130 @@ Search result for assets search
         "messages": []
     }
     ```
+# Group System - Upload
+Represents the file upload
+
+## Upload [/system/upload/{id}]
+Represents an Upload
+
++ Parameters
+    + id (string, `1`) ... The id of the Upload.
+
++ Model (application/json)
+
+    ```js
+    {
+      "headers": {},
+      "data": {
+        "createdAt": "2015-09-17T21:31:41Z",
+        "createdBy": {
+          "entity": "user",
+          "id": 10000,
+          "name": "Test User"
+        },
+        "current": 0,
+        "entity": "upload",
+        "files": null,
+        "id": 1,
+        "modifiedAt": "2015-09-17T21:31:41Z",
+        "modifiedBy": {
+          "entity": "user",
+          "id": 10000,
+          "name": "Test User"
+        },
+        "status": "open",
+        "total": null
+      },
+      "messages": []
+    }
+    ```
+
+### Retrieve an Upload [GET]
+Returns a specific Upload.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [Upload][]
+
+### Update an Upload [PATCH]
+Update the file upload object
+
++ Request Update (application/json)
+
+    ```js
+    {
+        "status": "iprogress"
+    }
+    ```
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+            
++ Response 200
+
+    ```js
+    {
+      "headers": {},
+      "data": {
+        "createdAt": "2015-09-18T16:32:45Z",
+        "createdBy": {
+          "entity": "user",
+          "id": 10000,
+          "name": "Test User"
+        },
+        "current": 0,
+        "entity": "upload",
+        "files": null,
+        "id": 2,
+        "message": null,
+        "modifiedAt": "2015-09-18T16:32:45Z",
+        "modifiedBy": {
+          "entity": "user",
+          "id": 10000,
+          "name": "Test User"
+        },
+        "status": "inProgress",
+        "total": null
+      },
+      "messages": []
+    }
+    ```
+    
+### Initiate an Upload [POST]
+Initiate the file upload object
+
++ Request Initialize (multipart/form-data)
+
+        -----BOUNDARY
+        Content-Disposition: form-data; name="file"; filename="image1.jpeg"
+        Content-Type: image/jpeg
+        Content-Transfer-Encoding: base64
+    
+        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+        HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAABAAEDASIA
+        AhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEB
+        AAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AD//Z
+        -----BOUNDARY
+        
+        ------BOUNDARY
+        Content-Disposition: form-data; name="id"
+        1
+        ------BOUNDARY
+        
+        + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+            Content-Type: multipart/form-data; boundary=----BOUNDARY
+
++ Response 201
+
+    [Upload][]
