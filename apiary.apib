@@ -14296,9 +14296,30 @@ Represents an Upload
           "id": 10000,
           "name": "Test User"
         },
-        "current": 0,
+        "current": 2,
         "entity": "upload",
-        "files": null,
+        "files": [
+            {
+                {
+                    "entity": "pictureImage",
+                    "height": 576,
+                    "id": 313665,
+                    "width": 1024,
+                    "link": "https://s3.amazonaws.com/static-test.veo.tv/picture/2015/09/18/1/filename_main.png",
+                    "profile": "main"
+                
+                },
+                {
+                    "entity": "pictureImage",
+                    "height": 576,
+                    "id": 313666,
+                    "width": 1024,
+                    "link": "https://s3.amazonaws.com/static-test.veo.tv/picture/2015/09/18/1/filename_1.png",
+                    "profile": "webPortraitSmall"
+                
+                }
+            }
+        ],
         "id": 1,
         "modifiedAt": "2015-09-17T21:31:41Z",
         "modifiedBy": {
@@ -14306,8 +14327,8 @@ Represents an Upload
           "id": 10000,
           "name": "Test User"
         },
-        "status": "open",
-        "total": null
+        "status": "inProgress",
+        "total": 10
       },
       "messages": []
     }
@@ -14344,33 +14365,7 @@ Update the file upload object
             
 + Response 200
 
-    ```js
-    {
-      "headers": {},
-      "data": {
-        "createdAt": "2015-09-18T16:32:45Z",
-        "createdBy": {
-          "entity": "user",
-          "id": 10000,
-          "name": "Test User"
-        },
-        "current": 0,
-        "entity": "upload",
-        "files": null,
-        "id": 2,
-        "message": null,
-        "modifiedAt": "2015-09-18T16:32:45Z",
-        "modifiedBy": {
-          "entity": "user",
-          "id": 10000,
-          "name": "Test User"
-        },
-        "status": "inProgress",
-        "total": null
-      },
-      "messages": []
-    }
-    ```
+    [Upload][]
     
 ### Initiate an Upload [POST]
 Initiate the file upload object
@@ -14401,4 +14396,29 @@ Initiate the file upload object
 
 + Response 201
 
-    [Upload][]
+    ```js
+    {
+      "headers": {},
+      "data": {
+        "createdAt": "2015-09-17T21:31:41Z",
+        "createdBy": {
+          "entity": "user",
+          "id": 10000,
+          "name": "Test User"
+        },
+        "current": 2,
+        "entity": "upload",
+        "files": null,
+        "id": 1,
+        "modifiedAt": "2015-09-17T21:31:41Z",
+        "modifiedBy": {
+          "entity": "user",
+          "id": 10000,
+          "name": "Test User"
+        },
+        "status": "open",
+        "total": null
+      },
+      "messages": []
+    }
+    ```
