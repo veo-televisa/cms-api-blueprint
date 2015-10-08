@@ -7112,49 +7112,40 @@ Represents a Program
 + Model (application/json)
 
     ```js
-    {
-        "headers": {},
-        "data": {
+        {
+          "headers": {},
+          "data": {
             "entity": "program",
-            "category": "linearEpisodeProgram",
-            "id": 3,
-            "status": "published",
+            "id": 1,
+            "title": "Mickey",
+            "isApproved": true,
+            "titleSEO": "Aventura de Mickey",
+            "affiliate": "Cablevision",
+            "duration": 1800,
+            "keywords": "mickey mouse, aventura",
+            "isAdult": false,
+            "isRightsBlocked": false,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa",
+            "editorialRating": 9,
+            "asset": 12,
+            "version": 1,
+            "year": 2001,
             "createdAt": "2014-03-28T00:25:44Z",
             "modifiedAt": "2014-03-28T00:25:46Z",
-            "duration": 2,
-            "externalProgramId": "EP013394160010",
-            "isHd": false,
-            "isLive": false,
-            "keywords": null,
-            "areRightsBlocked": false,
-            "genre": {
-                "id": 111,
-                "title": "Acción y Aventura"
+            "createdBy": {
+              "entity": "user",
+              "id": 3,
+              "name": "Feed Televisa"
             },
-            "packageCode": null,
-            "parentalRating": {
-                "id": 9,
-                "title": "R"
-            },
-            "synopsisShort": "Karen cuida de Zach",
-            "synopsis": "Karen cuida de Zach",
-            "subCategory": "series",
-            "title": "Co-Ed Confidential 4",
-            "titleSeo": "Co-Ed Confidential 4",
-            "airDate": "2010-06-17T00:00:00Z"
-            "createdBy": 3,
-            "modifiedBy": 4,
-            "images": [
-                {
-                    "type": "epgTimeline",
-                    "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                    "width": 31,
-                    "height": 47
-                }
-            ]
-        },
-        "messages": []
-    }
+            "modifiedBy": {
+              "entity": "user",
+              "id": 10000,
+              "name": "Test User"
+            }
+          },
+          "messages": []
+        }
     ```
 
 ### Retrieve a Program [GET]
@@ -7178,37 +7169,7 @@ Updates a specific Program
 
     ```js
     {
-            "category": "linearEpisodeProgram",
-            "status": "published",
-            "duration": 2,
-            "externalProgramId": "EP013394160010",
-            "isHd": false,
-            "isLive": false,
-            "keywords": null,
-            "areRightsBlocked": false,
-            "genre": {
-                "id": 111
-            },
-            "packageCode": null,
-            "parentalRating": {
-                "id": 9
-            },
-            "synopsisShort": "Karen cuida de Zach",
-            "synopsis": "Karen cuida de Zach",
-            "subCategory": "series",
-            "title": "Co-Ed Confidential 4",
-            "titleSeo": "Co-Ed Confidential 4",
-            "airDate": "2010-06-17T00:00:00Z"
-            "createdBy": 3,
-            "modifiedBy": 4,
-            "images": [
-                {
-                    "type": "epgTimeline",
-                    "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                    "width": 31,
-                    "height": 47
-                }
-            ]
+        "title": "Lorem"
     }
     ```
 
@@ -7244,215 +7205,65 @@ Returns all Programs.
         "headers": {"total": 10},
         "data": [
             {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
-                "id": 3,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "duration": 2,
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
+            "entity": "program",
+            "id": 1,
+            "title": "Mickey",
+            "isApproved": true,
+            "titleSEO": "Aventura de Mickey",
+            "affiliate": "Cablevision",
+            "duration": 1800,
+            "keywords": "mickey mouse, aventura",
+            "isAdult": false,
+            "isRightsBlocked": false,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa",
+            "editorialRating": 9,
+            "asset": 12,
+            "version": 1,
+            "year": 2001,
+            "createdAt": "2014-03-28T00:25:44Z",
+            "modifiedAt": "2014-03-28T00:25:46Z",
+            "createdBy": {
+              "entity": "user",
+              "id": 3,
+              "name": "Feed Televisa"
             },
-            {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
-                "id": 4,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "duration": 2,
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
-                "id": 5,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "duration": 2,
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
-                "id": 6,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "duration": 2,
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
-                "id": 7,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "duration": 2,
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
-                "id": 8,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "duration": 2,
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
-                "id": 9,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "duration": 2,
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
-                "id": 10,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "duration": 2,
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
-                "id": 12,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "duration": 2,
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
-                "id": 13,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "duration": 2,
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
+            "modifiedBy": {
+              "entity": "user",
+              "id": 10000,
+              "name": "Test User"
             }
+          },
+          {
+            "entity": "program",
+            "id": 2,
+            "title": "Lorem",
+            "isApproved": true,
+            "titleSEO": "Lorem ipsum dolor sit amet",
+            "affiliate": "Cablevision",
+            "duration": 3600,
+            "keywords": "lorem, sit, amet",
+            "isAdult": true,
+            "isRightsBlocked": false,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa",
+            "editorialRating": 9,
+            "asset": 3,
+            "version": 1,
+            "year": 2011,
+            "createdAt": "2014-03-28T00:25:44Z",
+            "modifiedAt": "2014-03-28T00:25:46Z",
+            "createdBy": {
+              "entity": "user",
+              "id": 3,
+              "name": "Feed Televisa"
+            },
+            "modifiedBy": {
+              "entity": "user",
+              "id": 10000,
+              "name": "Test User"
+            }
+          }
         ],
         "messages": []
     }
