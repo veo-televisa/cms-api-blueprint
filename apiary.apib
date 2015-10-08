@@ -1827,57 +1827,38 @@ Represents a Channel
 
     ```js
     {
-        "headers": {},
-        "data": {
-            "entity": "channel",
-            "category": "linearChannel",
-            "id": 16,
-            "status": "published",
-            "createdAt": "2014-03-28T00:25:44Z",
-            "modifiedAt": "2014-03-28T00:25:46Z",
-            "createdBy": 3,
-            "modifiedBy": 4,
-            "title": "Unicable",
-            "callSign": "UNIC",
-            "number": 203,
-            "packageCodes": [
-                "mini-basico",
-                "basico",
-                "familiar",
-                "premium-hbo",
-                "premium-moviecity",
-                "LIVETV",
-                "MIN-B",
-                "MODULAR",
-                "BASICO",
-                "TOTAL HD",
-                "packTV",
-                "packHD",
-                "packHDMax"
-            ],
-            "msos": [
-                "2",
-                "3",
-                "5"
-            ],
-            "isRestricted": false,
-            "streamName": "CV_Unicable",
-            "previewUrl": "http://pmorigin.veo.tv/Content/SS/Live/Channel(CV_Unicable).isml",
-            "hlsStreamName": null,
-            "hlsLiveAkamaiId": 206354,
-            "hasSearchResultOverlay": true,
-            "hasASpotOverlay": true,
-            "epgDescription": "Unicable",
-            "images": [
-                {
-                    "type": "epgTimeline",
-                    "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                    "width": 31,
-                    "height": 47
-                }
-            ]
+      "headers": {},
+      "data": {
+        "entity": "channel",
+        "id": 1,
+        "title": "TNT",
+        "number": 45,
+        "affiliate": "Cablevision",
+        "packageCodes": [
+          "mini-basico",
+          "basico",
+          "familiar",
+          "premium-hbo"
+        ],
+        "msos": [
+          "2",
+          "5"
+        ],
+        "image": 25,
+        "createdAt": "2014-03-28T00:25:44Z",
+        "modifiedAt": "2014-03-28T00:25:46Z",
+        "createdBy": {
+          "entity": "user",
+          "id": 3,
+          "name": "Feed Televisa"
         },
-        "messages": []
+        "modifiedBy": {
+          "entity": "user",
+          "id": 10000,
+          "name": "Test User"
+        }
+      },
+      "messages": []
     }
     ```
 
@@ -1902,49 +1883,22 @@ Updates a specific Channel
 
     ```js
     {
-            "category": "linearChannel",
-            "status": "published",
-            "createdBy": 3,
-            "modifiedBy": 4,
-            "title": "Unicable",
-            "callSign": "UNIC",
-            "number": 203,
-            "packageCodes": [
-                "mini-basico",
-                "basico",
-                "familiar",
-                "premium-hbo",
-                "premium-moviecity",
-                "LIVETV",
-                "MIN-B",
-                "MODULAR",
-                "BASICO",
-                "TOTAL HD",
-                "packTV",
-                "packHD",
-                "packHDMax"
-            ],
-            "msos": [
-                "2",
-                "3",
-                "5"
-            ],
-            "isRestricted": false,
-            "streamName": "CV_Unicable",
-            "previewUrl": "http://pmorigin.veo.tv/Content/SS/Live/Channel(CV_Unicable).isml",
-            "hlsStreamName": null,
-            "hlsLiveAkamaiId": 206354,
-            "hasSearchResultOverlay": true,
-            "hasASpotOverlay": true,
-            "epgDescription": "Unicable",
-            "images": [
-                {
-                    "type": "epgTimeline",
-                    "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                    "width": 31,
-                    "height": 47
-                }
-            ]
+       "entity": "channel",
+        "id": 1,
+        "title": "TNT",
+        "number": 45,
+        "affiliate": "Cablevision",
+        "packageCodes": [
+          "mini-basico",
+          "basico",
+          "familiar",
+          "premium-hbo"
+        ],
+        "msos": [
+          "2",
+          "5"
+        ],
+        "image": 25,
     }
     ```
 
@@ -1977,230 +1931,69 @@ Returns all Channels.
 
     ```js
     {
-        "headers": {"total": 11},
-        "data": [
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 27,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 26,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 25,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 24,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 23,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 22,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 21,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 20,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 19,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 18,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 17,
-                "status": "published",
-                "createdAt": "2014-03-28T00:25:44Z",
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
-            }
-        ],
-        "messages": []
+      "headers": {
+        "total": 2
+      },
+      "data": [
+        {
+          "entity": "channel",
+          "id": 1,
+          "title": "TNT",
+          "number": 45,
+          "affiliate": "Cablevision",
+          "packageCodes": [
+            "mini-basico",
+            "basico",
+            "familiar",
+            "premium-hbo"
+          ],
+          "msos": [
+            "2",
+            "5"
+          ],
+          "image": 25,
+          "createdAt": "2014-03-28T00:25:44Z",
+          "modifiedAt": "2014-03-28T00:25:46Z",
+          "createdBy": {
+            "entity": "user",
+            "id": 3,
+            "name": "Feed Televisa"
+          },
+          "modifiedBy": {
+            "entity": "user",
+            "id": 10000,
+            "name": "Test User"
+          }
+        },
+        {
+          "entity": "channel",
+          "id": 6,
+          "title": "FOX",
+          "number": 35,
+          "affiliate": "Cablevision",
+          "packageCodes": [
+            "familiar",
+            "premium-hbo"
+          ],
+          "msos": [
+            "5"
+          ],
+          "image": 56,
+          "createdAt": "2015-03-28T00:25:44Z",
+          "modifiedAt": "2015-03-28T00:25:46Z",
+          "createdBy": {
+            "entity": "user",
+            "id": 3,
+            "name": "Feed Televisa"
+          },
+          "modifiedBy": {
+            "entity": "user",
+            "id": 10000,
+            "name": "Test User"
+          }
+        }
+      ],
+      "messages": []
     }
     ```
 
