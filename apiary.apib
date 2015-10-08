@@ -292,11 +292,13 @@ Creates a new Asset.
 # Group Business - Channel
 Represents actions against Channel objects
 
-## Channel [/business/channel/{id}]
+## Channel [/business/tv/epg/channel/{id}/start/{start}/end/{end}]
 Represents a Channel
 
 + Parameters
     + id (string, `1`) ... The id of the Channel.
+    + start (int, `1423720800`) ... The start Unix timestamp of the EPG.
+    + end (int, `1424204313`) ... The end Unix timestamp of the EPG.
 
 + Model (application/json)
 
@@ -387,7 +389,7 @@ Deletes a Channel
 + Response 204
 
 
-## List Channels [/business/channel]
+## List Channels [/business/tv/epg/channel]
 Returns all Channels.
 
 + Model (application/json)
@@ -4675,11 +4677,13 @@ Updates a list of Geoblockings
 # Group Business - Listing
 Represents actions against Listing objects
 
-## Listing [/business/tv/epg/{id}]
+## Listing [/business/tv/epg/{id}/start/{start}/end/{end}]
 Represents a Listing
 
 + Parameters
     + id (string, `1`) ... The id of the Listing.
+    + start (int, `1423720800`) ... The start Unix timestamp of the EPG.
+    + end (int, `1424204313`) ... The end Unix timestamp of the EPG.
 
 + Model (application/json)
 
