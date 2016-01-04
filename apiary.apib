@@ -20,9 +20,9 @@ Represents a Asset
 + Model (application/json)
 
     ```js
-    {
-      "headers": {},
-      "data": {
+{
+    "headers": {},
+    "data": {
         "entity": "asset",
         "id": 2,
         "type": "Event",
@@ -31,49 +31,224 @@ Represents a Asset
         "keywords": null,
         "status": "deleted",
         "mainPoster": {
-          "id": 4
+            "id": 4
         },
         "mainFrame": {
-          "id": 6
+            "id": 6
         },
-        "pictures": [
-          {
-            "createdAt": "2013-07-30T18:03:31Z",
-            "createdBy": {
-              "entity": "user",
-              "id": 20,
-              "name": "Valentina Rubio"
+        "credits": [
+            {
+                "category": "actor",
+                "createdAt": "2013-09-09T13:00:00Z",
+                "createdBy": {
+                    "entity": "user",
+                    "id": 1,
+                    "name": "Admin"
+                },
+                "entity": "credit",
+                "id": 1,
+                "modifiedAt": "2013-09-09T13:00:00Z",
+                "modifiedBy": {
+                    "entity": "user",
+                    "id": 1,
+                    "name": "Admin"
+                },
+                "person": {
+                    "category": "actor",
+                    "createdAt": "2015-11-04T19:13:23Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "credits": [
+                        "actor"
+                    ],
+                    "displayName": "Mystro Clark",
+                    "entity": "person",
+                    "id": 10,
+                    "modifiedAt": "2015-11-04T19:13:23Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    }
+                }
             },
-            "entity": "picture",
-            "id": 2587,
-            "modifiedAt": "2013-07-30T18:04:40Z",
-            "modifiedBy": null,
-            "pictureType": "landscape",
-            "title": "Amelie",
-            "versions": [
-              {
-                "entity": "pictureImage",
-                "height": 576,
-                "id": 88973,
-                "size": 970902,
-                "width": 1024,
-                "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2587_image.png",
-                "profile": "main"
-              }
-            ]
-          }
+            {
+                "category": "director",
+                "createdAt": "2013-09-09T13:00:00Z",
+                "createdBy": {
+                    "entity": "user",
+                    "id": 1,
+                    "name": "Admin"
+                },
+                "entity": "credit",
+                "id": 2,
+                "modifiedAt": "2013-09-09T13:00:00Z",
+                "modifiedBy": {
+                    "entity": "user",
+                    "id": 1,
+                    "name": "Admin"
+                },
+                "person": {
+                    "category": "director",
+                    "createdAt": "2015-11-04T19:13:35Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "credits": [
+                        "director"
+                    ],
+                    "displayName": "Ana Fernández",
+                    "entity": "person",
+                    "id": 31,
+                    "modifiedAt": "2015-11-04T19:13:35Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    }
+                }
+            },
+            {
+                "category": "actor",
+                "createdAt": "2013-09-09T13:00:00Z",
+                "createdBy": {
+                    "entity": "user",
+                    "id": 1,
+                    "name": "Admin"
+                },
+                "entity": "credit",
+                "id": 3,
+                "modifiedAt": "2013-09-09T13:00:00Z",
+                "modifiedBy": {
+                    "entity": "user",
+                    "id": 1,
+                    "name": "Admin"
+                },
+                "person": {
+                    "category": "actor",
+                    "createdAt": "2015-11-04T19:13:46Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "credits": [
+                        "actor"
+                    ],
+                    "displayName": "Taraji P. Henson",
+                    "entity": "person",
+                    "id": 41,
+                    "modifiedAt": "2015-11-04T19:13:46Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    }
+                }
+            }
+        ],
+        "pictures": [
+            {
+                "createdAt": "2013-07-30T18:03:31Z",
+                "createdBy": {
+                    "entity": "user",
+                    "id": 20,
+                    "name": "Valentina Rubio"
+                },
+                "entity": "picture",
+                "id": 2587,
+                "modifiedAt": "2013-07-30T18:04:40Z",
+                "modifiedBy": null,
+                "pictureType": "landscape",
+                "title": "Amelie",
+                "versions": [
+                    {
+                        "entity": "pictureImage",
+                        "height": 576,
+                        "id": 88973,
+                        "size": 970902,
+                        "width": 1024,
+                        "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2587_image.png",
+                        "profile": "main"
+                    }
+                ]
+            }
         ],
         "createdAt": "2013-03-27T21:43:10Z",
         "createdBy": {
-          "entity": "user",
-          "id": 3,
-          "name": "Feed Televisa"
+            "entity": "user",
+            "id": 3,
+            "name": "Feed Televisa"
         },
         "modifiedAt": "2014-08-03T11:01:50Z",
         "modifiedBy": null
-      },
-      "messages": []
-    }
+    },
+    "messages": [],
+    "people": [
+        {
+            "category": null,
+            "createdAt": "2015-11-05T01:10:02Z",
+            "createdBy": {
+                "entity": "user",
+                "id": 1,
+                "name": "Admin"
+            },
+            "credits": [],
+            "displayName": "Dermot Crowley",
+            "entity": "person",
+            "id": 286,
+            "modifiedAt": "2015-11-05T01:10:02Z",
+            "modifiedBy": {
+                "entity": "user",
+                "id": 1,
+                "name": "Admin"
+            }
+        },
+        {
+            "category": null,
+            "createdAt": "2015-11-05T01:10:02Z",
+            "createdBy": {
+                "entity": "user",
+                "id": 1,
+                "name": "Admin"
+            },
+            "credits": [],
+            "displayName": "Idris Elba",
+            "entity": "person",
+            "id": 287,
+            "modifiedAt": "2015-11-05T01:10:02Z",
+            "modifiedBy": {
+                "entity": "user",
+                "id": 1,
+                "name": "Admin"
+            }
+        },
+        {
+            "category": null,
+            "createdAt": "2015-11-05T01:10:03Z",
+            "createdBy": {
+                "entity": "user",
+                "id": 1,
+                "name": "Admin"
+            },
+            "credits": [],
+            "displayName": "Warren Brown",
+            "entity": "person",
+            "id": 288,
+            "modifiedAt": "2015-11-05T01:10:03Z",
+            "modifiedBy": {
+                "entity": "user",
+                "id": 1,
+                "name": "Admin"
+            }
+        }
+    ]
+}
     ```
 
 ### Retrieve an Asset [GET]
@@ -132,8 +307,10 @@ Returns all Assets.
 + Model (application/json)
 
     ```js
-    {
-    "headers": {"total": 2},
+{
+    "headers": {
+        "total": 2
+    },
     "data": [
         {
             "entity": "asset",
@@ -149,6 +326,181 @@ Returns all Assets.
             "mainFrame": {
                 "id": 6
             },
+            "credits": [
+                {
+                    "category": "actor",
+                    "createdAt": "2013-09-09T13:00:00Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "entity": "credit",
+                    "id": 1,
+                    "modifiedAt": "2013-09-09T13:00:00Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "person": {
+                        "category": "actor",
+                        "createdAt": "2015-11-04T19:13:23Z",
+                        "createdBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        },
+                        "credits": [
+                            "actor"
+                        ],
+                        "displayName": "Mystro Clark",
+                        "entity": "person",
+                        "id": 10,
+                        "modifiedAt": "2015-11-04T19:13:23Z",
+                        "modifiedBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        }
+                    }
+                },
+                {
+                    "category": "director",
+                    "createdAt": "2013-09-09T13:00:00Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "entity": "credit",
+                    "id": 2,
+                    "modifiedAt": "2013-09-09T13:00:00Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "person": {
+                        "category": "director",
+                        "createdAt": "2015-11-04T19:13:35Z",
+                        "createdBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        },
+                        "credits": [
+                            "director"
+                        ],
+                        "displayName": "Ana Fernández",
+                        "entity": "person",
+                        "id": 31,
+                        "modifiedAt": "2015-11-04T19:13:35Z",
+                        "modifiedBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        }
+                    }
+                },
+                {
+                    "category": "actor",
+                    "createdAt": "2013-09-09T13:00:00Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "entity": "credit",
+                    "id": 3,
+                    "modifiedAt": "2013-09-09T13:00:00Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "person": {
+                        "category": "actor",
+                        "createdAt": "2015-11-04T19:13:46Z",
+                        "createdBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        },
+                        "credits": [
+                            "actor"
+                        ],
+                        "displayName": "Taraji P. Henson",
+                        "entity": "person",
+                        "id": 41,
+                        "modifiedAt": "2015-11-04T19:13:46Z",
+                        "modifiedBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        }
+                    }
+                }
+            ],
+            "people": [
+                {
+                    "category": null,
+                    "createdAt": "2015-11-05T01:10:02Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "credits": [],
+                    "displayName": "Dermot Crowley",
+                    "entity": "person",
+                    "id": 286,
+                    "modifiedAt": "2015-11-05T01:10:02Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    }
+                },
+                {
+                    "category": null,
+                    "createdAt": "2015-11-05T01:10:02Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "credits": [],
+                    "displayName": "Idris Elba",
+                    "entity": "person",
+                    "id": 287,
+                    "modifiedAt": "2015-11-05T01:10:02Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    }
+                },
+                {
+                    "category": null,
+                    "createdAt": "2015-11-05T01:10:03Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "credits": [],
+                    "displayName": "Warren Brown",
+                    "entity": "person",
+                    "id": 288,
+                    "modifiedAt": "2015-11-05T01:10:03Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    }
+                }
+            ],
             "pictures": [
                 {
                     "createdAt": "2013-07-30T18:03:31Z",
@@ -199,6 +551,181 @@ Returns all Assets.
             "mainFrame": {
                 "id": 2
             },
+            "credits": [
+                {
+                    "category": "actor",
+                    "createdAt": "2013-09-09T13:00:00Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "entity": "credit",
+                    "id": 1,
+                    "modifiedAt": "2013-09-09T13:00:00Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "person": {
+                        "category": "actor",
+                        "createdAt": "2015-11-04T19:13:23Z",
+                        "createdBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        },
+                        "credits": [
+                            "actor"
+                        ],
+                        "displayName": "Mystro Clark",
+                        "entity": "person",
+                        "id": 10,
+                        "modifiedAt": "2015-11-04T19:13:23Z",
+                        "modifiedBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        }
+                    }
+                },
+                {
+                    "category": "director",
+                    "createdAt": "2013-09-09T13:00:00Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "entity": "credit",
+                    "id": 2,
+                    "modifiedAt": "2013-09-09T13:00:00Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "person": {
+                        "category": "director",
+                        "createdAt": "2015-11-04T19:13:35Z",
+                        "createdBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        },
+                        "credits": [
+                            "director"
+                        ],
+                        "displayName": "Ana Fernández",
+                        "entity": "person",
+                        "id": 31,
+                        "modifiedAt": "2015-11-04T19:13:35Z",
+                        "modifiedBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        }
+                    }
+                },
+                {
+                    "category": "actor",
+                    "createdAt": "2013-09-09T13:00:00Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "entity": "credit",
+                    "id": 3,
+                    "modifiedAt": "2013-09-09T13:00:00Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "person": {
+                        "category": "actor",
+                        "createdAt": "2015-11-04T19:13:46Z",
+                        "createdBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        },
+                        "credits": [
+                            "actor"
+                        ],
+                        "displayName": "Taraji P. Henson",
+                        "entity": "person",
+                        "id": 41,
+                        "modifiedAt": "2015-11-04T19:13:46Z",
+                        "modifiedBy": {
+                            "entity": "user",
+                            "id": 1,
+                            "name": "Admin"
+                        }
+                    }
+                }
+            ],
+            "people": [
+                {
+                    "category": null,
+                    "createdAt": "2015-11-05T01:10:02Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "credits": [],
+                    "displayName": "Dermot Crowley",
+                    "entity": "person",
+                    "id": 286,
+                    "modifiedAt": "2015-11-05T01:10:02Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    }
+                },
+                {
+                    "category": null,
+                    "createdAt": "2015-11-05T01:10:02Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "credits": [],
+                    "displayName": "Idris Elba",
+                    "entity": "person",
+                    "id": 287,
+                    "modifiedAt": "2015-11-05T01:10:02Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    }
+                },
+                {
+                    "category": null,
+                    "createdAt": "2015-11-05T01:10:03Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "credits": [],
+                    "displayName": "Warren Brown",
+                    "entity": "person",
+                    "id": 288,
+                    "modifiedAt": "2015-11-05T01:10:03Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    }
+                }
+            ],
             "pictures": [
                 {
                     "createdAt": "2014-07-30T18:03:31Z",
@@ -237,7 +764,7 @@ Returns all Assets.
         }
     ],
     "messages": []
-    }
+}
     ```
 
 ### Retrieve all Assets [GET]
