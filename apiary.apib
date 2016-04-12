@@ -3017,37 +3017,45 @@ Updates a list of Countries
 # Group Business - Device Configuration
 Represents actions against Device Configuration
 
-## Device Configuration [/business/device-config]
+## Device Configuration [/business/device-configuration/{id}]
 Represents the Configuration of a Device (e.g., iOS, Android)
+
++ Parameters
+    + id (string, `1`) ... The id of the Device Configuration.
 
 + Model (application/json)
 
     ```js
-    {
+    {   
         "headers": {},
         "data": {
+            "createdAt": "2015-10-20T15:55:11Z",
+            "createdBy": {
+                "entity": "user",
+                "id": 10007,
+                "name": "Test Editor"
+            },
+            "data": {
+                "apiHost": "http://local.www.veo.tv/api/",
+                "playreadyLicenseServer": "http://local.www.veo.tv/secure/license/playready",
+                "widevineLicenseServer": "http://local.www.veo.tv/secure/license/widevine",
+                "secureApiHost": "http://local.www.veo.tv/secure/"
+            },
             "entity": "deviceConfiguration",
             "id": 1,
-            "status": "published",
-            "createdAt": "2013-08-23T19:07:49Z",
-            "modifiedAt": "2014-08-07T02:50:31Z",
-            "properties": {
-               "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
-               "labelLinks": {
-                    "phone": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/phone",
-                    "tablet": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/tablet"
-               },
-               "rentalsEnabled": true,
-               "minimunSecondsBufferVideo": 1,
-               "maximunSecondsBufferVideo": 5
-            }
+            "lockedAt": null,
+            "lockedBy": null,
+            "modifiedAt": "2015-10-20T15:55:11Z",
+            "modifiedBy": null,
+            "name": "Video Player - Local",
+            "token": "dead-beef-dead-beef-dead-beef"
         },
         "messages": []
     }
     ```
 
 ### Retrieve Device Configuration [GET]
-Returns a specific Device Configuration.
+Returns a specific Device Configuration
 
 + Request
 
@@ -3066,18 +3074,16 @@ Updates a specific Device Configuration
 + Request
 
     ```js
-    {
-            "status": "published",
-            "properties": {
-               "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
-               "labelLinks": {
-                    "phone": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/phone",
-                    "tablet": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/tablet"
-               },
-               "rentalsEnabled": true,
-               "minimunSecondsBufferVideo": 1,
-               "maximunSecondsBufferVideo": 5
-            }
+    {   
+        "data": {
+            "apiHost": "http://local.www.veo.tv/api/",
+            "playreadyLicenseServer": "http://local.www.veo.tv/secure/license/playready",
+            "widevineLicenseServer": "http://local.www.veo.tv/secure/license/widevine",
+            "secureApiHost": "http://local.www.veo.tv/secure/"
+        },
+        "name": "Video Player - Local",
+        "token": "dead-beef-dead-beef-dead-beef"
+
     }
     ```
 
@@ -3092,7 +3098,7 @@ Updates a specific Device Configuration
     [Device Configuration][]
 
 ### Delete Device Configuration [DELETE]
-Deletes a Device Configuration
+Deletes a specific Device Configuration
 
 + Request
 
@@ -3102,29 +3108,140 @@ Deletes a Device Configuration
 
 
 + Response 204
+    
+    
+## List Device Configurations [/business/device-configuration]
+Returns all Device Configurations
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {
+            "total": 4
+        },
+        "data": [
+            {
+                "createdAt": "2015-10-20T15:55:11Z",
+                "createdBy": {
+                    "entity": "user",
+                    "id": 10007,
+                    "name": "Test Editor"
+                },
+                "data": {
+                    "apiHost": "http://local.www.veo.tv/api/",
+                    "playreadyLicenseServer": "http://local.www.veo.tv/secure/license/playready",
+                    "widevineLicenseServer": "http://local.www.veo.tv/secure/license/widevine",
+                    "secureApiHost": "http://local.www.veo.tv/secure/"
+                },
+                "entity": "deviceConfiguration",
+                "id": 1,
+                "modifiedAt": "2015-10-20T15:55:11Z",
+                "modifiedBy": null,
+                "name": "Video Player - Local",
+                "token": "dead-beef-dead-beef-dead-beef"
+            },
+            {
+                "createdAt": "2015-10-20T15:55:11Z",
+                "createdBy": {
+                    "entity": "user",
+                    "id": 10007,
+                    "name": "Test Editor"
+                },
+                "data": {
+                    "apiHost": "http://www-test.veo.tv/api/",
+                    "playreadyLicenseServer": "http://www-test.veo.tv/secure/license/playready",
+                    "widevineLicenseServer": "http://www-test.veo.tv/secure/license/widevine",
+                    "secureApiHost": "http://www-test.veo.tv/secure/"
+                },
+                "entity": "deviceConfiguration",
+                "id": 2,
+                "modifiedAt": "2016-04-11T21:22:09Z",
+                "modifiedBy": {
+                    "entity": "user",
+                    "id": 10007,
+                    "name": "Test Editor"
+                },
+                "name": "Video Player - Test",
+                "token": "dead-beef-dead-beef-dead-beef"
+            },
+            {
+                "createdAt": "2015-10-20T15:55:11Z",
+                "createdBy": {
+                    "entity": "user",
+                    "id": 10007,
+                    "name": "Test Editor"
+                },
+                "data": {
+                    "apiHost": "http://www-stage.veo.tv/api/",
+                    "playreadyLicenseServer": "http://www-stage.veo.tv/secure/license/playready",
+                    "widevineLicenseServer": "http://www-stage.veo.tv/secure/license/widevine",
+                    "secureApiHost": "http://www-stage.veo.tv/secure/"
+                },
+                "entity": "deviceConfiguration",
+                "id": 3,
+                "modifiedAt": "2015-10-20T15:55:11Z",
+                "modifiedBy": null,
+                "name": "Video Player - Stage",
+                "token": "dead-beef-dead-beef-dead-beef"
+            },
+            {
+                "createdAt": "2015-10-20T15:55:11Z",
+                "createdBy": {
+                    "entity": "user",
+                    "id": 10007,
+                    "name": "Test Editor"
+                },
+                "data": {
+                    "apiHost": "http://www-origin.veo.tv/api/",
+                    "playreadyLicenseServer": "http://www-origin.veo.tv/secure/license/playready",
+                    "widevineLicenseServer": "http://www-origin.veo.tv/secure/license/widevine",
+                    "secureApiHost": "http://www-origin.veo.tv/secure/"
+                },
+                "entity": "deviceConfiguration",
+                "id": 4,
+                "modifiedAt": "2015-10-20T15:55:11Z",
+                "modifiedBy": null,
+                "name": "Video Player - Production",
+                "token": "dead-beef-dead-beef-dead-beef"
+            }
+        ],
+        "messages": []
+    }
+    ```
+    
+### Retrieve all Device Configurations [GET]
+Retrieves all Device Configurations
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
 
 
-### Create Device Configuration [POST]
-Creates a new Device Configuration.
++ Response 200
+
+    [List Device Configurations][]
+
+### Creates a Device Configuration [POST]
+Creates a new Device Configuration
 
 + Request
 
     ```js
-    {
-            "status": "published",
-            "properties": {
-               "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
-               "labelLinks": {
-                    "phone": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/phone",
-                    "tablet": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/tablet"
-               },
-               "rentalsEnabled": true,
-               "minimunSecondsBufferVideo": 1,
-               "maximunSecondsBufferVideo": 5
-            }
+    {   
+        "data": {
+            "apiHost": "http://local.www.veo.tv/api/",
+            "playreadyLicenseServer": "http://local.www.veo.tv/secure/license/playready",
+            "widevineLicenseServer": "http://local.www.veo.tv/secure/license/widevine",
+            "secureApiHost": "http://local.www.veo.tv/secure/"
+        },
+        "name": "Video Player - Local",
+        "token": "dead-beef-dead-beef-dead-beef"
+
     }
     ```
-
     + Headers
 
             Authorization: X-Auth-Token qwerty12345
@@ -3134,125 +3251,6 @@ Creates a new Device Configuration.
 
     [Device Configuration][]
 
-## Labels [/business/device-config/label/{key}]
-Represents the Labels for a Device's Configuration
-
-+ Parameters
-    + key (string, `tablet`) ... The key for the labels configuration.
-
-+ Model (application/json)
-
-    ```js
-    {
-        "headers": {"total": 1},
-        "data": [
-            {
-                "login": {
-                    "accountOnHoldMessageSky": "Su cuenta está inactiva. Para tener acceso al contenido de BlueToGo revise su perfil BlueToGo.",
-                    "learnMoreNoDot": "Más información",
-                    "manageProfile": "Administrar Perfil",
-                    "genres": {
-                        "action": "Acción",
-                        "comedy": "Comedia"
-                    }
-                }
-            }
-        ],
-        "messages": []
-    }
-    ```
-
-### Retrieve Labels [GET]
-Returns the Labels for a Device's Configuration
-
-+ Request
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Labels][]
-
-### Update Labels [PATCH]
-Updates the Labels for a Device's Configuration
-
-+ Request
-
-    ```js
-    {
-        "data": [
-            {
-                "login": {
-                    "accountOnHoldMessageSky": "Su cuenta está inactivo. Para tener acceso al contenido de BlueToGo revisa su perfil BlueToGo.",
-                    "learnMoreNoDot": "Más información",
-                    "manageProfile": "Administrar Perfil",
-                    "genres": {
-                        "action": "Acción",
-                        "comedy": "Comedia"
-                    }
-                }
-            }
-        ]
-    }
-    ```
-
-    + Headers
-
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Labels][]
-
-### Deletes Labels [DELETE]
-Deletes Labels for a Device's Configuration
-
-+ Request
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 204
-
-
-### Creates Labels [POST]
-Creates the Labels for a Device's Configuration
-
-+ Request
-
-    ```js
-    {
-        "data": [
-            {
-                "login": {
-                    "accountOnHoldMessageSky": "Su cuenta está inactivo. Para tener acceso al contenido de BlueToGo revisa su perfil BlueToGo.",
-                    "learnMoreNoDot": "Más información",
-                    "manageProfile": "Administrar Perfil",
-                    "genres": {
-                        "action": "Acción",
-                        "comedy": "Comedia"
-                    }
-                }
-            }
-        ]
-    }
-    ```
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 201
-
-    [Labels][]
 
 # Group Business - Distributor
 Represents actions against Distributor objects
