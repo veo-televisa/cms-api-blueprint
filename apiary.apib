@@ -258,17 +258,11 @@ Returns all Assets.
         {
             "entity": "asset",
             "id": 2,
-            "type": "Event",
+            "category": "episode",
             "title": "Amelie",
             "titleEditorial": "Amelie",
             "keywords": null,
             "status": "deleted",
-            "mainPoster": {
-                "id": 4
-            },
-            "mainFrame": {
-                "id": 6
-            },
             "credits": [
                 {
                     "category": "actor",
@@ -385,65 +379,6 @@ Returns all Assets.
                     }
                 }
             ],
-            "people": [
-                {
-                    "category": null,
-                    "createdAt": "2015-11-05T01:10:02Z",
-                    "createdBy": {
-                        "entity": "user",
-                        "id": 1,
-                        "name": "Admin"
-                    },
-                    "credits": [],
-                    "displayName": "Dermot Crowley",
-                    "entity": "person",
-                    "id": 286,
-                    "modifiedAt": "2015-11-05T01:10:02Z",
-                    "modifiedBy": {
-                        "entity": "user",
-                        "id": 1,
-                        "name": "Admin"
-                    }
-                },
-                {
-                    "category": null,
-                    "createdAt": "2015-11-05T01:10:02Z",
-                    "createdBy": {
-                        "entity": "user",
-                        "id": 1,
-                        "name": "Admin"
-                    },
-                    "credits": [],
-                    "displayName": "Idris Elba",
-                    "entity": "person",
-                    "id": 287,
-                    "modifiedAt": "2015-11-05T01:10:02Z",
-                    "modifiedBy": {
-                        "entity": "user",
-                        "id": 1,
-                        "name": "Admin"
-                    }
-                },
-                {
-                    "category": null,
-                    "createdAt": "2015-11-05T01:10:03Z",
-                    "createdBy": {
-                        "entity": "user",
-                        "id": 1,
-                        "name": "Admin"
-                    },
-                    "credits": [],
-                    "displayName": "Warren Brown",
-                    "entity": "person",
-                    "id": 288,
-                    "modifiedAt": "2015-11-05T01:10:03Z",
-                    "modifiedBy": {
-                        "entity": "user",
-                        "id": 1,
-                        "name": "Admin"
-                    }
-                }
-            ],
             "pictures": [
                 {
                     "createdAt": "2013-07-30T18:03:31Z",
@@ -478,7 +413,183 @@ Returns all Assets.
                 "name": "Feed Televisa"
             },
             "modifiedAt": "2014-08-03T11:01:50Z",
-            "modifiedBy": null
+            "modifiedBy": null,
+            "parentShow": {
+                "createdAt": "2016-02-18T11:15:05Z",
+                "createdBy": {
+                    "entity": "user",
+                    "id": 1,
+                    "name": "Admin"
+                },
+                "entity": "asset",
+                "genre": {
+                    "createdAt": "2013-03-21T17:22:12Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "entity": "genre",
+                    "id": 264,
+                    "items": {},
+                    "modifiedAt": "2016-01-07T13:54:47Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 89,
+                        "name": "Jessica  Reyes"
+                    },
+                    "parent": null,
+                    "title": "Música"
+                },
+                "id": 10181,
+                "modifiedAt": "2016-03-30T18:02:55Z",
+                "modifiedBy": {
+                    "entity": "user",
+                    "id": 46,
+                    "name": "Alexandro  Campos  Vega"
+                },
+                "pictures": [
+                    {
+                        "createdAt": "2016-02-18T11:15:06Z",
+                        "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "entity": "picture",
+                    "id": 21090,
+                    "modifiedAt": "2016-02-19T02:45:03Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "pictureType": "landscape",
+                    "title": "landscapegenericoveo.jpg",
+                    "versions": [
+                        {
+                            "entity": "pictureImage",
+                            "height": 768,
+                            "id": 109501,
+                            "profile": "xga-landscape",
+                            "size": 49051,
+                            "width": 1024,
+                            "link": "https://s3.amazonaws.com/static.veo.tv/mpx/images/Veo/346/555/landscapegenericoveo_SUSANAADICCION_1024x768.jpg"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 720,
+                            "id": 109502,
+                            "profile": "hd-landscape",
+                            "size": 53215,
+                            "width": 1280,
+                            "link": "https://s3.amazonaws.com/static.veo.tv/mpx/images/Veo/346/555/landscapegenericoveo_SUSANAADICCION_1280x720.jpg"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 480,
+                            "id": 109503,
+                            "profile": "vga-landscape",
+                            "size": 27851,
+                            "width": 640,
+                            "link": "https://s3.amazonaws.com/static.veo.tv/mpx/images/Veo/346/555/landscapegenericoveo_SUSANAADICCION_640x480.jpg"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 1080,
+                            "id": 109504,
+                            "profile": "fhd-landscape",
+                            "size": 90438,
+                            "width": 1920,
+                            "link": "https://s3.amazonaws.com/static.veo.tv/mpx/images/Veo/346/555/landscapegenericoveo_SUSANAADICCION_1920x1080.jpg"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 1080,
+                            "id": 109505,
+                            "profile": "main",
+                            "size": 160604,
+                            "width": 1920,
+                            "link": "https://s3.amazonaws.com/static.veo.tv/mpx/images/Veo/346/555/landscapegenericoveo_SUSANAADICCION_landscape_orig_1455793821062.jpg"
+                        }
+                    ]
+                },
+                {
+                    "createdAt": "2016-02-18T11:15:05Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "entity": "picture",
+                    "id": 21089,
+                    "modifiedAt": "2016-02-19T02:45:03Z",
+                    "modifiedBy": {
+                        "entity": "user",
+                        "id": 1,
+                        "name": "Admin"
+                    },
+                    "pictureType": "portrait",
+                    "title": "portraitgenericoveo.jpg",
+                    "versions": [
+                        {
+                            "entity": "pictureImage",
+                            "height": 480,
+                            "id": 109497,
+                            "profile": "hvga-portrait",
+                            "size": 14581,
+                            "width": 320,
+                            "link": "https://s3.amazonaws.com/static.veo.tv/mpx/images/Veo/346/555/portraitgenericoveo_SUSANAADICCION_320x480.jpg"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 640,
+                            "id": 109498,
+                            "profile": "vga-portrait",
+                            "size": 23285,
+                            "width": 480,
+                            "link": "https://s3.amazonaws.com/static.veo.tv/mpx/images/Veo/346/555/portraitgenericoveo_SUSANAADICCION_480x640.jpg"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 1024,
+                            "id": 109499,
+                            "profile": "xga-portrait",
+                            "size": 42287,
+                            "width": 768,
+                            "link": "https://s3.amazonaws.com/static.veo.tv/mpx/images/Veo/346/555/portraitgenericoveo_SUSANAADICCION_768x1024.jpg"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 1400,
+                            "id": 109500,
+                            "profile": "main",
+                            "size": 182320,
+                            "width": 1920,
+                            "link": "https://s3.amazonaws.com/static.veo.tv/mpx/images/Veo/346/555/portraitgenericoveo_SUSANAADICCION_portrait_orig_1455793820368.jpg"
+                        }
+                    ]
+                }
+            ],
+            "rating": {
+                "createdAt": "2012-10-04T13:48:00Z",
+                "createdBy": {
+                    "entity": "user",
+                    "id": 1,
+                    "name": "Admin"
+                },
+                "entity": "parentalRating",
+                "id": 18,
+                "items": [],
+                "modifiedAt": "2013-04-29T00:29:00Z",
+                "modifiedBy": null,
+                "parent": null,
+                "title": "C"
+            },
+            "status": "published",
+            "title": "SUSANA ADICCION",
+            "titleEditorial": "SuSana Adicción"
+            },
         },
         {
             "entity": "asset",
