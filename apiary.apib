@@ -5463,6 +5463,126 @@ Retrieves all Listings.
     [List Listings][]
 
 
+# Group Business - MPX Ingest
+MPX Ingestion
+
+### MPX Ingest [POST]
+
+Re-Ingest from MPX
+
++ Request
+
+    ```js
+    {
+        "type" : "Movie",
+        "externalAssetId": "PAID0000000000748574"
+    }
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    ```js
+{
+    "headers": {},
+    "data": {
+        "airDate": "2009-01-02T06:00:00Z",
+        "category": "movie",
+        "clipParentAsset": null,
+        "createdAt": "2016-05-09T19:43:03Z",
+        "createdBy": {
+            "entity": "user",
+            "id": 10003,
+            "name": "Sarai Lopez"
+        },
+        "credits": [],
+        "distributor": null,
+        "duration": 5280,
+        "entity": "asset",
+        "externalBillingId": "001043286",
+        "firstPublishedAt": null,
+        "genre": null,
+        "id": 10402,
+        "keywords": null,
+        "licenseEndDate": "2017-04-14T12:59:59Z",
+        "licenseStartDate": "2016-04-15T13:00:00Z",
+        "lockedAt": null,
+        "lockedBy": null,
+        "modifiedAt": "2016-05-09T19:43:03Z",
+        "modifiedBy": {
+            "entity": "user",
+            "id": 10003,
+            "name": "Sarai Lopez"
+        },
+        "otherGenres": [],
+        "parentShow": null,
+        "parentalRating": null,
+        "pictures": [],
+        "publicationEvent": {
+            "createdAt": "2016-05-09T19:43:03Z",
+            "createdBy": {
+                "entity": "user",
+                "id": 10003,
+                "name": "Sarai Lopez"
+            },
+            "endDate": "2017-04-14T12:59:59Z",
+            "entity": "publicationEvent",
+            "id": 13819,
+            "licenseEndDate": "2017-04-14T12:59:59Z",
+            "licenseStartDate": "2016-04-15T13:00:00Z",
+            "modifiedAt": "2016-05-09T19:43:03Z",
+            "modifiedBy": {
+                "entity": "user",
+                "id": 10003,
+                "name": "Sarai Lopez"
+            },
+            "startDate": "2016-04-15T13:00:00Z"
+        },
+        "publicationEvents": [
+            {
+                "createdAt": "2016-05-09T19:43:03Z",
+                "createdBy": {
+                    "entity": "user",
+                    "id": 10003,
+                    "name": "Sarai Lopez"
+                },
+                "endDate": "2017-04-14T12:59:59Z",
+                "entity": "publicationEvent",
+                "id": 13819,
+                "licenseEndDate": "2017-04-14T12:59:59Z",
+                "licenseStartDate": "2016-04-15T13:00:00Z",
+                "modifiedAt": "2016-05-09T19:43:03Z",
+                "modifiedBy": {
+                    "entity": "user",
+                    "id": 10003,
+                    "name": "Sarai Lopez"
+                },
+                "startDate": "2016-04-15T13:00:00Z"
+            }
+        ],
+        "publicationTransitions": [
+            "publish"
+        ],
+        "status": "draft",
+        "studio": null,
+        "subCategory": null,
+        "synopsis": "La historia se centra en un comando de animales ultrainteligentes que trabajan para una agencia del gobierno intentando prevenir que un malvado millonario se apodere del mundo.",
+        "synopsisShort": "La historia se centra en un comando de animales ultrainteligentes que trabajan para una agencia del gobierno intentando prevenir que un malvado millonario se apodere del mundo.",
+        "title": "Fuerza G",
+        "titleEditorial": null,
+        "titleSeo": "Fuerza G",
+        "titleShort": "Fuerza G",
+        "videos": [],
+        "baseStatus": "draft"
+    },
+    "messages": []
+}
+    ```
+
 # Group Business - Navigation
 Represents actions against Navigation objects
 
