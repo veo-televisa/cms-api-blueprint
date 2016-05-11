@@ -824,6 +824,29 @@ Returns all Assets.
 ### Retrieve all Assets [GET]
 Retrieves all Assets.
 
++ Parameters
+    + sort (enum[string]) ... The sort field.
+        + Members
+            + `id` - Entity identifier.
+            + `createdAt` - Original creation date.
+            + `createdBy` - Original creator.
+            + `modifiedAt` - Last modification date.
+            + `modifiedBy` - Last modified by.
+            + `mainGenre` - Entity genre.
+            + `airDate` - Air date.
+            + `parentalRating` - Parental rating.
+            + `title` - Original title.
+            + `status` - Entity status.
+            + `category` - Entity category movie, series, episode, etc
+            + `licenseStartDate` - Beginning of licensing window.
+            + `licenseEndDate` - End of licensing window.
+    + sortdir (enum[string]) ... The sort direction for the sort field.
+        + Members
+            + `asc` - Sort the information ascending
+            + `desc` - Sort the information descending
+    + limit (integer, `20`) ... The number of records to return.
+    + page (integer, `1`) ... The page offset.
+
 + Request
 
     + Headers
