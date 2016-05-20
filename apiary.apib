@@ -13538,6 +13538,16 @@ Update the file upload object
 ### Initiate an Upload [POST]
 Initiate the file upload object
 
++ Request
+
+    ```js
+    {
+        "file": "image1.jpeg",
+        "context": "general"
+    }
+    ```
+Allowed Context: general, aspot
+
 + Request Initialize (multipart/form-data)
 
         -----BOUNDARY
@@ -13566,27 +13576,41 @@ Initiate the file upload object
 
     ```js
     {
-      "headers": {},
-      "data": {
-        "createdAt": "2015-09-17T21:31:41Z",
+    "headers": {},
+    "data": {
+        "createdAt": "2016-05-20T13:57:26Z",
         "createdBy": {
-          "entity": "user",
-          "id": 10000,
-          "name": "Test User"
+            "entity": "user",
+            "id": 10003,
+            "name": "Sarai  Lopez"
         },
         "current": 0,
         "entity": "upload",
         "files": null,
-        "id": 1,
-        "modifiedAt": "2015-09-17T21:31:41Z",
+        "id": 886,
+        "message": null,
+        "modifiedAt": "2016-05-20T13:57:26Z",
         "modifiedBy": {
-          "entity": "user",
-          "id": 10000,
-          "name": "Test User"
+            "entity": "user",
+            "id": 10003,
+            "name": "Sarai  Lopez"
         },
         "status": "open",
-        "total": null
-      },
-      "messages": []
-    }
+        "total": null,
+        "workload": {
+            "source": {
+                "filteredFileName": "1000x1400.jpg",
+                "filePath": "/var/www/blim/shared/upload/picture/2016/05/20/886/1000x1400_main.jpg",
+                "type": null
+            },
+            "target": {
+                "filePath": "images/picture/2016/05/20/886/1000x1400_main.jpg"
+            },
+            "uploadId": 886,
+            "pictureId": null,
+            "mainImageId": null
+        }
+    },
+    "messages": []
+}
     ```
