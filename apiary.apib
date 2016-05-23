@@ -26,6 +26,19 @@ Represents a Asset
         "entity": "asset",
         "id": 2,
         "category": "movie",
+        "countries": [
+            {
+                "createdAt": "2013-03-21T22:46:39Z",
+                "createdBy": null,
+                "entity": "country",
+                "id": 5,
+                "items": [],
+                "modifiedAt": "2013-04-29T00:28:49Z",
+                "modifiedBy": null,
+                "parent": null,
+                "title": "Mexico"
+            }
+        ],
         "title": "Amelie",
         "titleEditorial": "Amelie",
         "keywords": null,
@@ -209,7 +222,7 @@ Returns a specific Asset.
     [Asset][]
 
 
-### Updates a Asset [PATCH]
+### Updates an Asset [PATCH]
 Updates a specific Asset
 
 + Request
@@ -217,7 +230,12 @@ Updates a specific Asset
     ```js
     {
             "title": "Operación Dragón",
-            "status": "published"
+            "status": "published",
+            "countries": [
+                {
+                    "id": 5
+                }
+            ]
     }
     ```
 
@@ -5654,7 +5672,8 @@ Represents a Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(movie)+AND+genre:('accion y aventura')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/accion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 },
                                 {
                                     "id": 31,
@@ -5664,7 +5683,20 @@ Represents a Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(movie)+AND+genre:('animacion')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/animacion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": [
+                                        {
+                                            "createdAt": "2013-03-21T22:46:39Z",
+                                            "createdBy": null,
+                                            "entity": "country",
+                                            "id": 5,
+                                            "items": [],
+                                            "modifiedAt": "2013-04-29T00:28:49Z",
+                                            "modifiedBy": null,
+                                            "parent": null,
+                                            "title": "Mexico"
+                                        }                                        
+                                    ],
                                 }
                             ]
                         },
@@ -5685,7 +5717,8 @@ Represents a Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(series)+AND+genre:('accion y aventura')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/accion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 },
                                 {
                                     "id": 31,
@@ -5695,7 +5728,8 @@ Represents a Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(series)+AND+genre:('animacion')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/animacion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 }
                             ]
                         },
@@ -5716,7 +5750,8 @@ Represents a Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(telenovelas)+AND+genre:('accion y aventura')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/accion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 },
                                 {
                                     "id": 10,
@@ -5726,7 +5761,8 @@ Represents a Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(telenovelas)+AND+genre:('animacion')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/animacion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 }
                             ]
                         },
@@ -5747,7 +5783,8 @@ Represents a Navigation
                                     "apiLink": "/search?q=entity:(collection)+AND+title:(biografias)&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/accion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 },
                                 {
                                     "id": 10,
@@ -5757,7 +5794,8 @@ Represents a Navigation
                                     "apiLink": "/search?q=entity:(collection)+AND+title:(clasicas)&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/animacion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 }
                             ]
                         }
@@ -5964,7 +6002,8 @@ Updates a specific Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(movie)+AND+genre:('accion y aventura')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/accion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 },
                                 {
                                     "id": 31,
@@ -5974,7 +6013,12 @@ Updates a specific Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(movie)+AND+genre:('animacion')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/animacion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": [
+                                        {
+                                            "id": 5
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -5995,7 +6039,8 @@ Updates a specific Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(series)+AND+genre:('accion y aventura')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/accion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 },
                                 {
                                     "id": 31,
@@ -6005,7 +6050,8 @@ Updates a specific Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(series)+AND+genre:('animacion')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/animacion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 }
                             ]
                         },
@@ -6026,7 +6072,8 @@ Updates a specific Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(telenovelas)+AND+genre:('accion y aventura')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/accion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 },
                                 {
                                     "id": 10,
@@ -6036,7 +6083,8 @@ Updates a specific Navigation
                                     "apiLink": "/search?q=entity:(asset)+AND+category:(telenovelas)+AND+genre:('animacion')&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/animacion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 }
                             ]
                         },
@@ -6057,7 +6105,8 @@ Updates a specific Navigation
                                     "apiLink": "/search?q=entity:(collection)+AND+title:(biografias)&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/accion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 },
                                 {
                                     "id": 10,
@@ -6067,7 +6116,8 @@ Updates a specific Navigation
                                     "apiLink": "/search?q=entity:(collection)+AND+title:(clasicas)&sort=relevance&sortDir=desc",
                                     "link": "/browse/peliculas/animacion",
                                     "icon": null,
-                                    "items": []
+                                    "items": [],
+                                    "countries": []
                                 }
                             ]
                         }
@@ -6652,6 +6702,19 @@ Represents a Page
         
       },
       "data": {
+        "countries": [
+            {
+                "createdAt": "2013-03-21T22:46:39Z",
+                "createdBy": null,
+                "entity": "country",
+                "id": 5,
+                "items": [],
+                "modifiedAt": "2013-04-29T00:28:49Z",
+                "modifiedBy": null,
+                "parent": null,
+                "title": "Mexico"
+            }
+        ],
         "createdAt": "2015-05-22T00:00:00Z",
         "createdBy": {
           "entity": "user",
@@ -7028,6 +7091,11 @@ Updates a specific Page
         "seoDescription": "seo description",
         "seoTitle": "test page seo",
         "title": "test page",
+        "countries": [
+            {
+                "id": 5
+            }
+        ],
         "zones": [
             {
                 "key": "main",
