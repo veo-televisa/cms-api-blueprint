@@ -8745,6 +8745,7 @@ Creates a new Season in the CMS
     [Season][]
 
 
+
 # Group Business - Studio
 Represents actions against Studio objects
 
@@ -8938,6 +8939,334 @@ Creates a new Studio in the CMS
 + Response 201
 
     [Studio][]
+
+
+# Group Business - Supported Country
+Represents actions against Supported Country objects
+
+
+## List Supported Countries [/business/supported-country]
+Returns all Supported Countries.
+
++ Model (application/json)
+
+    ```js
+{
+  "headers": {
+    "total": 18
+  },
+  "data": [
+    {
+      "code": "MX",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 5,
+      "items": [],
+      "modifiedAt": "2016-09-22T18:47:39Z",
+      "modifiedBy": {
+        "entity": "user",
+        "id": 10002,
+        "name": "Miguel  Angel  Gutierrez"
+      },
+      "parent": null,
+      "title": "Mexico"
+    },
+    {
+      "code": "AR",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 16,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Argentina"
+    },
+    {
+      "code": "BZ",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 28,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Belice"
+    },
+    {
+      "code": "BO",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 34,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Bolivia"
+    },
+    {
+      "code": "CL",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 52,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Chile"
+    },
+    {
+      "code": "CO",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 56,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Colombia"
+    },
+    {
+      "code": "CR",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 60,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Costa Rica"
+    },
+    {
+      "code": "EC",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 66,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Ecuador"
+    },
+    {
+      "code": "SV",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 68,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "El Salvador"
+    },
+    {
+      "code": "GT",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 91,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Guatemala"
+    },
+    {
+      "code": "HN",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 99,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Honduras"
+    },
+    {
+      "code": "NI",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 168,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Nicaragua"
+    },
+    {
+      "code": "PA",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 179,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Panama"
+    },
+    {
+      "code": "PY",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 181,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Paraguay"
+    },
+    {
+      "code": "PE",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 183,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Peru"
+    },
+    {
+      "code": "DO",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 192,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Republica Dominicana"
+    },
+    {
+      "code": "UY",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 246,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Uruguay"
+    },
+    {
+      "code": "VE",
+      "createdAt": "2013-03-21T22:46:39Z",
+      "createdBy": {
+        "entity": "user",
+        "id": 2,
+        "name": "Rodolfo  Puig"
+      },
+      "entity": "country",
+      "id": 249,
+      "items": [],
+      "modifiedAt": "2013-04-29T00:28:49Z",
+      "modifiedBy": null,
+      "parent": null,
+      "title": "Venezuela"
+    }
+  ],
+  "messages": []
+}
+    ```
+
+### Retrieve all Supported Countries [GET]
+Retrieves all supported countries.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [List Supported Countries][]
+
 
 # Group Business - Video
 Represents actions against Video objects
