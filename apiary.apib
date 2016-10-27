@@ -5379,32 +5379,7 @@ Returns a specific GeoGroup.
     [GeoGroup][]
 
 
-### Updates a GeoGroup [PATCH]
-Updates a specific GeoGroup
-
-+ Request
-
-    ```js
-    {
-        "title": "Latam",
-        "Description": "Description"
-    }
-    ```
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-+ Parameters
-    + title (string, required) - Title of the GeoGroup
-    + description (string, optional) Description
-
-+ Response 200
-
-    [GeoGroup][]
-
-
-e ### Deletes a GeoGroup [DELETE]
+### Deletes a GeoGroup [DELETE]
 Deletes a GeoGroup
 
 + Request
@@ -5416,6 +5391,46 @@ Deletes a GeoGroup
 
 + Response 204
 
+
+## GeoGroups [/business/geo-group]
+
++ Model (application/json)
+
+    ```js
+      {
+          "headers": {},
+          "data": {
+            "description": "Added description",
+            "entity": "geoGroup",
+            "id": 2,
+            "lockedAt": null,
+            "lockedBy": null,
+            "title": "title changed"
+          },
+          "messages": []
+        }
+    ```
+    
+### Update a GeoGroups [GET]
+Update GeoGroups.
+
++ Request
+    
+     ```js
+    {
+        "title": "Latam",
+        "Description": "Description"
+    }
+    ```
+    
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [GeoGroups][]
 
 ## List GeoGroups [/business/geo-group]
 Returns all GeoGroups.
