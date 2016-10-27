@@ -5336,6 +5336,136 @@ Updates a list of Geoblockings
 
     [List Geoblockings][]
 
+
+# Group Business - GeoGroup
+Represents actions against GeoGroup objects
+
+## GeoGroup [/business/geo-group/{id}]
+Represents a GeoGroup
+
++ Parameters
+    + id (string, required) - GeoGroup id
++ Model (application/json)
+
+    ```js
+        {
+          "headers": {},
+          "data": {
+            "description": "Group all latin countries except Mexico",
+            "entity": "geoGroup",
+            "id": 1,
+            "lockedAt": null,
+            "lockedBy": null,
+            "title": "LatAm"
+          },
+          "messages": []
+        }
+    ```
++ Parameters
+    + id (int, required) - GeoGroup id
+    
+### Retrieve a GeoGroup [GET]
+Returns a specific GeoGroup.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [GeoGroup][]
+
+
+### Updates a GeoGroup [PATCH]
+Updates a specific GeoGroup
+
++ Request
+
+    ```js
+    {
+        "title": "Latam",
+        "Description": "Description"
+    }
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
++ Parameters
+    + title (string, required) - Title of the GeoGroup
+    + description (string, optional) Description
+
++ Response 200
+
+    [GeoGroup][]
+
+## Delete GeoGroup
+ Delete a GeoGroup
+### Deletes a GeoGroup [DELETE]
+Deletes a GeoGroup
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 204
+
+[Delete GeoGroup]][
+
+## List GeoGroups [/business/geo-group]
+Returns all GeoGroups.
+
++ Model (application/json)
+
+    ```js
+      {
+        "headers": {
+          "total": 3
+        },
+        "data": [
+          {
+            "entity": "geoGroup",
+            "id": 2,
+            "title": "Modified again"
+          },
+          {
+            "entity": "geoGroup",
+            "id": 3,
+            "title": "New geo Group1"
+          },
+          {
+            "entity": "geoGroup",
+            "id": 1,
+            "title": "LatAm"
+          }
+        ],
+        "messages": []
+      }
+    ```
+
+### Retrieve all GeoGroups [GET]
+Retrieves all GeoGroups.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [List GeoGroups][]
+
+
+
 # Group Business - Listing
 Represents actions against Listing objects
 
